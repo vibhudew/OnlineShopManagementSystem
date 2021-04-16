@@ -40,7 +40,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="file"></span>
-              Orders
+              Sales
             </a>
           </li>
           <li class="nav-item">
@@ -52,31 +52,37 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
-              Customers
+              Manufacturing
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Purchases
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="layers"></span>
-              Integrations
+              Contacts
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Payments and Accounts Management
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="layers"></span>
-              Integrations
+              Expenses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="layers"></span>
+              HRM
             </a>
           </li>
         </ul>
