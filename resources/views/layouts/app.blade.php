@@ -26,63 +26,81 @@
                 Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
             -->
               <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                  CT
+                <a href="/" class="simple-text logo-mini">
+                  SM
                 </a>
-                <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                  Creative Tim
+                <a href="/" class="simple-text logo-normal">
+                  Store Mater
                 </a>
               </div>
               <div class="sidebar-wrapper" id="sidebar-wrapper">
                 <ul class="nav">
                   <li>
-                    <a href="./dashboard.html">
+                    <a href="/">
                       <i class="now-ui-icons design_app"></i>
                       <p>Dashboard</p>
                     </a>
                   </li>
                   <li>
-                    <a href="./icons.html">
-                      <i class="now-ui-icons education_atom"></i>
-                      <p>Icons</p>
+                    <a href="/users">
+                      <i class="now-ui-icons users_circle-08"></i>
+                      <p>Users</p>
                     </a>
                   </li>
                   <li>
-                    <a href="./map.html">
-                      <i class="now-ui-icons location_map-big"></i>
-                      <p>Maps</p>
+                    <a href="/Contacts">
+                      <i class="now-ui-icons education_agenda-bookmark"></i>
+                      <p>Contacts</p>
                     </a>
                   </li>
                   <li>
-                    <a href="./notifications.html">
-                      <i class="now-ui-icons ui-1_bell-53"></i>
-                      <p>Notifications</p>
+                    <a href="/Products">
+                      <i class="now-ui-icons shopping_shop"></i>
+                      <p>Products</p>
                     </a>
                   </li>
                   <li>
-                    <a href="./user.html">
-                      <i class="now-ui-icons users_single-02"></i>
-                      <p>User Profile</p>
-                    </a>
-                  </li>
-                  <li class="active ">
-                    <a href="./tables.html">
-                      <i class="now-ui-icons design_bullet-list-67"></i>
-                      <p>Table List</p>
+                    <a href="/Purchases">
+                      <i class="now-ui-icons shopping_box"></i>
+                      <p>Purchases</p>
                     </a>
                   </li>
                   <li>
-                    <a href="./typography.html">
-                      <i class="now-ui-icons text_caps-small"></i>
-                      <p>Typography</p>
+                    <a href="/Sales">
+                      <i class="now-ui-icons shopping_cart-simple"></i>
+                      <p>Sales</p>
                     </a>
                   </li>
-                  <li class="active-pro">
-                    <a href="./upgrade.html">
+                  <li>
+                    <a href="/Manufacturing">
+                      <i class="now-ui-icons loader_gear"></i>
+                      <p>Manufacturing</p>
+                    </a>
+                  </li>
+                  <li>
+                  <a href="/Accounts">
+                    <i class="now-ui-icons business_bank"></i>
+                    <p>Accounts</p>
+                  </a>
+                </li>
+                  <li>
+                  <a href="/Expenses">
+                    <i class="now-ui-icons business_money-coins"></i>
+                    <p>Expenses</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/HRM">
+                    <i class="now-ui-icons business_briefcase-24"></i>
+                    <p>HRM</p>
+                  </a>
+                </li>
+         <!--        <li class="active-pro">
+                    <a href="/">
                       <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                       <p>Upgrade to PRO</p>
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -98,7 +116,7 @@
                         <span class="navbar-toggler-bar bar3"></span>
                       </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Table List</a>
+                    <a class="navbar-brand" href="#pablo">@yield('page-title')</a>
                   </div>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -158,7 +176,7 @@
                   <div class="col-md-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4 class="card-title"> Simple Table</h4>
+                        <h4 class="card-title "><strong> @yield('card-title') </strong></h4>
                       </div>
                       <div class="card-body">
                         
@@ -176,17 +194,17 @@
                   <nav>
                     <ul>
                       <li>
-                        <a href="https://www.creative-tim.com">
-                          Creative Tim
+                        <a href="">
+                          Store Master
                         </a>
                       </li>
                       <li>
-                        <a href="http://presentation.creative-tim.com">
+                        <a href="">
                           About Us
                         </a>
                       </li>
                       <li>
-                        <a href="http://blog.creative-tim.com">
+                        <a href="">
                           Blog
                         </a>
                       </li>
@@ -195,7 +213,7 @@
                   <div class="copyright" id="copyright">
                     &copy; <script>
                       document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                    </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                    </script>All rights reserved, <a href="/">Store Master</a>
                   </div>
                 </div>
               </footer>
