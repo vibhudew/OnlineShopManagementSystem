@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+
 
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
 
+<<<<<<< HEAD
  
 
+=======
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+>>>>>>> 9345dcb4c2e0af9a364313e2d72d0f667fa62c5e
