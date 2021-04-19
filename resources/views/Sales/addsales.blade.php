@@ -74,15 +74,6 @@
 </div>
 </div>
 <div class="card ">
-<form action="/AddSalesproduct.php">
-  <div class="form-group">
-    <h6>Sales Product Name:</h6>
-    <input type="email" class="form-control" placeholder="Enter Product Name" id="proName">
-    <button type="submit" class="btn btn-primary">Add product</button>
-</form>
-</div>
-</div>
-<div class="card ">
 <div class="container ">
 <form action="/action_page.php">
   <div class="form-group ">

@@ -21,10 +21,10 @@ Route::get('/', function () {
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
-Route::get('/Sales', function () {
-    return view('Sales/addsales');
-});
-// Route::get('/Sales', function () {
+ Route::get('/Sales', function () {
+     return view('Sales/addsales');
+ });
+//Route::get('/Sales', function () {
 //     return view('Sales/updatesales');
 // });
 Auth::routes();
