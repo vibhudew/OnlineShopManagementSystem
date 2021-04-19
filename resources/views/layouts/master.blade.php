@@ -26,17 +26,17 @@
                 Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
             -->
               <div class="logo">
-                <a href="/" class="simple-text logo-mini">
+                <a href="/home" class="simple-text logo-mini">
                   SM
                 </a>
-                <a href="/" class="simple-text logo-normal">
+                <a href="/home" class="simple-text logo-normal">
                   Store Mater
                 </a>
               </div>
               <div class="sidebar-wrapper" id="sidebar-wrapper">
                 <ul class="nav">
                   <li>
-                    <a href="/">
+                    <a href="/home">
                       <i class="now-ui-icons design_app"></i>
                       <p>Dashboard</p>
                     </a>
