@@ -24,6 +24,10 @@ Route::get('/Expenses', function () {
     return view('Expense/view');
 });
 
+Route::get('/Products', function () {
+    return view('Product/viewproduct');
+});
+
 
 Auth::routes();
 
