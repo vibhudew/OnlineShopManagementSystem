@@ -21,12 +21,21 @@ Route::get('/', function () {
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
+<<<<<<< HEAD
  Route::get('/Sales', function () {
      return view('Sales/addsales');
  });
 //Route::get('/Sales', function () {
 //     return view('Sales/updatesales');
 // });
+=======
+
+Route::get('/Products', function () {
+    return view('Product/viewproduct');
+});
+
+
+>>>>>>> 8de76703f535ed54966a86d90ac63fadd3663799
 Auth::routes();
 
 
