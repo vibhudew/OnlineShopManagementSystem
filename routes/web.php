@@ -19,6 +19,9 @@ Route::get('/Expenses', function () {
     return view('Expense/view');
 });
 
+
 Auth::routes();
 
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
