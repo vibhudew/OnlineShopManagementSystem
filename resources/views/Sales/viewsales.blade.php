@@ -13,10 +13,10 @@
       <tr>
         <th>Invoice Id</th>
         <th>Invoice Date</th>
-        <th>Item Id</th>
-        <th>Contact Id</th>
+        <th>Customers</th>
+        <th>Pay Term</th>
         <th>Total Amount</th>
-        <th>Payment Due</th>
+        <th>Payement Method</th>
         <th>Sell Satus</th>
         <th>Payment Status</th>
       </tr>
