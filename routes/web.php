@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
-<<<<<<< HEAD
+
 Route::get('/Sales', function () {
     return view('Sales/viewsales');
 });
@@ -32,7 +32,7 @@ Route::get('/Sales', function () {
 //Route::get('/Sales', function () {
 //     return view('Sales/updatesales');
 // });
-=======
+
 
  Route::get('/Sales', function () {
      return view('Sales/addsales');
@@ -41,7 +41,7 @@ Route::get('/Sales', function () {
 Route::get('/Sales', function () {
     return view('Sales/updatesales');
 });
->>>>>>> 9980bf0415f889d5438a03716c262972338fd752
+
 
 Route::get('/Products', function () {
     return view('Product/viewproduct');

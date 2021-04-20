@@ -7,7 +7,12 @@
 
 <!--<div class="jumbotron" >-->
 <div class="container">
+@foreach($errors->all() as $error)
+  <div class="alert alert-danger" role="alert">
+    {{$error}}
+  </div>
 
+@endforeach
 <form method="post" action="/saveRecipe">
 {{csrf_field()}}
 <div class="mb-3">
@@ -23,6 +28,6 @@
 </div>
 </form>
 </div>
-<!--</div>-->
+<!--</div>-->  
     
 @endsection
