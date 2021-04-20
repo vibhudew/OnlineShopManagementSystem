@@ -41,12 +41,10 @@ Route::get('/Manufacturing', function () {
 
 Auth::routes();
 
-<<<<<<< HEAD
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
 
 
->>>>>>> b51cecfbb32fab2e421913ad813c2b4fd2aae731
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
