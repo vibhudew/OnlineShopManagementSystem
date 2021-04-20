@@ -6,9 +6,32 @@
 
 @section('content')
 <div class="card">
-<div class="container">
-  <h6>Customers:</h6>
-  <select class="form-select" aria-label="Default select example">
+<div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="Invoiceid">Invoice ID :</label>
+      <input type="PId" class="form-control" id="Invoiceid" placeholder="Enter the Invoice Id">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Invoicedate">Invoice Date :</label>
+      <input type="Text" class="form-control" id="Invoicedate" placeholder="Enter the Invoice Date">
+    </div>
+  </div>
+  
+  <div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="Salespay">Sales Payment ID :</label>
+      <input type="text" class="form-control" id="Invoiceid" placeholder="Enter the Sales Payment Id">
+    </div>
+
+  <div class="form-group col-md-6">
+      <label for="Totalamount">Total Amount(Rs.):</label>
+      <input type="PId" class="form-control" id="pId" placeholder="Enter The Total Amount">
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="customer">Customer:</label>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
   <option selected>Select</option>
   <option value="1">Shashika</option>
   <option value="2">Hiran</option>
@@ -16,21 +39,22 @@
 </select>
 </div>
 </div>
-<div class="card">
-<div class="container">
-  <h6>Sell Status:</h6>
-  <select class="form-select" aria-label="Default select example">
+    <div class="form-row">
+<div class="form-group col-md-6">
+    <label for="paymethod">Payment Method:</label>
+    <select class="form-select" aria-label="Default select example">
   <option selected> Select </option>
-  <option value="1">Recieved</option>
-  <option value="2">Pending</option>
-</select>                                         
-</div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Pay Term:</h6>
-                                           
-  <select class="form-select" aria-label="Default select example">
+  <option value="1">Credit Cards</option>
+  <option value="2">Debit Cards</option>
+  <option value="3">Cash</option>
+  <option value="4">Checks</option>
+</select>   
+  </div>
+  </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="payterm">Payment Term:</label>
+    <select class="form-select" aria-label="Default select example">
   <option selected> Select </option>
   <option value="1">PIA</option>
   <option value="2">COD</option>
@@ -38,57 +62,10 @@
 </select>
 </div>
 </div>
-<div class="card ">
-<div class="container ">
-<form action="/action_page.php">
-  <div class="form-group ">
-    <h6>Invoice Id:</h6>
-    <input type="text" class="form-control " placeholder="Enter Invoice Id" id="invoice id">
-  </div>
-  </form>
-</div>
-</div>
-<div class="card">
-<div class="container">
-<div class="row">
-      <div class='col-sm-6'>
-      <h6>invoice date:</h6>
-         <input type='text' class="form-control" id='datetimepicker4' />
-      </div>
-      <script type="text/javascript">
-         $(function () {
-             $('#datetimepicker4').datetimepicker();
-         });
-      </script>
-   </div>
-</div>
-</div>
-<div class="card ">
-<div class="container ">
-<form action="/action_page.php">
-  <div class="form-group ">
-    <h6>Total Amount(Rs.):</h6>
-    <input type="text" class="form-control " placeholder="Enter Total Amount" id="invoice id">
-  </div>
-  </form>
-</div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Payement Method:</h6>
-  <select class="form-select" aria-label="Default select example">
-  <option selected> Select </option>
-  <option value="1">Credit Cards</option>
-  <option value="2">Debit Cards</option>
-  <option value="3">Cash</option>
-  <option value="4">Checks</option>
-</select>                                         
-  </div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Payement Status:</h6>
-  <select class="form-select" aria-label="Default select example">
+<div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="Paymentstatus">Payment Status:</label>
+    <select class="form-select" aria-label="Default select example">
   <option selected> Select </option>
   <option value="1">Paid</option>
   <option value="2">Due</option>
@@ -96,6 +73,19 @@
 </select>
 </div>
 </div>
+<div class="form-row">
+<div class="form-group col-md-6">
+    <label for="Sellstatus">Sell Status:</label>
+    <select class="form-select" aria-label="Default select example">
+  <option selected> Select </option>
+  <option value="1">Recieved</option>
+  <option value="2">Pending</option>
+</select>
+</div>
+</div>
+</div>
+  
+
 
 
 @endsection

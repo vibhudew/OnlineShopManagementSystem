@@ -22,16 +22,18 @@ Route::get('/', function () {
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
-Route::get('/Sales', function () {
-    return view('Sales/viewsales');
-});
-//  Route::get('/Sales', function () {
-//      return view('Sales/addsales');
-//  });
+// Route::get('/Sales', function () {
+//     return view('Sales/viewsales');
+// });
+  Route::get('/Sales', function () {
+      return view('Sales/addsales');
+  });
 //Route::get('/Sales', function () {
 //     return view('Sales/updatesales');
 // });
 
+<<<<<<< HEAD
+=======
  Route::get('/Sales', function () {
      return view('Sales/addsales');
  });
@@ -41,6 +43,7 @@ Route::get('/Sales', function () {
 });
 
 
+>>>>>>> e636b111e83e045d4b953971581643c3132943cc
 Route::get('/Products', function () {
     return view('Product/viewproduct');
 });
