@@ -16,10 +16,12 @@ class RecipeController extends Controller
              'mRecipe'=>'required|max:500|min:5',
              ]);
 
-         $recipe->manufacturingProductName=$request->mProduct;
+         $recipe->manufacturingProductName=$request->mProduct; 
          $recipe->recipe=$request->mRecipe;
          $recipe->save();
-
+        
+         $data=Recipe::all();//getting all data from recipes table to data variable
+         dd($data);
          return view('Manufacturing/Recipe');
         
     }
