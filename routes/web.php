@@ -43,6 +43,7 @@ Route::get('/Sales', function () {
 });
 
 
+
 Route::get('/Products', function () {
     return view('Product/viewproduct');
 });
