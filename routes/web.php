@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,18 +44,23 @@ Route::get('/Products', function () {
     return view('Product/viewproduct');
 });
 
-Route::get('/Manufacturing', function () {
+Route::get('/Manufacturing1', function () {
     return view('Manufacturing/addRecipe');
 });
+
+Route:: get('/Manufacturing',function(){
+    return view('Manufacturing/Recipe');
+});
+
+Route:: post('/saveRecipe','RecipeController@store');
 
 
 Auth::routes();
 
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ //Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 
