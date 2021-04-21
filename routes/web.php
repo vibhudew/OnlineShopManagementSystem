@@ -63,7 +63,7 @@ Auth::routes();
 
 
  Route:: post('/savesales','AddsalesController@store');
- Route:: post('/savesales','AddsalespaymentsController@store');
+ 
 
 
 
