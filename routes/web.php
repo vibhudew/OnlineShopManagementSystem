@@ -25,21 +25,18 @@ Route::get('/Expenses', function () {
  Route::get('/Sales', function () {
      return view('Sales/addsales');
  });
-<<<<<<< HEAD
  
 Route::get('/Sales', function () {
     return view('Sales/updatesales');
 });
 
-=======
-
-Route::get('/Sales', function () {
-    return view('Sales/updatesales');
-});
->>>>>>> 9980bf0415f889d5438a03716c262972338fd752
 
 Route::get('/Products', function () {
-    return view('Product/updateproduct');
+    return view('Product/viewproduct');
+});
+
+Route::get('/Products/addproduct', function () {
+    return view('Product/addproduct');
 });
 
 Route::get('/Manufacturing', function () {
@@ -52,9 +49,6 @@ Route::get('/Manufacturing', function () {
 
 
 Auth::routes();
-
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
