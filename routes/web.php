@@ -40,6 +40,8 @@ Route::get('/Products/addproduct', function () {
 
 Route:: post('/saveProduct','AddProductController@store');
 
+Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
+
 //kaveen product part end
 
 Route::get('/Manufacturing1', function () {

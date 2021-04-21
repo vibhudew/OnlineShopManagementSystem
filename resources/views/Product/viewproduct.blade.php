@@ -9,13 +9,16 @@
 <a href="Products/addproduct" class = "btn btn-primary"> ADD </a>
 
 <table class = "table table-dark">
-  <th>Product Name</th>
   <th>Product Id</th>
-  <th>Unit Purchase Price</th>
-  <th>Unit Selling Price</th>
-  <th>Currunt Stock</th>
-  <th>Edit</th>
-  <th>Delete</th>
+  <th>Product Name</th>
+  <th>Unit </th>
+  <th>Brand</th>
+  <th>Category</th>
+  <th>SubCategory</th>
+  <th>DefaultPurchasePrice</th>
+  <th>DefaultSellingPrice</th>
+  <th>ProductDescription</th>
+  <th>Action</th>
 
   @foreach($Product1 as $product1)
       <tr>
@@ -28,7 +31,12 @@
         <td>{{$product1->DefaultPurchasePrice}}</td>
         <td>{{$product1->DefaultSellingPrice}}</td>
         <td>{{$product1->ProductDescription}}</td>
+
+        <td>
+          <a href="/deleteProduct/{{$product1->Productid}}" class="btn btn-warning">Delete</a>
+        </td>
       </tr>
+      
   @endforeach
 
 

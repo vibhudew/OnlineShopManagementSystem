@@ -32,5 +32,13 @@ class AddProductController extends Controller
         return view('Product/viewproduct')->with('Product1', $data);//return product view with data to display
         //dd($request->all());
     }
+    public function deleteProduct($Productid){
+        $ProductDetails = ProductDetails::find($Productid);
+        $ProductDetails->delete();
+        return redirect()->back();
+
+    }
+    
+
 
 }
