@@ -32,18 +32,6 @@ Route::get('/Expenses', function () {
 //     return view('Sales/updatesales');
 // });
 
-<<<<<<< HEAD
-=======
- Route::get('/Sales', function () {
-     return view('Sales/addsales');
- });
-
-Route::get('/Sales', function () {
-    return view('Sales/updatesales');
-});
-
-
->>>>>>> e636b111e83e045d4b953971581643c3132943cc
 Route::get('/Products', function () {
     return view('Product/viewproduct');
 });
@@ -65,6 +53,9 @@ Auth::routes();
  //Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+ Route:: post('/savesales','AddsalesController@store');
+ Route:: post('/savesales','AddsalespaymentsController@store');
 
 
 
