@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,13 +69,22 @@ Auth::routes();
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route:: get('/Sales',function(){
-    //We only return Recipe1 when saveing data but this view should appear other times aswell
+    //We only return viewsales1 when saving data but this view should appear other times aswell
     $data=App\Models\addsales::all();
     return view('Sales/viewsales')->with('viewsales1',$data); 
 });
 
-
+//this calls the store function in AddsalesController 
  Route:: post('/savesales','AddsalesController@store');
+ Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
+
+
+ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+
+
+
+
+
  
 
 

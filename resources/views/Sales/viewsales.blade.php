@@ -29,6 +29,9 @@
             <td>{{$Viewsales1->payterm}}</td>
             <td>{{$Viewsales1->paymentstatus}}</td>
             <td>{{$Viewsales1->sellstatus}}</td>
+            <td>
+                <a href="/deletesales/{{$Viewsales1->id}}" class="btn btn-danger">Delete</a>
+            </td>
         </tr>
         @endforeach
     
