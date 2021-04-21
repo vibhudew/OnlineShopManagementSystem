@@ -57,13 +57,18 @@ Route::get('/Products/addproduct', function () {
     return view('Product/addproduct');
 });
 
-Route::get('/Manufacturing', function () {
+Route::get('/Manufacturing1', function () {
+    
     return view('Manufacturing/addRecipe');
 });
 
-Route::get('/Manufacturing', function () {
-    return view('Manufacturing/addRecipe');
+Route:: get('/Manufacturing',function(){
+    //We only return Recipe1 when saveing data but this view should appear other times aswell
+    $data=App\Models\Recipe::all();
+    return view('Manufacturing/Recipe')->with('Recipe1',$data); 
 });
+
+Route:: post('/saveRecipe','RecipeController@store');
 
 
 Auth::routes();
