@@ -8,25 +8,39 @@
 
 <div class="container">
            
-  <table class="table table-dark table-hover">
-    <thead>
-      <tr>
+<table class="table table-bordered table-dark">
+
         <th>Invoice Id</th>
-        <th>Invoice Date</th>
         <th>Customers</th>
-        <th>Pay Term</th>
         <th>Total Amount</th>
-        <th>Payement Method</th>
-        <th>Sell Satus</th>
+        <th>Payment Method</th>
+        <th>Pay Term</th>
         <th>Payment Status</th>
-      </tr>
-    </thead>
+        <th>Sell Satus</th>
+       
+      
+       <!--view data in table -->
+       @foreach($viewsales1 as $Viewsales1)
+        <tr>    
+            <td>{{$Viewsales1->invoiceid}}</td> <!--accessing columns in db from $recipe1 variable -->
+            <td>{{$Viewsales1->customer}}</td>
+            <td>{{$Viewsales1->totalamount}}</td>
+            <td>{{$Viewsales1->paymentmethod}}</td>
+            <td>{{$Viewsales1->payterm}}</td>
+            <td>{{$Viewsales1->paymentstatus}}</td>
+            <td>{{$Viewsales1->sellstatus}}</td>
+            <td>
+                <a href="/deletesales/{{$Viewsales1->id}}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        @endforeach
+    
     
   </table>
  
 </div>
-<button type="button" class="btn btn-primary">ADD</button>
-  <button type="button" class="btn btn-secondary">EDIT</button>
-  <button type="button" class="btn btn-success">DELETE</button>
+<a href="/Sales1"  class="btn btn-success" >Add Sales</a>
+
+  
 
 @endsection
