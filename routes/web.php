@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,14 @@ Auth::routes();
 
 
  Route:: post('/savesales','AddsalesController@store');
+
+
+ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+
+
+
+
+
  
 
 
