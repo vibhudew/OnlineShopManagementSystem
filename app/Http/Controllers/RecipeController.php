@@ -12,8 +12,8 @@ class RecipeController extends Controller
          $recipe = new Recipe;
          
          $this->validate($request,[
-             'mProduct'=>'required|max:500|min:5',
-             'mRecipe'=>'required|max:500|min:5',
+             'mProduct'=>'required|max:1000|min:5',
+             'mRecipe'=>'required|max:1000|min:5',
              ]);
 
          $recipe->manufacturingProductName=$request->mProduct; 
@@ -21,8 +21,9 @@ class RecipeController extends Controller
          $recipe->save();
         
          $data=Recipe::all();//getting all data from recipes table to data variable
-         dd($data);
-         return view('Manufacturing/Recipe');
+         
+
+         return view('Manufacturing/Recipe')->with('Recipe1',$data); //return Recipe view with data
         
     }
 }
