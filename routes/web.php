@@ -59,6 +59,8 @@ Route:: get('/Manufacturing',function(){
 //this calls the store function in REcipeController 
 Route:: post('/saveRecipe','RecipeController@store');
 
+Route::get('/deleteRecipe/{id}','RecipeController@deleterecipe');
+
 Auth::routes();
 
 

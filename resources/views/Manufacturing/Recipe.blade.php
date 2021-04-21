@@ -1,6 +1,6 @@
 @extends('layouts.master')
-@section('title', 'Home page')
-@section('page-title', 'Recipe')
+@section('title', 'Recipes')
+@section('page-title', 'Recipes')
 @section('content')
 
     <h1>Manufacturing Recipes</h1>
@@ -17,6 +17,12 @@
             <td>{{$recipe1->id}}</td> <!--accessing columns in db from $recipe1 variable -->
             <td>{{$recipe1->manufacturingProductName}}</td>
             <td>{{$recipe1->recipe}}</td>
+            <td>
+                <!--<a href="" class="btn btn-secondary">Update</a>-->
+            </td>
+            <td>
+                <a href="/deleteRecipe/{{$recipe1->id}}" class="btn btn-danger">Delete</a>
+            </td>
         </tr>
         @endforeach
     </table>
