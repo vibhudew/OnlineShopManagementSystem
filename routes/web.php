@@ -28,12 +28,20 @@ Route::get('/Expenses', function () {
       return view('Sales/addsales');
    });
 
-
+//kaveen work product part
 Route::get('/Products', function () {
-    return view('Product/viewproduct');
+    $data=App\Models\ProductDetails::all();
+    return view('Product/viewproduct')->with('Product1', $data);
 });
 
-//Manufacturing
+Route::get('/Products/addproduct', function () {
+    return view('Product/addproduct');
+});
+
+Route:: post('/saveProduct','AddProductController@store');
+
+//kaveen product part end
+
 Route::get('/Manufacturing1', function () {
     
     return view('Manufacturing/addRecipe');
