@@ -56,7 +56,7 @@ Route:: get('/Manufacturing',function(){
     $data=App\Models\Recipe::all();
     return view('Manufacturing/Recipe')->with('Recipe1',$data); 
 });
-
+//this calls the store function in REcipeController 
 Route:: post('/saveRecipe','RecipeController@store');
 
 Auth::routes();
