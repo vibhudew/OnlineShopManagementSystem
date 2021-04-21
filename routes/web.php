@@ -20,13 +20,15 @@ Route::get('/', function () {
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
-<<<<<<< HEAD
+
+Route::get('/AddExpenses', function () {
+    return view('Expense/add');
+});
 
  Route::get('/Sales', function () {
      return view('Sales/addsales');
  });
-=======
-<<<<<<< HEAD
+
 Route::get('/Sales', function () {
     return view('Sales/viewsales');
 });
@@ -36,8 +38,6 @@ Route::get('/Sales', function () {
 //Route::get('/Sales', function () {
 //     return view('Sales/updatesales');
 // });
-=======
->>>>>>> f1b791e322b6d2e2918fa9b59bae482d4d1792c3
 
  Route::get('/Sales', function () {
      return view('Sales/addsales');
@@ -46,10 +46,14 @@ Route::get('/Sales', function () {
 Route::get('/Sales', function () {
     return view('Sales/updatesales');
 });
->>>>>>> 9980bf0415f889d5438a03716c262972338fd752
+
 
 Route::get('/Products', function () {
     return view('Product/viewproduct');
+});
+
+Route::get('/addproducts', function () {
+    return view('Product/addproduct');
 });
 
 Route::get('/Manufacturing', function () {
@@ -59,21 +63,5 @@ Route::get('/Manufacturing', function () {
 
 Auth::routes();
 
-<<<<<<< HEAD
-=======
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> f1b791e322b6d2e2918fa9b59bae482d4d1792c3
-
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-<<<<<<< HEAD
-=======
-
-
-
-
- 
-
->>>>>>> f1b791e322b6d2e2918fa9b59bae482d4d1792c3
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
