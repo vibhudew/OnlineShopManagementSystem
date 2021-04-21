@@ -23,6 +23,8 @@ class AddsalesController extends Controller
 	    $addsales->paymentstatus=$request->paymentstatus;
         $addsales->sellstatus=$request->sellstatus;
         $addsales->save();
+        $data=addsales::all();//getting all data from addsales table to data variable to display
         //dd($request->all()); 
+        return view('Sales/viewsales')->with('viewsales1',$data );  //return addsales view with data to display
     }
 }
