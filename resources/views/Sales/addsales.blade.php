@@ -6,97 +6,63 @@
 
 @section('content')
 <div class="card">
-<div class="container">
-  <h6>Customers:</h6>
-  <select class="form-select" aria-label="Default select example">
-  <option selected>Select</option>
-  <option value="1">Shashika</option>
-  <option value="2">Hiran</option>
-  <option value="3">Kaveen</option>
-</select>
-</div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Sell Status:</h6>
-  <select class="form-select" aria-label="Default select example">
-  <option selected> Select </option>
-  <option value="1">Recieved</option>
-  <option value="2">Pending</option>
-</select>                                         
-</div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Pay Term:</h6>
-                                           
-  <select class="form-select" aria-label="Default select example">
-  <option selected> Select </option>
-  <option value="1">PIA</option>
-  <option value="2">COD</option>
-  <option value="3">EOM</option>
-</select>
-</div>
-</div>
-<div class="card ">
 <div class="container ">
-<form action="/action_page.php">
-  <div class="form-group ">
-    <h6>Invoice Id:</h6>
-    <input type="text" class="form-control " placeholder="Enter Invoice Id" id="invoice id">
-  </div>
-  </form>
-</div>
-</div>
-<div class="card">
-<div class="container">
-<div class="row">
-      <div class='col-sm-6'>
-      <h6>invoice date:</h6>
-         <input type='text' class="form-control" id='datetimepicker4' />
-      </div>
-      <script type="text/javascript">
-         $(function () {
-             $('#datetimepicker4').datetimepicker();
-         });
-      </script>
-   </div>
-  </div>
-</div>
-<div class="card ">
-<div class="container ">
-<form action="/action_page.php">
-  <div class="form-group ">
-    <h6>Total Amount(Rs.):</h6>
-    <input type="text" class="form-control " placeholder="Enter Total Amount" id="invoice id">
-  </div>
-  </form>
-</div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Payment Method:</h6>
-  <select class="form-select" aria-label="Default select example">
-  <option selected> Select </option>
-  <option value="1">Credit Cards</option>
-  <option value="2">Debit Cards</option>
-  <option value="3">Cash</option>
-  <option value="4">Checks</option>
-</select>                                         
-  </div>
-</div>
-<div class="card">
-<div class="container">
-  <h6>Payement Status:</h6>
-  <select class="form-select" aria-label="Default select example">
-  <option selected> Select </option>
-  <option value="1">Paid</option>
-  <option value="2">Due</option>
-  <option value="3">Particial</option>
-</select>
-</div>
-</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+  <form method= "post" action="/savesales">
+  {{csrf_field()}}
+      <label for="Invoiceid">Invoice ID :</label>
+      <input type="text" class="form-control" name="Invoiceid" placeholder="Enter the Invoice Id">
 
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Invoicedate">Invoice Date :</label>
+    <input type="Text" class="form-control" name="Invoicedate" placeholder="Enter the Invoice Date">
+  </div>
+  </div>
+  
+  <div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="Salespay">Sales Payment ID :</label>
+     
+      <input type="text" class="form-control" name="salespayid" placeholder="Enter the Sales Payment Id">
+
+    </div>
+
+  <div class="form-group col-md-6">
+      <label for="Totalamount">Total Amount(Rs.):</label>
+      <input type="text" class="form-control" name="totamount" placeholder="Enter The Total Amount">
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="customer">Customer:</label>
+     <input type="text" class="form-control" name="customer" placeholder="Enter Customer name">
+
+</div>
+    <div class="form-group col-md-6">
+    <label for="paymethod">Payment Method:</label>
+    <input type="text" class="form-control" name="paymentmethod" placeholder="Enter the payment method">
+
+</div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="payterm">Payment Term:</label>
+    <input type="text" class="form-control" name="payterm" placeholder="Enter the pay-term">
+
+</div>
+<div class="form-group col-md-6">
+    <label for="Paymentstatus">Payment Status:</label>
+    <input type="text" class="form-control" name="paymentstatus" placeholder="Enter the payment Status">
+</div>
+<div class="form-group col-md-6">
+    <label for="Sellstatus">Sell Status:</label>
+    <input type="text" class="form-control" name="sellstatus" placeholder="Enter the sell status">
+</div>
+<input type="submit" class="btn btn-primary" value = "Save">
+</form>
+</div>
+</div>
 
 
 

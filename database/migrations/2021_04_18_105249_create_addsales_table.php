@@ -16,7 +16,7 @@ class CreateAddsalesTable extends Migration
         Schema::create('addsales', function (Blueprint $table) {
             $table->integer('invoiceid');
             $table->string('customer');
-            $table->string('Sell Status');
+            $table->string('sellstatus');
             $table->string('payterm');
             $table->date('invoicedate');
             $table->timestamps();
