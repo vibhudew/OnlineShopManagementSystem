@@ -29,7 +29,7 @@ class AddProductController extends Controller
 
         $data= ProductDetails::all();
            
-        return view('Product/viewproduct')->with('Product1', $data);
+        return view('Product/viewproduct')->with('Product1', $data);//return product view with data to display
         //dd($request->all());
     }
 
