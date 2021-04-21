@@ -54,7 +54,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="/Products">
+                    <a href="/Product">
                       <i class="now-ui-icons shopping_shop"></i>
                       <p>Products</p>
                     </a>

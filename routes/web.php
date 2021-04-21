@@ -48,14 +48,19 @@ Route::get('/Sales', function () {
     return view('Sales/updatesales');
 });
 
-
+//kaveen work product part
 Route::get('/Products', function () {
-    return view('Product/viewproduct');
+    $data=App\Models\ProductDetails::all();
+    return view('Product/viewproduct')->with('Product1', $data);
 });
 
 Route::get('/Products/addproduct', function () {
     return view('Product/addproduct');
 });
+
+Route:: post('/saveProduct','AddProductController@store');
+
+//kaveen product part end
 
 Route::get('/Manufacturing1', function () {
     
