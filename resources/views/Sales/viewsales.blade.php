@@ -8,7 +8,7 @@
 
 <div class="container">
            
-  <table class="table table-dark table-hover">
+<table class="table table-bordered table-dark">
     <thead>
       <tr>
         <th>Invoice Id</th>
@@ -16,7 +16,7 @@
         <th>Customers</th>
         <th>Pay Term</th>
         <th>Total Amount</th>
-        <th>Payement Method</th>
+        <th>Payment Method</th>
         <th>Sell Satus</th>
         <th>Payment Status</th>
       </tr>
@@ -25,8 +25,8 @@
   </table>
  
 </div>
-<button type="button" class="btn btn-primary">ADD</button>
-  <button type="button" class="btn btn-secondary">EDIT</button>
-  <button type="button" class="btn btn-success">DELETE</button>
+<a href="/Sales1"  class="btn btn-success" >Add Sales</a>
+
+  
 
 @endsection

@@ -5,12 +5,13 @@
 @section('card-title', 'Add Sales')
 
 @section('content')
+<form method= "post" action="/savesales">
+  {{csrf_field()}}
 <div class="card">
 <div class="container ">
 <div class="form-row">
   <div class="form-group col-md-6">
-  <form method= "post" action="/savesales">
-  {{csrf_field()}}
+ 
       <label for="Invoiceid">Invoice ID :</label>
       <input type="text" class="form-control" name="Invoiceid" placeholder="Enter the Invoice Id">
 
@@ -59,10 +60,11 @@
     <label for="Sellstatus">Sell Status:</label>
     <input type="text" class="form-control" name="sellstatus" placeholder="Enter the sell status">
 </div>
-<input type="submit" class="btn btn-primary" value = "Save">
+<br>
+<input type="submit" style="float:right" class="btn btn-primary" value = "Save">
+</div>
+</div>
 </form>
-</div>
-</div>
 
 
 

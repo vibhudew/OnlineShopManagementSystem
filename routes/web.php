@@ -22,15 +22,13 @@ Route::get('/', function () {
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
-// Route::get('/Sales', function () {
-//     return view('Sales/viewsales');
-// });
-  Route::get('/Sales', function () {
-      return view('Sales/addsales');
+ Route::get('/Sales1', function () {
+     return view('Sales/viewsales');
   });
-//Route::get('/Sales', function () {
-//     return view('Sales/updatesales');
-// });
+ Route::get('/Sales1', function () {
+      return view('Sales/addsales');
+   });
+
 
 Route::get('/Products', function () {
     return view('Product/viewproduct');
@@ -56,6 +54,13 @@ Auth::routes();
  //Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+ Route:: get('/Sales',function(){
+    //We only return Recipe1 when saveing data but this view should appear other times aswell
+    $data=App\Models\addsales::all();
+    return view('Sales/viewsales')->with('viewsales1',$data); 
+});
+
 
  Route:: post('/savesales','AddsalesController@store');
  Route:: post('/savesales','AddsalespaymentsController@store');
