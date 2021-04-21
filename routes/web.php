@@ -29,7 +29,7 @@ Route::get('/Expenses', function () {
    });
 
 //kaveen work product part
-Route::get('/Products', function () {
+Route::get('/Product', function () {
     $data=App\Models\ProductDetails::all();
     return view('Product/viewproduct')->with('Product1', $data);
 });
@@ -55,6 +55,8 @@ Route:: get('/Manufacturing',function(){
 });
 //this calls the store function in REcipeController 
 Route:: post('/saveRecipe','RecipeController@store');
+
+Route::get('/deleteRecipe/{id}','RecipeController@deleterecipe');
 
 Auth::routes();
 

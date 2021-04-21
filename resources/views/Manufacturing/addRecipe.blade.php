@@ -1,6 +1,6 @@
 @extends('layouts.master')
-@section('title', 'Home page')
-@section('page-title', 'Recipe')
+@section('title', 'Add Recipe')
+@section('page-title', 'Add Recipe')
 @section('content')
 
 <h1 class="display-5">Add Product Recipe</h1>
