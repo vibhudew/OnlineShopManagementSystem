@@ -24,7 +24,7 @@
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add recipe here" name="mRecipe"></textarea>
   </div>
     <div class="text-center">
-        <input type="submit" class="btn btn-info" value="Save">
+        <input type="submit" class="btn btn-info" value="Save">     
 </div>
 </form>
 </div>
