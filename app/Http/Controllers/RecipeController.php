@@ -26,4 +26,11 @@ class RecipeController extends Controller
          return view('Manufacturing/Recipe')->with('Recipe1',$data); //return Recipe view with data to display
         
     }
+
+    public function deleterecipe($id){
+
+        $recipe=Recipe::find($id);
+        $recipe->delete();
+        return redirect()->back();
+    }
 }
