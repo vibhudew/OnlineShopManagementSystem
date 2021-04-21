@@ -72,8 +72,9 @@ Auth::routes();
     return view('Sales/viewsales')->with('viewsales1',$data); 
 });
 
-
+//this calls the store function in AddsalesController 
  Route:: post('/savesales','AddsalesController@store');
+ Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
 
 
  Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');

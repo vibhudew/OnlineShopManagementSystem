@@ -27,4 +27,10 @@ class AddsalesController extends Controller
         //dd($request->all()); 
         return view('Sales/viewsales')->with('viewsales1',$data );  //return addsales view with data to display
     }
+    public function deleteviewsales($id){
+
+        $addsales=addsales::find($id);
+        $addsales->delete();
+        return redirect()->back();
+    }
 }
