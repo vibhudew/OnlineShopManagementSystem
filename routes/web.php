@@ -18,13 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/Expenses', function () {
-    return view('Expense/view');
-});
 
-Route::get('/AddExpenses', function () {
-    return view('Expense/add');
-});
 
  Route::get('/Sales', function () {
      return view('Sales/addsales');
@@ -66,6 +60,17 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
+Route::get('/Expenses', function () {
+    return view('Expense/view');
+});
 
+Route::get('/AddExpenses', function () {
+    $data=App\Models\Ex_category::All();
+        
+    return view('/Expense/add')->with('Ex_category',$data);
+});
 
-
+Route::post('/addcategory','Expensescontroller@addexcategory');
+Route::get('/deleteexcategory/{id}','Expensescontroller@deleteexcategory');
+Route::get('/editexcategoryview/{id}','Expensescontroller@editexcategoryview');
+Route::post('/editexcategory','Expensescontroller@editexcategory');
