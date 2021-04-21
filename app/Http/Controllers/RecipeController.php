@@ -20,10 +20,10 @@ class RecipeController extends Controller
          $recipe->recipe=$request->mRecipe;
          $recipe->save();
         
-         $data=Recipe::all();//getting all data from recipes table to data variable
+         $data=Recipe::all();//getting all data from recipes table to data variable to display
          
 
-         return view('Manufacturing/Recipe')->with('Recipe1',$data); //return Recipe view with data
+         return view('Manufacturing/Recipe')->with('Recipe1',$data); //return Recipe view with data to display
         
     }
 }
