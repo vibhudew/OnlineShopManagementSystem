@@ -207,25 +207,20 @@
               </nav>
               <!-- End Navbar container mt-4 -->
               <div class="panel-header panel-header-sm">
-              </div>
-              <div class="content">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="card">
-                      <div class="card-header">
-                        <h4 class="card-title "><strong> @yield('card-title') </strong></h4>
-                      </div>
-                      <div class="card-body">
-                        
-                        <div class="">
-                            @yield('content')
-                        </div>
-                         
-                      </div>
-                    </div>
-                  </div>
+            </div>
+            <div class="content">
+              <div class="row">
+                <div class="col-md-12">
                   
+                      
+                      <div class="">
+                          @yield('content')
+                      </div>
+                       
+                   
                 </div>
+                
+              </div>
               <footer class="footer">
                 <div class=" container-fluid ">
                   <nav>
@@ -250,7 +245,7 @@
                   <div class="copyright" id="copyright">
                     &copy; <script>
                       document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-                    </script>  All rights reserved, <a href="/">Store Master</a>
+                    </script>All rights reserved, <a href="/">Store Master</a>
                   </div>
                 </div>
               </footer>

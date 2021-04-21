@@ -6,7 +6,7 @@
 
 @section('content')
 
-<input type ="button" class = "btn btn-primary" value="ADD">
+<a href="Products/addproduct" class = "btn btn-primary"> ADD </a>
 
 <table class = "table table-dark">
   <th>Product Name</th>
