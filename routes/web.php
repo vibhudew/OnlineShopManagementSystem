@@ -19,12 +19,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-<<<<<<< HEAD
 
-=======
-Route::get('/Expenses', function () {
-    return view('Expense/view');
-});
  Route::get('/Sales1', function () {
      return view('Sales/viewsales');
   });
@@ -41,7 +36,6 @@ Route::get('/Product', function () {
 Route::get('/Products/addproduct', function () {
     return view('Product/addproduct');
 });
->>>>>>> d6d1f5f17b57f54ca53c9da7db9cafcf25ff2bf6
 
 Route:: post('/saveProduct','AddProductController@store');
 
@@ -96,14 +90,16 @@ Auth::routes();
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
-
-Route::get('/AddExpenses', function () {
-    $data=App\Models\Ex_category::All();
-        
-    return view('/Expense/add')->with('Ex_category',$data);
+Route::get('/addExpenses', function () {
+    return view('Expense/add');
 });
 
-Route::post('/addcategory','Expensescontroller@addexcategory');
-Route::get('/deleteexcategory/{id}','Expensescontroller@deleteexcategory');
-Route::get('/editexcategoryview/{id}','Expensescontroller@editexcategoryview');
-Route::post('/editexcategory','Expensescontroller@editexcategory');
+Route::get('/Budget', function () {
+    $data=App\Models\Ex_category::All();
+    return view('/Expense/budget')->with('Ex_category',$data);
+});
+
+Route::post('/addcategory','Budgetcontroller@addexcategory');
+Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
+Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
+Route::post('/editexcategory','Budgetcontroller@editexcategory');
