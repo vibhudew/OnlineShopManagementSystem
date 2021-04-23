@@ -13,7 +13,7 @@ class Budgetcontroller extends Controller
 
         $this->validate($request,[
 
-            'name'=>'required|max:100|min:5',
+            'name'=>'required|max:100|min:3',
             'amount'=>'required',
             'timeline'=>'required',
             'period'=>'required',
