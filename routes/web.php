@@ -84,13 +84,6 @@ Auth::routes();
  Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
 
-
-
-
- 
-
-
-
 Route::get('/Expenses', function () {
     return view('Expense/view');
 });
