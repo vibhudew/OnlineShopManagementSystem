@@ -1,4 +1,4 @@
-@extends('layouts.Newmaster')
+@extends('layouts.NewMaster')
 
 @section('title', 'Expense')
 @section('page-title', 'Expense')
@@ -18,8 +18,8 @@
             <div class="row">
               <div class="col-md-12">
                 @foreach($errors->all() as $error)
-                <div class="alert alert-danger" role="alert">
-                  <button type="button" aria-hidden="true" class="close">
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                  <button type="button" aria-hidden="true" class="close" data-dismiss="alert">
                     <i class="now-ui-icons ui-1_simple-remove"></i>
                   </button>
                   {{$error}}

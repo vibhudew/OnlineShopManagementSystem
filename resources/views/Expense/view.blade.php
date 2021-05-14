@@ -1,4 +1,4 @@
-@extends('layouts.Newmaster')
+@extends('layouts.NewMaster')
 
 @section('title', 'Expense')
 @section('page-title', 'Expense')
@@ -12,7 +12,9 @@
         <div class="card-header">
           <h5 class="title">All Expenses</h5>
         </div>
-        <a class="btn btn-primary btn-lg" href="/addExpenses" role="button">Add Expense</a>
+        <div class="col-md-2">
+        <a class="btn btn-primary" href="/addExpenses" role="button">Add Expense</a>
+        </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">

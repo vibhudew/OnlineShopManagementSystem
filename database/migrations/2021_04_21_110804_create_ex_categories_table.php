@@ -19,7 +19,7 @@ class CreateExCategoriesTable extends Migration
             $table->integer('amount');
             $table->integer('timeline');
             $table->String('period');
-            $table->String('description');
+            $table->String('description')->nullable();
             $table->timestamps();
         });
     }

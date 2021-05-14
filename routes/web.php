@@ -107,3 +107,4 @@ Route::post('/addcategory','Budgetcontroller@addexcategory');
 Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
 Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
 Route::post('/editexcategory','Budgetcontroller@editexcategory');
+
