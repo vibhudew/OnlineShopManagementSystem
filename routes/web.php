@@ -41,6 +41,8 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
+Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+
 //kaveen product part end
 
 Route::get('/Manufacturing1', function () {
