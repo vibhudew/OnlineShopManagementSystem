@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.NewMaster')
 
 @section('title', 'Expense')
 @section('page-title', 'Expense')
@@ -6,12 +6,45 @@
 
 @section('content')
 
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="/AddExpenses" role="button">Learn more</a>
-</div>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">All Expenses</h5>
+        </div>
+        <div class="col-md-2">
+        <a class="btn btn-primary" href="/addExpenses" role="button">Add Expense</a>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Budget</th>
+                <th>timeline</th>
+                <th>Description</th>
+                <th>action</th>
+              </thead>
+              <tbody>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Category With Budget</h5>
+        </div>
+        <div class="card-body">
+          <a class="btn btn-primary btn-lg btn-block" href="/Budget" role="button">Add Expense</a>
+          
+        </div>
+    </div>
+  </div>
+
 
 @endsection

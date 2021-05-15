@@ -20,9 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/Expenses', function () {
-    return view('Expense/view');
-});
+
  Route::get('/Sales1', function () {
      return view('Sales/viewsales');
   });
@@ -82,7 +80,9 @@ Auth::routes();
 
 Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
+ Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
 
+<<<<<<< HEAD
 Route::get('/Accounts', function () {
 $data1=App\Models\Accounts::all();
     return view('Accounts/accountView')->with('Account1',$data1);
@@ -94,14 +94,26 @@ Route::get('/Accounts1', function () {
 });
 
 Route::post('/saveAccount','AccountController@store');
+=======
+ Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
+>>>>>>> 6bd2c712481fee53252210f04cd288fefb0169ce
 
 Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
+Route::get('/Expenses', function () {
+    return view('Expense/view');
+});
+Route::get('/addExpenses', function () {
+    return view('Expense/add');
+});
 
- 
+Route::get('/Budget', function () {
+    $data=App\Models\Ex_category::All();
+    return view('/Expense/budget')->with('Ex_category',$data);
+});
 
-
-
-
-
+Route::post('/addcategory','Budgetcontroller@addexcategory');
+Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
+Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
+Route::post('/editexcategory','Budgetcontroller@editexcategory');
 

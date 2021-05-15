@@ -17,12 +17,12 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'fname'=>'required',
-            'lname'=>'required',
-            'address'=>'required',
-            'nic'=>'required',
-            'mobile'=>'required',
-            'email'=>'required'       
+            'fname'=>'required |max:100|min:3',
+            'lname'=>'required|max:100|min:3',
+            'address'=>'required|max:100|min:5',
+            'nic'=>'required|max:12|min:10',
+            'mobile'=>'required|min:10',
+            'email'=>'required|min:5|max:50'    
             
         ]);
 
@@ -34,6 +34,7 @@ class EmployeeController extends Controller
             'mobile' => $request->get('mobile'),
             'email' => $request->get('email'),
         ]);
+
         $employee->save();
 
         return redirect('/HRM')->with('success', 'Employee created successfully!!!');
@@ -53,12 +54,12 @@ class EmployeeController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'fname'=>'required',
-            'lname'=>'required',
-            'address'=>'required',
-            'nic'=>'required',
-            'mobile'=>'required',
-            'email'=>'required'       
+            'fname'=>'required |max:100|min:3',
+            'lname'=>'required|max:100|min:3',
+            'address'=>'required|max:100|min:5',
+            'nic'=>'required|max:12|min:10',
+            'mobile'=>'required|min:10',
+            'email'=>'required|min:5|max:50'     
             
         ]);
 
@@ -80,6 +81,6 @@ class EmployeeController extends Controller
         $employee = Employee::find($id);
         $employee->delete();
 
-        return redirect('/HRM')->with('success', 'Contact deleted successfully!');
+        return redirect('/HRM')->with('success', 'Employee deleted successfully!');
     }
 }
