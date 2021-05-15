@@ -85,7 +85,7 @@
                   </a>
                 </li>
                   <li>
-                  <a href="/Expenses">
+                  <a href="/expense-categories">
                     <i class="now-ui-icons business_money-coins"></i>
                     <p>Expenses</p>
                   </a>
@@ -211,17 +211,29 @@
             </div>
             <div class="content">
               <div class="row">
-                <div class="col-md-12">
-                  
-                      
-                      <div class="">
+                    <div class="col-md-8">
+                      <div class="card">
+                        <div class="card-header">
+                          <h5 class="title">@yield('bigtitle')</h5>
+                        </div>
+                        <div class="card-body">
                           @yield('content')
                       </div>
-                       
-                   
+                    </div>
+                  </div>
+              
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="title">@yield('sidetitle')</h5>
+                    </div>
+                    <div class="card-body">
+                      @yield('sidecontent')
+                    </div>
+                  </div>
                 </div>
-                
               </div>
+
               <footer class="footer">
                 <div class=" container-fluid ">
                   <nav>

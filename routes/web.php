@@ -84,6 +84,8 @@ Auth::routes();
  Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
 
+ 
+
 
 
 
@@ -103,8 +105,12 @@ Route::get('/Budget', function () {
     return view('/Expense/budget')->with('Ex_category',$data);
 });
 
-Route::post('/addcategory','Budgetcontroller@addexcategory');
-Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
-Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
-Route::post('/editexcategory','Budgetcontroller@editexcategory');
 
+    //Expense Categories...
+    Route::resource('expense-categories', 'ExpenseCategoryController');
+    Route::post('/addcategory','ExpenseCategoryController@store');
+    Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
+    Route::post('/editexcategory','ExpenseCategoryController@update');
+    Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+    //Expenses...
+    Route::resource('expenses', 'ExpenseController');
