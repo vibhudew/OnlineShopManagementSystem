@@ -42,6 +42,8 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
+Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+
 //kaveen product part end
 
 Route::get('/Manufacturing1', function () {
@@ -76,16 +78,23 @@ Auth::routes();
 //this calls the store function in AddsalesController 
  Route:: post('/savesales','AddsalesController@store');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
+ Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
+ Route::post('/editsales','AddsalesController@editviewsales');
+
+
 
 
 Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
 
-Route::get('/Accounts', function () {
-$data1=App\Models\Accounts::all();
-    return view('Accounts/accountView')->with('Account1',$data1);
-});
+ Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
+
+
+ 
+
+
+
 
 Route::get('/Accounts1', function () {
     
