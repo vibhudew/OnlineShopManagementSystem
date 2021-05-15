@@ -204,10 +204,9 @@
                     </ul>
                   </div>
                 </div>
-               
               </nav>
               <!-- End Navbar container mt-4 -->
-              <div class="panel-header panel-header-sm">
+            <div class="panel-header panel-header-sm">
             </div>
             <div class="content">
               <div class="row">
@@ -221,7 +220,7 @@
                       </div>
                     </div>
                   </div>
-              
+
                 <div class="col-md-4">
                   <div class="card">
                     <div class="card-header">
@@ -233,6 +232,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
               <footer class="footer">
                 <div class=" container-fluid ">

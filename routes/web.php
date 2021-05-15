@@ -82,20 +82,10 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
 
-<<<<<<< HEAD
- Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
-
-
- 
-
-
-
-=======
 Route::get('/Accounts', function () {
 $data1=App\Models\Accounts::all();
     return view('Accounts/accountView')->with('Account1',$data1);
 });
->>>>>>> 7032183850ac8314b7a6464d09a709575f18aa0b
 
 Route::get('/Accounts1', function () {
     
@@ -106,18 +96,6 @@ Route::post('/saveAccount','AccountController@store');
 
 Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
-Route::get('/Expenses', function () {
-    return view('Expense/view');
-});
-Route::get('/addExpenses', function () {
-    return view('Expense/add');
-});
-
-Route::get('/Budget', function () {
-    $data=App\Models\Ex_category::All();
-    return view('/Expense/budget')->with('Ex_category',$data);
-});
-
 
     //Expense Categories...
     Route::resource('expense-categories', 'ExpenseCategoryController');
@@ -125,5 +103,18 @@ Route::get('/Budget', function () {
     Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
     Route::post('/editexcategory','ExpenseCategoryController@update');
     Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+    Route::post('/expense-categories','ExpenseCategoryController@index');
     //Expenses...
     Route::resource('expenses', 'ExpenseController');
+
+    Route::get('/expense', function () {
+        return view('expense/index');
+    });
+
+    Route::get('/addexpense', function () {
+        return view('expense/create');
+    });
+
+    Route::get('/editexpense', function () {
+        return view('expense/edit');
+    });
