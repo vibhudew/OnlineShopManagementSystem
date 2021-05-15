@@ -54,7 +54,7 @@ class AddsalesController extends Controller
         $addsales->sellstatus=$request->sellstatus;
         $addsales->save();
         $addsales=addsales::all();
-        return view('Sales/viewsales')->with('viewsales1', $addsales );
+        return view('Sales/viewsales')->with('editsale', $addsales );
 
     }
 

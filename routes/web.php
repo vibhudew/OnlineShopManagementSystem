@@ -88,7 +88,6 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
 
-<<<<<<< HEAD
  Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
 
@@ -96,12 +95,6 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
 
 
-=======
-Route::get('/Accounts', function () {
-$data1=App\Models\Accounts::all();
-    return view('Accounts/accountView')->with('Account1',$data1);
-});
->>>>>>> 7032183850ac8314b7a6464d09a709575f18aa0b
 
 Route::get('/Accounts1', function () {
     
