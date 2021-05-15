@@ -3,53 +3,17 @@
 @section('title', 'Expense')
 @section('page-title', 'Expense')
 @section('card-title', 'All Expense')
-
+@section('sidetitle','All')
 @section('content')
 
   <div class="row">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">
-          <h5 class="title">All Expense Category With Budget</h5>
-        </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table">
-              <thead class=" text-primary">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Budget</th>
-                <th>timeline</th>
-                <th>Description</th>
-                <th>action</th>
-              </thead>
-              <tbody>
-                @foreach ($Ex_category as $ex_category)
-                <tr>
-                  <td>{{$ex_category->id}}</td>
-                  <td>{{$ex_category->name}}</td>
-                  <td>{{$ex_category->amount}}</td>
-                  <td>{{$ex_category->timeline}}{{$ex_category->period}}</td>
-                  <td>{{$ex_category->description}}</td>
-                  <td>
-                    <a class="btn btn-success" href="/editexcategoryview/{{$ex_category->id}}" role="button" value="">Edit</a>
-                    <a class="btn btn-danger" href="/deleteexcategory/{{$ex_category->id}}" role="button" value="">Delete</a>
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="col-md-4">
       <div class="card">
         <div class="card-header">
           <h5 class="title">Add Category With Budget</h5>
         </div>
         <div class="card-body">
-          <form method="POST" action="/addcategory">
+          <form method="POST" action="ExpenseCategoryController@store">
             {{ csrf_field() }}
             <div class="row">
               <div class="col-md-12">
@@ -87,7 +51,7 @@
                   <label>Period</label>
                   <input class="form-control" list="Options" name="period" id="brand" placeholder="Select Your Budget Timeline">
                   <datalist id="Options">
-                      <option value="Day"">
+                      <option value="Day">
                       <option value="Month">
                       <option value="Year">
                   </datalist>

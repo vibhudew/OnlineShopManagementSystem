@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,12 +80,33 @@ Auth::routes();
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
 
 
- Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
 
+<<<<<<< HEAD
  Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
+
+ 
+
+
+
+=======
+Route::get('/Accounts', function () {
+$data1=App\Models\Accounts::all();
+    return view('Accounts/accountView')->with('Account1',$data1);
+});
+>>>>>>> 7032183850ac8314b7a6464d09a709575f18aa0b
+
+Route::get('/Accounts1', function () {
+    
+    return view('Accounts/addAccount');
+});
+
+Route::post('/saveAccount','AccountController@store');
+
+Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
 Route::get('/Expenses', function () {
     return view('Expense/view');
@@ -98,8 +120,12 @@ Route::get('/Budget', function () {
     return view('/Expense/budget')->with('Ex_category',$data);
 });
 
-Route::post('/addcategory','Budgetcontroller@addexcategory');
-Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
-Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
-Route::post('/editexcategory','Budgetcontroller@editexcategory');
 
+    //Expense Categories...
+    Route::resource('expense-categories', 'ExpenseCategoryController');
+    Route::post('/addcategory','ExpenseCategoryController@store');
+    Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
+    Route::post('/editexcategory','ExpenseCategoryController@update');
+    Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+    //Expenses...
+    Route::resource('expenses', 'ExpenseController');
