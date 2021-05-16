@@ -81,7 +81,8 @@ Auth::routes();
 Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
-
+ 
+//Madushi
 Route::get('/Accounts', function () {
 $data1=App\Models\Accounts::all();
     return view('Accounts/accountView')->with('Account1',$data1);
