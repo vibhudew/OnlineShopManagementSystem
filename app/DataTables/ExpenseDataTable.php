@@ -46,7 +46,10 @@ class ExpenseDataTable extends DataTable
                     ->setTableId('expense-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    ->orderBy(1);
+                    ->dom('Bfrtip')
+                    ->orderBy(1)
+        
+                    ;
 
     }
 
