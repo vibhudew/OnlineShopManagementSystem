@@ -85,7 +85,7 @@
                   </a>
                 </li>
                   <li>
-                  <a href="/Expenses">
+                  <a href="/expense-categories">
                     <i class="now-ui-icons business_money-coins"></i>
                     <p>Expenses</p>
                   </a>

@@ -42,6 +42,8 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
+Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+
 //kaveen product part end
 
 Route::get('/Manufacturing1', function () {
@@ -76,17 +78,23 @@ Auth::routes();
 //this calls the store function in AddsalesController 
  Route:: post('/savesales','AddsalesController@store');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
+ Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
+ Route::post('/editsales','AddsalesController@editviewsales');
+
+
 
 
 Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
+
+ Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
+
+
  
-//Madushi
-Route::get('/Accounts', function () {
-$data1=App\Models\Accounts::all();
-    return view('Accounts/accountView')->with('Account1',$data1);
-});
+
+
+
 
 Route::get('/Accounts1', function () {
     
@@ -97,20 +105,25 @@ Route::post('/saveAccount','AccountController@store');
 
 Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
-Route::get('/Expenses', function () {
-    return view('Expense/view');
-});
-Route::get('/addExpenses', function () {
-    return view('Expense/add');
-});
 
-Route::get('/Budget', function () {
-    $data=App\Models\Ex_category::All();
-    return view('/Expense/budget')->with('Ex_category',$data);
-});
+    //Expense Categories...
+    Route::resource('expense-categories', 'ExpenseCategoryController');
+    Route::post('/addcategory','ExpenseCategoryController@store');
+    Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
+    Route::post('/editexcategory','ExpenseCategoryController@update');
+    Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+    Route::post('/expense-categories','ExpenseCategoryController@index');
+    //Expenses...
+    Route::resource('expenses', 'ExpenseController');
 
-Route::post('/addcategory','Budgetcontroller@addexcategory');
-Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
-Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
-Route::post('/editexcategory','Budgetcontroller@editexcategory');
+    Route::get('/expense', function () {
+        return view('expense/index');
+    });
 
+    Route::get('/addexpense', function () {
+        return view('expense/create');
+    });
+
+    Route::get('/editexpense', function () {
+        return view('expense/edit');
+    });
