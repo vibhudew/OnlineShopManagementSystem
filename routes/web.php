@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AccountController;
 
@@ -114,11 +115,9 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
     Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
     Route::post('/expense-categories','ExpenseCategoryController@index');
     //Expenses...
-    Route::resource('expenses', 'ExpenseController');
+  //  Route::resource('expenses', 'ExpenseController');
 
-    Route::get('/expense', function () {
-        return view('expense/index');
-    });
+    Route::get('/expense', [ExpenseController::class ,'index']);
 
     Route::get('/addexpense', function () {
         return view('expense/create');
