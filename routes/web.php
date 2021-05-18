@@ -128,6 +128,11 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
     //Expenses...
   //  Route::resource('expenses', 'ExpenseController');
     Route::get('/expense', [ExpenseController::class ,'index']);
+    Route::post('/addexpense','ExpenseController@store');
+    Route::get('/editexpenseview/{id}','ExpenseController@edit');
+    Route::post('/editexpense','ExpenseController@update');
+    Route::get('/deleteexpense/{id}','ExpenseController@destroy');
+    Route::get('/createexpense','ExpenseController@create');
 
     Route::get('/addexpense', function () {
         return view('expense/create');
