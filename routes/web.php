@@ -29,7 +29,11 @@ Route::get('/', function () {
       return view('Sales/addsales');
    });
 
+
 //kaveen work product part
+
+
+
 Route::get('/Product', function () {
     $data=App\Models\ProductDetails::all();
     return view('Product/viewproduct')->with('Product1', $data);
@@ -43,9 +47,16 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
-Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+Route::get('/updateProduct/{Productid}','AddProductController@updateProductView');
+
+Route::post('/updateItems','AddProductController@updateProduct');
+
+Route::get('/search', 'AddProductController@search');
 
 //kaveen product part end
+
+
+
 
 Route::get('/Manufacturing1', function () {
     
@@ -117,8 +128,41 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
     //Expenses...
   //  Route::resource('expenses', 'ExpenseController');
     Route::get('/expense', [ExpenseController::class ,'index']);
-    Route::post('/addexpense','ExpenseController@store');
-    Route::get('/editexpenseview/{id}','ExpenseController@edit');
-    Route::post('/editexpense','ExpenseController@update');
-    Route::get('/deleteexpense/{id}','ExpenseController@destroy');
-    Route::get('/createexpense','ExpenseController@create');
+
+    Route::get('/addexpense', function () {
+        return view('expense/create');
+    });
+
+    Route::get('/editexpense', function () {
+        return view('expense/edit');
+    });
+
+     //miyelandi 
+     Route::get('/Purchase1', function () {
+        return view('Purchase/viewpurchase');
+     });
+    Route::get('/Purchase1', function () {
+         return view('Purchase/addpurchase');
+      });
+
+      Route:: get('/Purchase',function(){
+        //We only return viewsales1 when saving data but this view should appear other times aswell
+        $data=App\Models\addpurchase::all();
+        return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+    });
+    
+    //this calls the store function in AddsalesController 
+     Route:: post('/savepurchase','AddPurchaseController@store');
+     Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
+     Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
+     Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
+    //We only return viewsales1 when saving data but this view should appear other times aswell
+    $data=App\Models\addpurchase::all();
+    return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+});
+
+//this calls the store function in AddsalesController 
+ Route:: post('/savepurchase','AddPurchaseController@store');
+ Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
+ Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
+ Route::post('/editpurchase','AddPurchaseController@editviewpurchase');

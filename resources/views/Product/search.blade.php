@@ -9,7 +9,6 @@
 
 <a href="Products/addproduct" class = "btn btn-primary"> ADD PRODUCT </a>
 
-
 <form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
   
   <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search Product" aria-label="Search">
@@ -34,22 +33,22 @@
           <th>Action</th>
       </thead>
       <tbody>
-      @foreach($Product1 as $product1)
+      @foreach($ProductDetails as $ProductDetails)
         <tr style="text-align: center">
-          <td>{{$product1->id}}</td>
-     <!-- <td>{{$product1->Productid}}</td> -->
-          <td>{{$product1->ProductName}}</td>
-          <td>{{$product1->Unit}}</td>
-          <td>{{$product1->Brand}}</td>
-          <td>{{$product1->Category}}</td>
-          <td>{{$product1->SubCategory}}</td>
-          <td>{{$product1->DefaultPurchasePrice}}</td>
-          <td>{{$product1->DefaultSellingPrice}}</td>
-          <td>{{$product1->ProductDescription}}</td>
+          <td>{{$ProductDetails->id}}</td>
+     <!-- <td>{{$ProductDetails->Productid}}</td> -->
+          <td>{{$ProductDetails->ProductName}}</td>
+          <td>{{$ProductDetails->Unit}}</td>
+          <td>{{$ProductDetails->Brand}}</td>
+          <td>{{$ProductDetails->Category}}</td>
+          <td>{{$ProductDetails->SubCategory}}</td>
+          <td>{{$ProductDetails->DefaultPurchasePrice}}</td>
+          <td>{{$ProductDetails->DefaultSellingPrice}}</td>
+          <td>{{$ProductDetails->ProductDescription}}</td>
 
           <td>
-            <a href="/deleteProduct/{{$product1->id}}" class="btn btn-warning">Delete</a>
-            <a href="/updateProduct/{{$product1->id}}" class="btn btn-success">Update</a>
+            <a href="/deleteProduct/{{$ProductDetails->id}}" class="btn btn-warning">Delete</a>
+            <a href="/updateProduct/{{$ProductDetails->id}}" class="btn btn-success">Update</a>
           </td>
         </tr>
       @endforeach
