@@ -19,7 +19,7 @@ class CreateExpensesTable extends Migration
             $table->string('category');
             $table->string('date');
             $table->decimal('amount');
-            $table->string('contact');
+            $table->string('ontact');
             $table->string('description')->nullable();
             $table->timestamps();
         });

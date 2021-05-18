@@ -26,7 +26,7 @@
           <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
           <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
           <script src="/vendor/datatables/buttons.server-side.js"></script>
-
+          <script src="http://127.0.0.1:8000/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
         </head>
         
         <body class="">
