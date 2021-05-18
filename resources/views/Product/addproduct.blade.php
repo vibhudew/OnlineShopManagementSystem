@@ -84,5 +84,6 @@
   </div>
 
   <input type ="submit" class="btn btn-primary" value="SAVE">
+
 </form>
 @endsection

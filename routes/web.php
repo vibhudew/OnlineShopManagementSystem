@@ -29,7 +29,11 @@ Route::get('/', function () {
       return view('Sales/addsales');
    });
 
+
 //kaveen work product part
+
+
+
 Route::get('/Product', function () {
     $data=App\Models\ProductDetails::all();
     return view('Product/viewproduct')->with('Product1', $data);
@@ -43,9 +47,16 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
-Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+Route::get('/updateProduct/{Productid}','AddProductController@updateProductView');
+
+Route::post('/updateItems','AddProductController@updateProduct');
+
+Route::get('/search', 'AddProductController@search');
 
 //kaveen product part end
+
+
+
 
 Route::get('/Manufacturing1', function () {
     
