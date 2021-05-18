@@ -17,6 +17,10 @@
           <link href="http://127.0.0.1:8000/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
           <!-- CSS Just for demo purpose, don't include it in your project -->
           <link href="http://127.0.0.1:8000/assets/demo/demo.css" rel="stylesheet" />
+          <!--JQuery files-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/salesitems.js') }}" defer></script>
 
         </head>
         

@@ -84,6 +84,7 @@ Auth::routes();
 
 
 
+
 Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
  Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
