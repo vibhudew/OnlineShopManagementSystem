@@ -102,8 +102,14 @@
                     <p>HRM</p>
                   </a>
                 </li>
+                <li>
+                  <a href="/fullcalender">
+                    <i class="now-ui-icons ui-1_calendar-60"></i>
+                    <p>Calender</p>
+                  </a>
+                </li>
          <!--        <li class="active-pro">
-                    <a href="/">
+                    <a href="/">fullcalender
                       <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                       <p>Upgrade to PRO</p>
                     </a>
@@ -143,8 +149,8 @@
                     </form>
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                          <i class="now-ui-icons media-2_sound-wave"></i>
+                        <a class="nav-link" href="/fullcalender">
+                          <i class="now-ui-icons ui-1_calendar-60"></i>
                           <p>
                             <span class="d-lg-none d-md-block">Stats</span>
                           </p>

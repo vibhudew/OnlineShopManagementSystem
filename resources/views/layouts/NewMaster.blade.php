@@ -105,6 +105,12 @@
                     <p>HRM</p>
                   </a>
                 </li>
+                <li>
+                  <a href="/fullcalender">
+                    <i class="now-ui-icons ui-1_calendar-60"></i>
+                    <p>Calender</p>
+                  </a>
+                </li>
          <!--        <li class="active-pro">
                     <a href="/">
                       <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -126,7 +132,7 @@
                         <span class="navbar-toggler-bar bar3"></span>
                       </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">@yield('page-title')</a>
+                    <a class="navbar-brand" href="/home">@yield('page-title')</a>
                   </div>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -146,8 +152,8 @@
                     </form>
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                          <i class="now-ui-icons media-2_sound-wave"></i>
+                        <a class="nav-link" href="/fullcalender">
+                          <i class="now-ui-icons ui-1_calendar-60"></i>
                           <p>
                             <span class="d-lg-none d-md-block">Stats</span>
                           </p>

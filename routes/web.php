@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\FullCalenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,22 +127,15 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
     Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
     Route::post('/expense-categories','ExpenseCategoryController@index');
     //Expenses...
-  //  Route::resource('expenses', 'ExpenseController');
     Route::get('/expense', [ExpenseController::class ,'index']);
     Route::post('/addexpense','ExpenseController@store');
     Route::get('/editexpenseview/{id}','ExpenseController@edit');
     Route::post('/editexpense','ExpenseController@update');
     Route::get('/deleteexpense/{id}','ExpenseController@destroy');
     Route::get('/createexpense','ExpenseController@create');
-
-    Route::get('/addexpense', function () {
-        return view('expense/create');
-    });
-
-    Route::get('/editexpense', function () {
-        return view('expense/edit');
-    });
-
+    //Calender...
+    Route::get('fullcalender', [FullCalenderController::class, 'index']);
+    Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
      //miyelandi 
      Route::get('/Purchase1', function () {
         return view('Purchase/viewpurchase');
