@@ -61,5 +61,12 @@ class AddsalesController extends Controller
 
     }
 
+    public function search(){
+        $search_text  =$_GET['query'];
+        $addsales =addsales::where('customer','LIKE','%'.$search_text.'%')->get();
+        return view('Sales/search', compact('addsales'));
+
+}
+
 }
 

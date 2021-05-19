@@ -80,6 +80,7 @@ Auth::routes();
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
+ Route::get('/search' ,'AddsalesController@search');
 
 
 

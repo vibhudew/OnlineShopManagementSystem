@@ -14,6 +14,10 @@
   @endforeach
 
 
+  <form class = form-inline my-2 my-lg-0 type="get" action="{{url('/search')}}">
+                      <input class="form-control mr-sm-2" type="search"  name ="query" placeholder="search Sales">
+                      <button type="submit"  class="btn btn-outline-success my-2-sm-0" >Search</button>
+  </form>
 
 <div class="content">
         <div class="row">
@@ -110,7 +114,7 @@
               <tr>
                 <td colspan="3"></td>
                 <td>
-                  <strong>VAT(%):</strong>
+                  <strong>Discount(%):</strong>
                 </td>
                 <td>
                   <input type="text" name="" class="form-control" id="vat">
@@ -120,7 +124,7 @@
               <tr>
                 <td colspan="3"></td>
                 <td>
-                  <strong>VAT+Sub Total:</strong>
+                  <strong>Discounted Total:</strong>
                 </td>
                 <td>
                   <input type="text" name="" class="form-control" id="vatsubtotal" value="0.00" readonly>
@@ -154,7 +158,7 @@
 
       var vInput = ((vInput*subtotal)/100);
 
-      var vstotal = (parseFloat(subtotal)+parseFloat(vInput)).toFixed(1);
+      var vstotal = (parseFloat(subtotal)-parseFloat(vInput)).toFixed(1);
       $('#vatsubtotal').val(vstotal);
       });
 
