@@ -4,12 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
-<<<<<<< HEAD
 use App\Models\Contact;
-=======
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FullCalenderController;
->>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
 
 /*
 |--------------------------------------------------------------------------
@@ -26,18 +23,14 @@ Route::get('/Contacts',function (){
    $data=Contact::All();
    return view('/Contacts/view')->with('Contact',$data);
 });
-
-<<<<<<< HEAD
 Route::get('/contact/add',function (){
-     return view('/Contacts/add');
-  });
+    return view('/Contacts/add');
+ });
 
 Route::post('/saveContact','ContactController@store');
 
 Route::get('/deletecontact/{id}','ContactController@deletecontact');
 Route::get('/updatecontact/{id}','ContactController@updatecontactview');
-=======
->>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
 
  Route::get('/Sales1', function () {
      return view('Sales/viewsales');
@@ -96,9 +89,7 @@ Route:: post('/saveRecipe','RecipeController@store');
 
 Route::get('/deleteRecipe/{id}','RecipeController@deleterecipe');
 
-<<<<<<< HEAD
  Auth::routes();
-=======
 Route::get('/search','RecipeController@search');
 Route::get('/search2','RecipeController@search2');
 
@@ -106,7 +97,7 @@ Route::get('/insertManufacts', function (){
     $data=App\Models\Recipe::all();
     return view('Manufacturing/insertManufact')->with('manuData',$data);
   });
-Route::post('/saveManufact','RecipeController@manufacturing'); 
+Route::post('/saveManufact','RecipeController@manufacturing');
 
 Route::get('/displayManufact', function (){
     $data2=App\Models\Manufact::all();
@@ -122,8 +113,7 @@ Route::post('/updateRecipe2','RecipeController@updateRecipe2');
 //manufacturing part end
 
 
-Auth::routes();
->>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
+
 
 
  Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -154,15 +144,12 @@ Auth::routes();
  Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
  Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
-<<<<<<< HEAD
 
-=======
  //HRM Reports
- 
->>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
+
 
 Route::get('/Accounts1', function () {
-    
+
     return view('Accounts/addAccount');
 });
 
@@ -191,7 +178,7 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     //Calender...
     Route::get('fullcalender', [FullCalenderController::class, 'index']);
     Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
-     //miyelandi 
+     //miyelandi
      Route::get('/Purchase1', function () {
         return view('Purchase/viewpurchase');
      });
@@ -202,20 +189,20 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
       Route:: get('/Purchase',function(){
         //We only return viewsales1 when saving data but this view should appear other times aswell
         $data=App\Models\addpurchase::all();
-        return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+        return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
     });
-    
-    //this calls the store function in AddsalesController 
+
+    //this calls the store function in AddsalesController
      Route:: post('/savepurchase','AddPurchaseController@store');
      Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
      Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
      Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
     //We only return viewsales1 when saving data but this view should appear other times aswell
     $data=App\Models\addpurchase::all();
-    return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+    return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
 });
 
-//this calls the store function in AddsalesController 
+//this calls the store function in AddsalesController
  Route:: post('/savepurchase','AddPurchaseController@store');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
