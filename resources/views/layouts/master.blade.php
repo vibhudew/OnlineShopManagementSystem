@@ -7,6 +7,7 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
             <title>Storemaster - @yield('title')</title>
+<<<<<<< HEAD
 
           <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
           <!--     Fonts and icons     -->
@@ -17,6 +18,25 @@
           <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
           <!-- CSS Just for demo purpose, don't include it in your project -->
           <link href="../assets/demo/demo.css" rel="stylesheet" />
+=======
+          
+            <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+            <link href="http://127.0.0.1:8000/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+            <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+            <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+            <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+            <link src='https://cdn.datatables.net/buttons/1.7.0/css/buttons.bootstrap4.min.css'>
+            <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
+            <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
+            <script src="/vendor/datatables/buttons.server-side.js"></script>
+            <script src="http://127.0.0.1:8000/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+>>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
         </head>
 
         <body class="">
@@ -84,7 +104,7 @@
                   </a>
                 </li>
                   <li>
-                  <a href="/Expenses">
+                  <a href="/expense">
                     <i class="now-ui-icons business_money-coins"></i>
                     <p>Expenses</p>
                   </a>
@@ -95,8 +115,14 @@
                     <p>HRM</p>
                   </a>
                 </li>
+                <li>
+                  <a href="/fullcalender">
+                    <i class="now-ui-icons ui-1_calendar-60"></i>
+                    <p>Calender</p>
+                  </a>
+                </li>
          <!--        <li class="active-pro">
-                    <a href="/">
+                    <a href="/">fullcalender
                       <i class="now-ui-icons arrows-1_cloud-download-93"></i>
                       <p>Upgrade to PRO</p>
                     </a>
@@ -136,8 +162,8 @@
                     </form>
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                          <i class="now-ui-icons media-2_sound-wave"></i>
+                        <a class="nav-link" href="/fullcalender">
+                          <i class="now-ui-icons ui-1_calendar-60"></i>
                           <p>
                             <span class="d-lg-none d-md-block">Stats</span>
                           </p>
@@ -224,7 +250,11 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
 
+=======
+                </div>
+>>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
                 </div>
               <footer class="footer">
                 <div class=" container-fluid ">
@@ -254,6 +284,7 @@
                   </div>
                 </div>
               </footer>
+<<<<<<< HEAD
             </div>
           </div>
           <!--   Core JS Files   -->
@@ -279,5 +310,7 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+=======
+>>>>>>> 2d001a1197152e6a0b331d175b42ef8b0c31186d
      </body>
 </html>

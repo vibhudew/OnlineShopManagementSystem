@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-@section('title', 'Expense')
-@section('page-title', 'Expense')
-@section('card-title', 'All Expense')
+@section('title', 'Purchase')
+@section('page-title', 'Purchase')
+@section('card-title', 'Remove Purchase')
 
 @section('content')
 
@@ -11,7 +11,7 @@
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="/AddExpenses" role="button">Learn more</a>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
 
 @endsection
