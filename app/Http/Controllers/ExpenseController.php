@@ -25,7 +25,7 @@ class ExpenseController extends Controller
      */
     public function create()
     {
-        //
+        return view('expense.create');
     }
 
     /**
@@ -36,7 +36,25 @@ class ExpenseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $expense= new Expense;
+
+        $this->validate($request,[
+
+            'name'=>'required|max:100|min:3',
+
+        ]);
+
+        $expense->name=$request->name;
+        $expense->category=$request->category;
+        $expense->date=$request->date;
+        $expense->amount=$request->amount;
+        $expense->contact=$request->contact;
+        $expense->description=$request->description;
+        $expense->save();
+
+        
+        return redirect()->back();
     }
 
     /**
@@ -79,8 +97,10 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Expense $expense)
+    public function destroy($id)
     {
-        //
+        Expense::find($id)->delete($id);
+  
+        return redirect()->back();
     }
 }
