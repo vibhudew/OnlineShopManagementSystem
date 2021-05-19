@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "barryvdh/laravel-dompdf": "^0.9.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -13,18 +14,10 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "yajra/laravel-datatables": "^1.5",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "yajra/laravel-datatables-buttons": "^4.13"
-=======
         "yajra/laravel-datatables-buttons": "^4.13",
         "yajra/laravel-datatables-oracle": "^9.18"
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-        "yajra/laravel-datatables-buttons": "^4.13",
-        "yajra/laravel-datatables-oracle": "^9.18"
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     },
+    
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
