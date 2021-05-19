@@ -16,9 +16,13 @@
         "yajra/laravel-datatables": "^1.5",
         "yajra/laravel-datatables-buttons": "^4.13",
         "yajra/laravel-datatables-oracle": "^9.18"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 24ec6163582ce344bf21f738dbf4c38a0ec54f5b
     },
+    
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
