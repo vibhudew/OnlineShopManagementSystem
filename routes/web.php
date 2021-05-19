@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EmployeeController;
+use App\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,20 @@ use App\Http\Controllers\EmployeeController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/Contacts',function (){
+   $data=Contact::All();
+   return view('/Contacts/view')->with('Contact',$data);
 });
 
-Route::get('/Expenses', function () {
-    return view('Expense/view');
-});
+Route::get('/contact/add',function (){
+     return view('/Contacts/add');
+  });
+
+Route::post('/saveContact','ContactController@store');
+
+Route::get('/deletecontact/{id}','ContactController@deletecontact');
+Route::get('/updatecontact/{id}','ContactController@updatecontactview');
+
  Route::get('/Sales1', function () {
      return view('Sales/viewsales');
   });
@@ -46,7 +54,7 @@ Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 //kaveen product part end
 
 Route::get('/Manufacturing1', function () {
-    
+
     return view('Manufacturing/addRecipe');
 });
 
@@ -54,27 +62,27 @@ Route::get('/Manufacturing1', function () {
 Route:: get('/Manufacturing',function(){
     //We only return Recipe1 when saveing data but this view should appear other times aswell
     $data=App\Models\Recipe::all();
-    return view('Manufacturing/Recipe')->with('Recipe1',$data); 
+    return view('Manufacturing/Recipe')->with('Recipe1',$data);
 });
-//this calls the store function in REcipeController 
+//this calls the store function in REcipeController
 Route:: post('/saveRecipe','RecipeController@store');
 
 Route::get('/deleteRecipe/{id}','RecipeController@deleterecipe');
 
-Auth::routes();
+ Auth::routes();
 
 
- //Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route:: get('/Sales',function(){
     //We only return viewsales1 when saving data but this view should appear other times aswell
     $data=App\Models\addsales::all();
-    return view('Sales/viewsales')->with('viewsales1',$data); 
+    return view('Sales/viewsales')->with('viewsales1',$data);
 });
 
-//this calls the store function in AddsalesController 
+//this calls the store function in AddsalesController
  Route:: post('/savesales','AddsalesController@store');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
 
@@ -85,7 +93,7 @@ Auth::routes();
 
 
 
- 
+
 
 
 
