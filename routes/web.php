@@ -131,6 +131,7 @@ Route::post('/updateRecipe2','RecipeController@updateRecipe2');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
+ Route::get('/search' ,'AddsalesController@search');
 
 
 
@@ -138,6 +139,8 @@ Route::post('/updateRecipe2','RecipeController@updateRecipe2');
     Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
     Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
     Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
+
+
 
 //HRM Search Routes
  Route::get('/searchEmployee','\App\Http\Controllers\EmployeeController@searchEmployee');

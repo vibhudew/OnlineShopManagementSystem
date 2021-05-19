@@ -229,7 +229,12 @@
                         <h4 class="card-title "><strong> @yield('card-title') </strong></h4>
                       </div>
                       <div class="card-body">
+<<<<<<< HEAD
+                     
+                        
+=======
 
+>>>>>>> e2b1933a3ab3a6fb77fccdab65351167e33927f7
                         <div class="">
                             @yield('content')
                         </div>
