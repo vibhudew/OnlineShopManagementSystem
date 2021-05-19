@@ -103,12 +103,19 @@ Auth::routes();
 
 
 
-
 //HRM Routes
     Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
     Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
     Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
+<<<<<<< HEAD
+//HRM Routes
+    Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+    Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
+    Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
+
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 //HRM Search Routes
  Route::get('/searchEmployee','\App\Http\Controllers\EmployeeController@searchEmployee');
  Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
