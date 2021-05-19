@@ -41,6 +41,10 @@
         <td>{{$Account2->Note}}</td>
         <td>
             <a href="/deleteAccount/{{$Account2 -> id}}" class="btn btn-warning">Delete</a>
+        </td> 
+
+         <td>
+            <a href="/accountUpdate/{{$Account2 -> id}}" class="btn btn-warning">Edit</a>
         </td>    
         
     </tr>

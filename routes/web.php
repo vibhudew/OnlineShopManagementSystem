@@ -91,20 +91,6 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
  Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
 
- 
-
-
-
-
-Route::get('/Accounts1', function () {
-    
-    return view('Accounts/addAccount');
-});
-
-Route::post('/saveAccount','AccountController@store');
-
-Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
-
 
     //Expense Categories...
     Route::resource('expense-categories', 'ExpenseCategoryController');
@@ -127,3 +113,26 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
     Route::get('/editexpense', function () {
         return view('expense/edit');
     });
+
+
+
+    //Madushi
+
+Route::get('/Accounts', function () {
+    $data=App\Models\Accounts::all();
+    return view('Accounts/accountView')->with('Account1', $data);
+});
+
+Route::get('/Accounts1', function () {
+    return view('Accounts/addAccount');
+});
+
+Route:: post('/saveAccount','AccountController@store');
+
+Route::get('/deleteAccount/{id}','AccountController@deleteAccount');
+
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
+
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
+Route::post('/accountUpdate2','AccountController@accountUpdate2');
+
