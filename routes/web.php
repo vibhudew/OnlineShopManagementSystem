@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\FullCalenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +30,11 @@ Route::get('/', function () {
       return view('Sales/addsales');
    });
 
+
 //kaveen work product part
+
+
+
 Route::get('/Product', function () {
     $data=App\Models\ProductDetails::all();
     return view('Product/viewproduct')->with('Product1', $data);
@@ -42,9 +48,22 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
-Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+Route::get('/updateProduct/{Productid}','AddProductController@updateProductView');
+
+Route::post('/updateItems','AddProductController@updateProduct');
+
+Route::get('/search', 'AddProductController@search');
+
+Route::get('/stock', function(){
+    return view('Product_Stock/viewstock');
+});
+
+
 
 //kaveen product part end
+
+
+
 
 Route::get('/Manufacturing1', function () {
     
@@ -100,16 +119,40 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
     Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
     Route::post('/expense-categories','ExpenseCategoryController@index');
     //Expenses...
-    Route::resource('expenses', 'ExpenseController');
+    Route::get('/expense', [ExpenseController::class ,'index']);
+    Route::post('/addexpense','ExpenseController@store');
+    Route::get('/editexpenseview/{id}','ExpenseController@edit');
+    Route::post('/editexpense','ExpenseController@update');
+    Route::get('/deleteexpense/{id}','ExpenseController@destroy');
+    Route::get('/createexpense','ExpenseController@create');
+    //Calender...
+    Route::get('fullcalender', [FullCalenderController::class, 'index']);
+    Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+     //miyelandi 
+     Route::get('/Purchase1', function () {
+        return view('Purchase/viewpurchase');
+     });
+    Route::get('/Purchase1', function () {
+         return view('Purchase/addpurchase');
+      });
 
-    Route::get('/expense', function () {
-        return view('expense/index');
+      Route:: get('/Purchase',function(){
+        //We only return viewsales1 when saving data but this view should appear other times aswell
+        $data=App\Models\addpurchase::all();
+        return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
     });
+    
+    //this calls the store function in AddsalesController 
+     Route:: post('/savepurchase','AddPurchaseController@store');
+     Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
+     Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
+     Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
+    //We only return viewsales1 when saving data but this view should appear other times aswell
+    $data=App\Models\addpurchase::all();
+    return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+});
 
-    Route::get('/addexpense', function () {
-        return view('expense/create');
-    });
-
+<<<<<<< HEAD
     Route::get('/editexpense', function () {
         return view('expense/edit');
     });
@@ -136,3 +179,10 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 Route::post('/accountUpdate2','AccountController@accountUpdate2');
 
+=======
+//this calls the store function in AddsalesController 
+ Route:: post('/savepurchase','AddPurchaseController@store');
+ Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
+ Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
+ Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
+>>>>>>> 4f667dd107c692b908ad8b3a47c2c166a83fe75a
