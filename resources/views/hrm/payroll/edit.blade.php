@@ -9,10 +9,14 @@
 <div id="app">
         <div id="navbar">
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: #e3f2fd;">
 =======
 		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
   <div class="container-fluid">
     <a class="navbar-brand" href="#">HRM</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,12 +57,15 @@
       {{ method_field('PUT') }}
           @csrf
 <<<<<<< HEAD
+<<<<<<< HEAD
          
       <div class="form-group" class="mb-3">
           <label for="empName">Employee Name :</label>
           <input type="text" class="form-control" name="empName" id="empName" value="{{$payroll->empName }}" required />
         </div>
 =======
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 
           <div class="dropdown" class="mb-3">    
               <label for="empName">Employee Name:</label>
@@ -69,7 +76,10 @@
                   </select>
              
           </div>
+<<<<<<< HEAD
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         
 
           <div class="form-group" class="mb-3">
@@ -115,10 +125,14 @@
           <div class="form-group" class="mb-3">
                 <label for="gross">Gross Amount:</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" />
 =======
                 <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
           </div>
 
           <br/><br>

@@ -16,9 +16,13 @@
 @section('sidecontent')
 <a class="btn btn-primary btn-lg btn-block" href="/expense-categories" role="button">All Category</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <a class="btn btn-primary btn-lg btn-block" href="/addexpense" role="button">Add Expense</a>
 =======
 <a class="btn btn-primary btn-lg btn-block" href="/createexpense" role="button">Add Expense</a>
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+<a class="btn btn-primary btn-lg btn-block" href="/createexpense" role="button">Add Expense</a>
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 @endsection
 

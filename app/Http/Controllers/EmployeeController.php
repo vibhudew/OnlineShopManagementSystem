@@ -6,6 +6,11 @@ use App\Models\Employee;
 use Illuminate\Http\Request;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 class EmployeeController extends Controller
 {
     public function index()
@@ -21,26 +26,36 @@ class EmployeeController extends Controller
 
         return view('hrm.employees.read', ['employees' => $employees]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
        
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+        
+       
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     }
 
     public function store(Request $request)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         $request->validate([
-            'fname'=>'required |max:100|min:3',
-            'lname'=>'required|max:100|min:3',
+            'name'=>'required|max:100|min:3',
             'address'=>'required|max:100|min:5',
             'nic'=>'required|max:12|min:10',
             'mobile'=>'required|min:10',
-            'email'=>'required|min:5|max:50'    
+            'email'=>'required|min:5|max:50|email'    
             
         ]);
 
+
         $employee = new Employee([
+<<<<<<< HEAD
             'fname' => $request->get('fname'),
             'lname' => $request->get('lname'),
 =======
@@ -59,6 +74,10 @@ class EmployeeController extends Controller
 
             'name' => $request->get('name'),
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+
+            'name' => $request->get('name'),
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
             'address' => $request->get('address'),
             'nic' => $request->get('nic'),
             'mobile' => $request->get('mobile'),
@@ -66,9 +85,13 @@ class EmployeeController extends Controller
         ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         $employee->save();
 
         return redirect('/HRM')->with('success', 'Employee created successfully!!!');
@@ -89,6 +112,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
 <<<<<<< HEAD
+<<<<<<< HEAD
             'fname'=>'required |max:100|min:3',
             'lname'=>'required|max:100|min:3',
             'address'=>'required|max:100|min:5',
@@ -103,10 +127,19 @@ class EmployeeController extends Controller
             'mobile'=>'required|min:10',
             'email'=>'required|min:5|max:50|email'     
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+           
+            'name'=>'required|max:100|min:3',
+            'address'=>'required|max:100|min:5',
+            'nic'=>'required|max:12|min:10',
+            'mobile'=>'required|min:10',
+            'email'=>'required|min:5|max:50|email'     
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
             
         ]);
 
         $employee = Employee::find($id);
+<<<<<<< HEAD
 <<<<<<< HEAD
         $employee->fname =  $request->get('fname');
         $employee->lname = $request->get('lname');
@@ -114,15 +147,23 @@ class EmployeeController extends Controller
        
         $employee->name = $request->get('name');
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+       
+        $employee->name = $request->get('name');
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         $employee->address = $request->get('address');
         $employee->nic = $request->get('nic');
         $employee->mobile =$request->get('mobile');
         $employee->email = $request->get('email');
 <<<<<<< HEAD
+<<<<<<< HEAD
        
 =======
           
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+          
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         $employee->save();
 
         return redirect('/HRM')->with('success', 'Employee updated successfully!');
@@ -136,7 +177,10 @@ class EmployeeController extends Controller
         return redirect('/HRM')->with('success', 'Employee deleted successfully!');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 
     public function searchEmployee(){
 
@@ -154,5 +198,8 @@ class EmployeeController extends Controller
         return $pdf-> download('employees.pdf');
     } */
 
+<<<<<<< HEAD
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 }

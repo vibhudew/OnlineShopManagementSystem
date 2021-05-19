@@ -22,14 +22,20 @@ class ExpenseDataTable extends DataTable
         return datatables()
             ->eloquent($query)
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->addColumn('action', 'expense.action');
 =======
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
             ->addColumn('action', function( $data ){ 
 
 
                 return '<a class="btn btn-danger" href="/deleteexpense/'.$data->id.'">Delete</a>'; // or simply return html here
             } );
+<<<<<<< HEAD
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     }
 
     /**
@@ -56,6 +62,7 @@ class ExpenseDataTable extends DataTable
                     ->minifiedAjax()
                     ->dom('Bfrtip')
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ->orderBy(1)
         
                     ;
@@ -63,6 +70,9 @@ class ExpenseDataTable extends DataTable
 =======
                     ;
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+                    ;
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     }
 
     /**
@@ -74,6 +84,7 @@ class ExpenseDataTable extends DataTable
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'id',
             'name',
             'category',
@@ -82,6 +93,8 @@ class ExpenseDataTable extends DataTable
             'contact',
             'description'
 =======
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 
             Column::make('id')->title('ID'),
             Column::make('name')->title('Name'),
@@ -92,7 +105,10 @@ class ExpenseDataTable extends DataTable
             Column::make('description')->title('Description'),
             Column::make('action')->title('Action'),
 
+<<<<<<< HEAD
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         ];
     }
 
@@ -105,8 +121,12 @@ class ExpenseDataTable extends DataTable
     {
         return 'Expense_' . date('YmdHis');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+    
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     }
 }

@@ -48,7 +48,10 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
+<<<<<<< HEAD
 Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 Route::get('/updateProduct/{Productid}','AddProductController@updateProductView');
 
 Route::post('/updateItems','AddProductController@updateProduct');
@@ -64,7 +67,10 @@ Route::get('/stock', function(){
 //kaveen product part end
 
 
+<<<<<<< HEAD
 //manufacturing part starts
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 
 
 Route::get('/Manufacturing1', function () {
@@ -126,16 +132,20 @@ Auth::routes();
 
 
 
+//HRM Routes
+    Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+    Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
+    Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
-Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+//HRM Search Routes
+ Route::get('/searchEmployee','\App\Http\Controllers\EmployeeController@searchEmployee');
+ Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
+ Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
- Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
-
- Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
-
-
+ //HRM Reports
  
 
+<<<<<<< HEAD
 
 //HRM Routes
     Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
@@ -150,14 +160,19 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
  //HRM Reports
  
 
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 Route::get('/Accounts1', function () {
     
     return view('Accounts/addAccount');
 });
 
+
 Route::post('/saveAccount','AccountController@store');
 
 Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
+
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
 
     //Expense Categories...
@@ -168,14 +183,40 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
     Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
     Route::post('/expense-categories','ExpenseCategoryController@index');
     //Expenses...
-  //  Route::resource('expenses', 'ExpenseController');
-
     Route::get('/expense', [ExpenseController::class ,'index']);
+    Route::post('/addexpense','ExpenseController@store');
+    Route::get('/editexpenseview/{id}','ExpenseController@edit');
+    Route::post('/editexpense','ExpenseController@update');
+    Route::get('/deleteexpense/{id}','ExpenseController@destroy');
+    Route::get('/createexpense','ExpenseController@create');
+    //Calender...
+    Route::get('fullcalender', [FullCalenderController::class, 'index']);
+    Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+     //miyelandi 
+     Route::get('/Purchase1', function () {
+        return view('Purchase/viewpurchase');
+     });
+    Route::get('/Purchase1', function () {
+         return view('Purchase/addpurchase');
+      });
 
-    Route::get('/addexpense', function () {
-        return view('expense/create');
+      Route:: get('/Purchase',function(){
+        //We only return viewsales1 when saving data but this view should appear other times aswell
+        $data=App\Models\addpurchase::all();
+        return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
     });
+    
+    //this calls the store function in AddsalesController 
+     Route:: post('/savepurchase','AddPurchaseController@store');
+     Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
+     Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
+     Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
+    //We only return viewsales1 when saving data but this view should appear other times aswell
+    $data=App\Models\addpurchase::all();
+    return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+});
 
+<<<<<<< HEAD
     Route::get('/editexpense', function () {
         return view('expense/edit');
     });
@@ -227,6 +268,8 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
 });
 
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 //this calls the store function in AddsalesController 
  Route:: post('/savepurchase','AddPurchaseController@store');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');

@@ -9,6 +9,7 @@
 <div id="app">
         <div id="navbar">
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">HRM</a>
@@ -17,6 +18,11 @@
   <div class="container-fluid">
     <h5><a class="navbar-brand" href="#">HRM</a></h5>
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <h5><a class="navbar-brand" href="#">HRM</a></h5>
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,12 +30,17 @@
       <ul class="navbar-nav">
         <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <a class="nav-link active" aria-current="page" href="/HRM" >Employee</a>
+=======
+          <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Attendance" >Attendance</a>
+          <h4><a class="nav-link" href="/Attendance" >Attendance</a></h4>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link" href="/Payroll" >Payroll</a>
 =======
           <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
@@ -40,6 +51,9 @@
         <li class="nav-item">
           <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+          <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         </li>
     
       </ul>
@@ -66,6 +80,7 @@
           @csrf
           <div class="form-group" class="mb-3">    
 <<<<<<< HEAD
+<<<<<<< HEAD
               <label for="fname">First Name:</label>
               <input type="text" class="form-control" name="fname" value="{{$employee->fname }}" required/>
           </div>
@@ -81,6 +96,12 @@
           </div>
               
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+              <label for="name">Full Name:</label>
+              <input type="text" class="form-control" name="name" value="{{$employee->name }}" required/>
+          </div>
+              
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
           <div class="form-group">
                 <label for="address">Address:</label>
                 <input type="text" class="form-control" name="address" value="{{ $employee->address }}" required  />

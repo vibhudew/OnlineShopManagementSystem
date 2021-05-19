@@ -7,8 +7,11 @@
 @section('content')
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <a href="Products/addproduct" class = "btn btn-primary"> ADD </a>
 =======
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 <div id="app">
     <div id="navbar">
       <nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
@@ -42,7 +45,10 @@
 
 </form>
 
+<<<<<<< HEAD
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 <div class="card-body">
   <div class="table-responsive">
     <table class="table">
@@ -86,8 +92,13 @@
 
 </table> 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @endsection
 =======
 
 @endsection
 >>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+
+@endsection
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
