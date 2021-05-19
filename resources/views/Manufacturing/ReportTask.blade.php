@@ -33,11 +33,12 @@
         <table id="tb1">
             <thead>
                 <tr>
-                <th>PRODUCT</th>
-                <th>PRODUCTION COST</th>
-                <th>MANUFACTURING COST</th>
-                <th>TOTAL COST</th>
-                <th>ADDED DATE AND TIME</th>
+                    <th>Product Name</th>
+                    <th>Recipe</th>
+                    <th>Steps</th>
+                    <th>Production Cost</th>
+                    <th>Material Cost</th>
+                    <th>Total Cost</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,6 +54,6 @@
                 @endforeach
             </tbody>
             </table> 
-            <br>
+        <br>
 </body>
 </html>

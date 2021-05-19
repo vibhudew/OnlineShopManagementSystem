@@ -137,11 +137,11 @@ class RecipeController extends Controller
     }
     public function getReport(){
         $taskReport = Recipe::all();
-        return view('ReportTask',compact('taskReport'));
+        return view('Manufacturing/ReportTask',compact('taskReport'));
     }
     public function downloadReport(){
         $taskReport = Recipe::all();
-        $pdf = PDF::loadView('ReportTask',compact('taskReport'));
+        $pdf = PDF::loadView('Manufacturing/ReportTask',compact('taskReport'));
         return $pdf->setPaper('A4','potrate')->download('abc.pdf');
     }
    
