@@ -30,13 +30,13 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Category</label>
-                  <input type="text" class="form-control" name="amount" placeholder="Enter your budget category" >
+                  <input type="text" class="form-control" name="category" placeholder="Enter your budget category" >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Date</label>
-                  <input type="datetime-local" class="form-control" name="amount" >
+                  <input type="datetime-local" class="form-control" name="date" >
                 </div>
               </div>
             </div>
@@ -44,13 +44,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Amount</label>
-                  <input type="text" class="form-control" name="timeline" placeholder="Enter expense amount" >
+                  <input type="text" class="form-control" name="amount" placeholder="Enter expense amount" >
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Expense for contact</label>
-                  <input type="text" class="form-control" name="timeline" placeholder="Select contact" >
+                  <input type="text" class="form-control" name="contact" placeholder="Select contact" >
                 </div>
               </div>
             </div>
