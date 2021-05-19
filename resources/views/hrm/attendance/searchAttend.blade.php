@@ -37,11 +37,25 @@
 <div class="col-sm-12">
     <br>
     <h1>All Attendances</h1> 
+<table>
+<tr>
+    <td>
+        <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchAttend')}}">
+          <input class="form-control mr-sm-2"size="65" name="queryAttend" type="search" placeholder="Type Employee First Name to Get Atttendance Records" aria-label="Search">
+          <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form> 
+    </td>
 
-    <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchAttend')}}">
-      <input class="form-control mr-sm-2" size="100" name="queryAttend" type="search" placeholder="Type Employee First Name to Get Atttendance Records" aria-label="Search">
-      <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <td>
+        <a class="btn btn-primary" href="#">Get Attendances PDF for a Employee</a>
+    </td>
+
+
+</tr>
+
+
+</table>
+    
 
     <div>
     <a style="margin: 19px;" href="{{ route('Attendance.create')}}" class="btn btn-primary btn-lg">Add Attendance</a>

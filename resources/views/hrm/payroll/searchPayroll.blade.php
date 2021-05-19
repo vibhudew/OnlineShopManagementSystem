@@ -2,7 +2,7 @@
 
 @section('title', 'HRM')
 @section('page-title', 'HRM')
-@section('card-title', 'Attendance Management')
+@section('card-title', 'Payroll Management')
 
 @section('content')
 
@@ -36,15 +36,28 @@
 <div class="row">
 <div class="col-sm-12">
     <br>
-    <h1>All Attendances</h1> 
+    <h1>All Payrolls</h1> 
 
-    <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchAttend')}}">
-      <input class="form-control mr-sm-2" size="100" name="queryAttend" type="search" placeholder="Type Employee First Name to Get Atttendance Records" aria-label="Search">
-      <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <table>
+   <tr>
+      <td>
+            <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchPayroll')}}">
+            <input class="form-control mr-sm-2" size="100" name="queryPayroll" type="search" placeholder="Type Employee First Name to Get Payroll Records" aria-label="Search">
+            <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </td>
+
+      <td>
+      <a class="btn btn-primary" href="#">Get Payrolls PDF for a Employee</a>
+      </td>
+   </tr>
+    
+    </table>
+
+   
 
     <div>
-    <a style="margin: 19px;" href="{{ route('Attendance.create')}}" class="btn btn-primary btn-lg">Add Attendance</a>
+    <a style="margin: 19px;" href="{{ route('Payroll.create')}}" class="btn btn-primary btn-lg">Add Payroll</a>
     </div>  
 
     <div class="col-sm-12">
@@ -56,30 +69,39 @@
         @endif
     </div>  
 
+ 
     <table class="table table-dark">
       <thead class="thead-light">
         <tr>
           <td >ID</td>
           <td >Employee ID with Name </td>
-          <td >Start Time </td>
-          <td >End Time </td>
+          <td >Month/Year </td>
+          <td >Total Work Duration </td>
+          <td >Amount per Duration Unit </td>
+          <td >Allowances </td>
+          <td >Deductions </td>
+          <td >Gross Amount </td>
           <td colspan = 2>Action</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($attendances as $attendance)
+        @foreach($payrolls as $payroll)
         <tr>
-            <td>{{ $attendance->id}}</td>
-            <td>{{ $attendance->empNameAttend}}</td>
-            <td>{{ $attendance->startTime}}</td>
-            <td>{{ $attendance->endTime}}</td>
+            <td>{{ $payroll->id}}</td>
+            <td>{{ $payroll->empName}}</td>
+            <td>{{ $payroll->monthYear}}</td>
+            <td>{{ $payroll->totalWorkDur}}</td>
+            <td>Rs. {{ $payroll->amtPerDur}}</td>
+            <td>Rs. {{ $payroll->allow}}</td>
+            <td>Rs. {{ $payroll->deduct}}</td>
+            <td>Rs. {{ $payroll->gross}}</td>
             
             <td>
-                <a href="{{ route('Attendance.edit',$attendance->id)}}" class="btn btn-success">Edit</a>
+                <a href="{{ route('Payroll.edit',$payroll->id)}}" class="btn btn-success">Edit</a>
                
             </td>
             <td>
-                <form action="{{ route('Attendance.destroy', $attendance->id)}}" method="post">
+                <form action="{{ route('Payroll.destroy', $payroll->id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-warning" type="submit">Delete</button>
@@ -92,5 +114,14 @@
 <div>
 </div>
 </div>
+
+<script>
+function myFunction() {
+  var num = 5.56789;
+  var n = num.toFixed(2);
+  document.getElementById("demo").innerHTML = n;
+}
+</script>
+
 
 @endsection

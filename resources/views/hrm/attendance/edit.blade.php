@@ -8,22 +8,22 @@
 
 <div id="app">
         <div id="navbar">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"" style="background-color: #e3f2fd;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">HRM</a>
+    <h5><a class="navbar-brand" href="#">HRM</a></h5>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/HRM" >Employee</a>
+          <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Attendance" >Attendance</a>
+          <h4><a class="nav-link" href="/Attendance" >Attendance</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Payroll" >Payroll</a>
+          <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
         </li>
     
       </ul>
@@ -49,9 +49,14 @@
     <form method="post" action="{{ route('Attendance.update', $attendance->id) }}">
     {{ method_field('PUT') }}
           @csrf
-          <div class="form-group" class="mb-3">    
+          <div class="dropdown" class="mb-3">    
               <label for="empNameAttend">Employee Name:</label>
-              <input type="text" name="empNameAttend" class="form-control" value="{{$attendance->empNameAttend }}" required/>
+                  <select class="form-control" name="empNameAttend" value="{{$attendance->empNameAttend }}">
+                      @foreach ($employees as $employee)
+                          <option value="{{ $employee->id}} &nbsp&nbsp {{$employee ->name}}">{{$employee ->name}}</option>
+                      @endforeach 
+                  </select>
+             
           </div>
 
           <div class="form-group" class="mb-3">

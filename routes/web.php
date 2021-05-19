@@ -104,27 +104,30 @@ Auth::routes();
 
 
 
+//HRM Routes
+    Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+    Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
+    Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
-Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+//HRM Search Routes
+ Route::get('/searchEmployee','\App\Http\Controllers\EmployeeController@searchEmployee');
+ Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
+ Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
- Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
-
- Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
-
-
+ //HRM Reports
  
-
-
-
 
 Route::get('/Accounts1', function () {
     
     return view('Accounts/addAccount');
 });
 
+
 Route::post('/saveAccount','AccountController@store');
 
 Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
+
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
 
     //Expense Categories...

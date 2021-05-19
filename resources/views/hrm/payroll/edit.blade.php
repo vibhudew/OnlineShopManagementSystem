@@ -8,7 +8,7 @@
 
 <div id="app">
         <div id="navbar">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: #e3f2fd;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">HRM</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,11 +48,16 @@
     <form method="post" action="{{ route('Payroll.update', $payroll->id) }}">
       {{ method_field('PUT') }}
           @csrf
-         
-      <div class="form-group" class="mb-3">
-          <label for="empName">Employee Name :</label>
-          <input type="text" class="form-control" name="empName" id="empName" value="{{$payroll->empName }}" required />
-        </div>
+
+          <div class="dropdown" class="mb-3">    
+              <label for="empName">Employee Name:</label>
+                  <select class="form-control" name="empName" value="{{$payroll->empName }}">
+                      @foreach ($employees as $employee)
+                          <option value="{{ $employee->id}} &nbsp&nbsp {{$employee ->name}}">{{$employee ->name}}</option>
+                      @endforeach 
+                  </select>
+             
+          </div>
         
 
           <div class="form-group" class="mb-3">
@@ -97,7 +102,7 @@
 
           <div class="form-group" class="mb-3">
                 <label for="gross">Gross Amount:</label>
-                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" />
+                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
           </div>
 
           <br/><br>
