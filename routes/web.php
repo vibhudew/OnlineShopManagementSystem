@@ -185,6 +185,14 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     //Calender...
     Route::get('fullcalender', [FullCalenderController::class, 'index']);
     Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+
+
+
+
+
+
+
+    
      //miyelandi
      Route::get('/Purchase1', function () {
         return view('Purchase/viewpurchase');
