@@ -29,14 +29,18 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Category</label>
-                  <input type="text" class="form-control" name="category" placeholder="Enter your budget category" >
+                  <label for="name">Category</label>
+                  <select class="form-control">
+                    @foreach($categories as $category)
+                      <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                  </select>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Date</label>
-                  <input type="datetime-local" class="form-control" name="date" >
+                  <input type="date" class="form-control" name="date" >
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Expense;
 use Illuminate\Http\Request;
 use App\DataTables\ExpenseDataTable;
+use App\Models\ExpenseCategory;
 
 class ExpenseController extends Controller
 {
@@ -25,7 +26,9 @@ class ExpenseController extends Controller
      */
     public function create()
     {
-        return view('expense.create');
+        $categories = ExpenseCategory::all(['id','name']);
+        return view('expense.create',compact('categories'));
+        
     }
 
     /**
@@ -54,7 +57,7 @@ class ExpenseController extends Controller
         $expense->save();
 
         
-        return redirect()->back();
+        return redirect('/expense')->with('success', 'Attendance added successfully!!!');
     }
 
     /**
