@@ -97,8 +97,10 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Expense $expense)
+    public function destroy($id)
     {
-        //
+        Expense::find($id)->delete($id);
+  
+        return redirect()->back();
     }
 }
