@@ -107,7 +107,7 @@ Route::get('/download-pdf','RecipeController@downloadReport');
 //manufacturing part end
 
 
-
+Auth::routes();
 
 
  //Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
