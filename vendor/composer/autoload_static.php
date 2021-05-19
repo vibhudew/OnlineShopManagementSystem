@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
+class ComposerStaticInitf206ffdb5d6450076d082c59b8759a21
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -674,6 +674,7 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmployeeController.php',
         'App\\Http\\Controllers\\ExpenseCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExpenseCategoryController.php',
@@ -693,10 +694,12 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Accounts' => __DIR__ . '/../..' . '/app/Models/Accounts.php',
         'App\\Models\\Attendance' => __DIR__ . '/../..' . '/app/Models/Attendance.php',
+        'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Models/Contact.php',
         'App\\Models\\Employee' => __DIR__ . '/../..' . '/app/Models/Employee.php',
         'App\\Models\\Event' => __DIR__ . '/../..' . '/app/Models/Event.php',
         'App\\Models\\Expense' => __DIR__ . '/../..' . '/app/Models/Expense.php',
         'App\\Models\\ExpenseCategory' => __DIR__ . '/../..' . '/app/Models/ExpenseCategory.php',
+        'App\\Models\\Manufact' => __DIR__ . '/../..' . '/app/Models/Manufact.php',
         'App\\Models\\Payroll' => __DIR__ . '/../..' . '/app/Models/Payroll.php',
         'App\\Models\\ProductDetails' => __DIR__ . '/../..' . '/app/Models/ProductDetails.php',
         'App\\Models\\Recipe' => __DIR__ . '/../..' . '/app/Models/Recipe.php',
@@ -4962,35 +4965,6 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
-        'Ramsey\\Collection\\AbstractArray' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractArray.php',
-        'Ramsey\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractCollection.php',
-        'Ramsey\\Collection\\AbstractSet' => __DIR__ . '/..' . '/ramsey/collection/src/AbstractSet.php',
-        'Ramsey\\Collection\\ArrayInterface' => __DIR__ . '/..' . '/ramsey/collection/src/ArrayInterface.php',
-        'Ramsey\\Collection\\Collection' => __DIR__ . '/..' . '/ramsey/collection/src/Collection.php',
-        'Ramsey\\Collection\\CollectionInterface' => __DIR__ . '/..' . '/ramsey/collection/src/CollectionInterface.php',
-        'Ramsey\\Collection\\DoubleEndedQueue' => __DIR__ . '/..' . '/ramsey/collection/src/DoubleEndedQueue.php',
-        'Ramsey\\Collection\\DoubleEndedQueueInterface' => __DIR__ . '/..' . '/ramsey/collection/src/DoubleEndedQueueInterface.php',
-        'Ramsey\\Collection\\Exception\\CollectionMismatchException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/CollectionMismatchException.php',
-        'Ramsey\\Collection\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/InvalidArgumentException.php',
-        'Ramsey\\Collection\\Exception\\InvalidSortOrderException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/InvalidSortOrderException.php',
-        'Ramsey\\Collection\\Exception\\NoSuchElementException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/NoSuchElementException.php',
-        'Ramsey\\Collection\\Exception\\OutOfBoundsException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/OutOfBoundsException.php',
-        'Ramsey\\Collection\\Exception\\UnsupportedOperationException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/UnsupportedOperationException.php',
-        'Ramsey\\Collection\\Exception\\ValueExtractionException' => __DIR__ . '/..' . '/ramsey/collection/src/Exception/ValueExtractionException.php',
-        'Ramsey\\Collection\\GenericArray' => __DIR__ . '/..' . '/ramsey/collection/src/GenericArray.php',
-        'Ramsey\\Collection\\Map\\AbstractMap' => __DIR__ . '/..' . '/ramsey/collection/src/Map/AbstractMap.php',
-        'Ramsey\\Collection\\Map\\AbstractTypedMap' => __DIR__ . '/..' . '/ramsey/collection/src/Map/AbstractTypedMap.php',
-        'Ramsey\\Collection\\Map\\AssociativeArrayMap' => __DIR__ . '/..' . '/ramsey/collection/src/Map/AssociativeArrayMap.php',
-        'Ramsey\\Collection\\Map\\MapInterface' => __DIR__ . '/..' . '/ramsey/collection/src/Map/MapInterface.php',
-        'Ramsey\\Collection\\Map\\NamedParameterMap' => __DIR__ . '/..' . '/ramsey/collection/src/Map/NamedParameterMap.php',
-        'Ramsey\\Collection\\Map\\TypedMap' => __DIR__ . '/..' . '/ramsey/collection/src/Map/TypedMap.php',
-        'Ramsey\\Collection\\Map\\TypedMapInterface' => __DIR__ . '/..' . '/ramsey/collection/src/Map/TypedMapInterface.php',
-        'Ramsey\\Collection\\Queue' => __DIR__ . '/..' . '/ramsey/collection/src/Queue.php',
-        'Ramsey\\Collection\\QueueInterface' => __DIR__ . '/..' . '/ramsey/collection/src/QueueInterface.php',
-        'Ramsey\\Collection\\Set' => __DIR__ . '/..' . '/ramsey/collection/src/Set.php',
-        'Ramsey\\Collection\\Tool\\TypeTrait' => __DIR__ . '/..' . '/ramsey/collection/src/Tool/TypeTrait.php',
-        'Ramsey\\Collection\\Tool\\ValueExtractorTrait' => __DIR__ . '/..' . '/ramsey/collection/src/Tool/ValueExtractorTrait.php',
-        'Ramsey\\Collection\\Tool\\ValueToStringTrait' => __DIR__ . '/..' . '/ramsey/collection/src/Tool/ValueToStringTrait.php',
         'Ramsey\\Uuid\\BinaryUtils' => __DIR__ . '/..' . '/ramsey/uuid/src/BinaryUtils.php',
         'Ramsey\\Uuid\\Builder\\BuilderCollection' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/BuilderCollection.php',
         'Ramsey\\Uuid\\Builder\\DefaultUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DefaultUuidBuilder.php',
@@ -5915,20 +5889,6 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'Symfony\\Component\\Routing\\RouteCompilerInterface' => __DIR__ . '/..' . '/symfony/routing/RouteCompilerInterface.php',
         'Symfony\\Component\\Routing\\Router' => __DIR__ . '/..' . '/symfony/routing/Router.php',
         'Symfony\\Component\\Routing\\RouterInterface' => __DIR__ . '/..' . '/symfony/routing/RouterInterface.php',
-        'Symfony\\Component\\String\\AbstractString' => __DIR__ . '/..' . '/symfony/string/AbstractString.php',
-        'Symfony\\Component\\String\\AbstractUnicodeString' => __DIR__ . '/..' . '/symfony/string/AbstractUnicodeString.php',
-        'Symfony\\Component\\String\\ByteString' => __DIR__ . '/..' . '/symfony/string/ByteString.php',
-        'Symfony\\Component\\String\\CodePointString' => __DIR__ . '/..' . '/symfony/string/CodePointString.php',
-        'Symfony\\Component\\String\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/string/Exception/ExceptionInterface.php',
-        'Symfony\\Component\\String\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/string/Exception/InvalidArgumentException.php',
-        'Symfony\\Component\\String\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/string/Exception/RuntimeException.php',
-        'Symfony\\Component\\String\\Inflector\\EnglishInflector' => __DIR__ . '/..' . '/symfony/string/Inflector/EnglishInflector.php',
-        'Symfony\\Component\\String\\Inflector\\FrenchInflector' => __DIR__ . '/..' . '/symfony/string/Inflector/FrenchInflector.php',
-        'Symfony\\Component\\String\\Inflector\\InflectorInterface' => __DIR__ . '/..' . '/symfony/string/Inflector/InflectorInterface.php',
-        'Symfony\\Component\\String\\LazyString' => __DIR__ . '/..' . '/symfony/string/LazyString.php',
-        'Symfony\\Component\\String\\Slugger\\AsciiSlugger' => __DIR__ . '/..' . '/symfony/string/Slugger/AsciiSlugger.php',
-        'Symfony\\Component\\String\\Slugger\\SluggerInterface' => __DIR__ . '/..' . '/symfony/string/Slugger/SluggerInterface.php',
-        'Symfony\\Component\\String\\UnicodeString' => __DIR__ . '/..' . '/symfony/string/UnicodeString.php',
         'Symfony\\Component\\Translation\\Catalogue\\AbstractOperation' => __DIR__ . '/..' . '/symfony/translation/Catalogue/AbstractOperation.php',
         'Symfony\\Component\\Translation\\Catalogue\\MergeOperation' => __DIR__ . '/..' . '/symfony/translation/Catalogue/MergeOperation.php',
         'Symfony\\Component\\Translation\\Catalogue\\OperationInterface' => __DIR__ . '/..' . '/symfony/translation/Catalogue/OperationInterface.php',
@@ -6334,10 +6294,10 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf206ffdb5d6450076d082c59b8759a21::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf206ffdb5d6450076d082c59b8759a21::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf206ffdb5d6450076d082c59b8759a21::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf206ffdb5d6450076d082c59b8759a21::$classMap;
 
         }, null, ClassLoader::class);
     }
