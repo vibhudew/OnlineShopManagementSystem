@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AccountController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\FullCalenderController;
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +33,14 @@ Route::get('/', function () {
       return view('Sales/addsales');
    });
 
+
 //kaveen work product part
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 Route::get('/Product', function () {
     $data=App\Models\ProductDetails::all();
     return view('Product/viewproduct')->with('Product1', $data);
@@ -43,12 +54,31 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
+<<<<<<< HEAD
 Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
+=======
+Route::get('/updateProduct/{Productid}','AddProductController@updateProductView');
+
+Route::post('/updateItems','AddProductController@updateProduct');
+
+Route::get('/search', 'AddProductController@search');
+
+Route::get('/stock', function(){
+    return view('Product_Stock/viewstock');
+});
+
+
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 //kaveen product part end
 
 
+<<<<<<< HEAD
 //manufacturing part starts
+=======
+
+
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 Route::get('/Manufacturing1', function () {
     
     return view('Manufacturing/addRecipe');
@@ -106,6 +136,7 @@ Auth::routes();
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
 
+<<<<<<< HEAD
 
 
 
@@ -117,14 +148,31 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
 
  
+=======
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 
+//HRM Routes
+    Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
+    Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
+    Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
+//HRM Search Routes
+ Route::get('/searchEmployee','\App\Http\Controllers\EmployeeController@searchEmployee');
+ Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
+ Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
+<<<<<<< HEAD
+=======
+ //HRM Reports
+ 
+
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 Route::get('/Accounts1', function () {
     
     return view('Accounts/addAccount');
 });
+<<<<<<< HEAD
 
 Route::post('/saveAccount','AccountController@store');
 
@@ -142,11 +190,69 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
   //  Route::resource('expenses', 'ExpenseController');
 
     Route::get('/expense', [ExpenseController::class ,'index']);
+=======
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
     Route::get('/addexpense', function () {
         return view('expense/create');
     });
 
+<<<<<<< HEAD
     Route::get('/editexpense', function () {
         return view('expense/edit');
     });
+=======
+Route::post('/saveAccount','AccountController@store');
+
+Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
+
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
+
+
+    //Expense Categories...
+    Route::resource('expense-categories', 'ExpenseCategoryController');
+    Route::post('/addcategory','ExpenseCategoryController@store');
+    Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
+    Route::post('/editexcategory','ExpenseCategoryController@update');
+    Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+    Route::post('/expense-categories','ExpenseCategoryController@index');
+    //Expenses...
+    Route::get('/expense', [ExpenseController::class ,'index']);
+    Route::post('/addexpense','ExpenseController@store');
+    Route::get('/editexpenseview/{id}','ExpenseController@edit');
+    Route::post('/editexpense','ExpenseController@update');
+    Route::get('/deleteexpense/{id}','ExpenseController@destroy');
+    Route::get('/createexpense','ExpenseController@create');
+    //Calender...
+    Route::get('fullcalender', [FullCalenderController::class, 'index']);
+    Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+     //miyelandi 
+     Route::get('/Purchase1', function () {
+        return view('Purchase/viewpurchase');
+     });
+    Route::get('/Purchase1', function () {
+         return view('Purchase/addpurchase');
+      });
+
+      Route:: get('/Purchase',function(){
+        //We only return viewsales1 when saving data but this view should appear other times aswell
+        $data=App\Models\addpurchase::all();
+        return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+    });
+    
+    //this calls the store function in AddsalesController 
+     Route:: post('/savepurchase','AddPurchaseController@store');
+     Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
+     Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
+     Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
+    //We only return viewsales1 when saving data but this view should appear other times aswell
+    $data=App\Models\addpurchase::all();
+    return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+});
+
+//this calls the store function in AddsalesController 
+ Route:: post('/savepurchase','AddPurchaseController@store');
+ Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
+ Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
+ Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03

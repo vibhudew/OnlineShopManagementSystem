@@ -21,7 +21,15 @@ class ExpenseDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
+<<<<<<< HEAD
             ->addColumn('action', 'expense.action');
+=======
+            ->addColumn('action', function( $data ){ 
+
+
+                return '<a class="btn btn-danger" href="/deleteexpense/'.$data->id.'">Delete</a>'; // or simply return html here
+            } );
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     /**
@@ -47,10 +55,14 @@ class ExpenseDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
+<<<<<<< HEAD
                     ->orderBy(1)
         
                     ;
 
+=======
+                    ;
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     /**
@@ -61,6 +73,7 @@ class ExpenseDataTable extends DataTable
     protected function getColumns()
     {
         return [
+<<<<<<< HEAD
             'id',
             'name',
             'category',
@@ -68,6 +81,18 @@ class ExpenseDataTable extends DataTable
             'amount',
             'contact',
             'description'
+=======
+
+            Column::make('id')->title('ID'),
+            Column::make('name')->title('Name'),
+            Column::make('category')->title('Category'),
+            Column::make('date')->title('Date'),
+            Column::make('amount')->title('Amount'),
+            Column::make('contact')->title('Contact'),
+            Column::make('description')->title('Description'),
+            Column::make('action')->title('Action'),
+
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
         ];
     }
 
@@ -79,5 +104,9 @@ class ExpenseDataTable extends DataTable
     protected function filename()
     {
         return 'Expense_' . date('YmdHis');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 }
