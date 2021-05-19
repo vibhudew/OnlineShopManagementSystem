@@ -8,22 +8,6 @@
           
             <title>Storemaster - @yield('title')</title>
           
-<<<<<<< HEAD
-          <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-          <!--     Fonts and icons     -->
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-          <!-- CSS Files -->
-          <link href="http://127.0.0.1:8000/assets/css/bootstrap.min.css" rel="stylesheet" />
-          <link href="http://127.0.0.1:8000/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
-          <!-- CSS Just for demo purpose, don't include it in your project -->
-          <link href="http://127.0.0.1:8000/assets/demo/demo.css" rel="stylesheet" />
-          <!--JQuery files-->
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="{{ asset('js/salesitems.js') }}" defer></script>
-
-=======
             <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -40,7 +24,6 @@
             <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
             <script src="/vendor/datatables/buttons.server-side.js"></script>
             <script src="http://127.0.0.1:8000/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
->>>>>>> 9dd1f2465b97260913ef75fd6f74776b8b9bbc34
         </head>
         
         <body class="">
