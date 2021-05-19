@@ -29,6 +29,14 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
+<<<<<<< HEAD
+                  <label for="name">Category</label>
+                  <select class="form-control">
+                    @foreach($categories as $category)
+                      <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                  </select>
+=======
                   <label>Category</label>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,11 +47,15 @@
 =======
                   <input type="text" class="form-control" name="category" placeholder="Enter your budget category" >
 >>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+>>>>>>> 24ec6163582ce344bf21f738dbf4c38a0ec54f5b
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Date</label>
+<<<<<<< HEAD
+                  <input type="date" class="form-control" name="date" >
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <input type="datetime-local" class="form-control" name="amount" >
@@ -53,6 +65,7 @@
 =======
                   <input type="datetime-local" class="form-control" name="date" >
 >>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+>>>>>>> 24ec6163582ce344bf21f738dbf4c38a0ec54f5b
                 </div>
               </div>
             </div>

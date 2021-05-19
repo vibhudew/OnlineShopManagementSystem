@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">        
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         <head>
           <meta charset="utf-8" />
           <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
           <link rel="icon" type="image/png" href="../assets/img/favicon.png">
           <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-          
+
             <title>Storemaster - @yield('title')</title>
-          
+
             <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -25,7 +25,7 @@
             <script src="/vendor/datatables/buttons.server-side.js"></script>
             <script src="http://127.0.0.1:8000/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
         </head>
-        
+
         <body class="">
           <div class="wrapper ">
             <div class="sidebar" data-color="red">
@@ -173,9 +173,9 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <!-- Left Side Of Navbar -->
                             <ul class="navbar-nav mr-auto">
-        
+
                             </ul>
-        
+
                             <!-- Right Side Of Navbar -->
                             <ul class="navbar-nav ml-auto">
                                 <!-- Authentication Links -->
@@ -185,7 +185,7 @@
                                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                         </li>
                                     @endif
-                                    
+
                                     @if (Route::has('register'))
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -196,14 +196,14 @@
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }}
                                         </a>
-        
+
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
                                             </a>
-        
+
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                 @csrf
                                             </form>
@@ -216,7 +216,7 @@
                     </ul>
                   </div>
                 </div>
-               
+
               </nav>
               <!-- End Navbar container mt-4 -->
               <div class="panel-header panel-header-sm">
@@ -229,11 +229,16 @@
                         <h4 class="card-title "><strong> @yield('card-title') </strong></h4>
                       </div>
                       <div class="card-body">
+<<<<<<< HEAD
+                     
                         
+=======
+
+>>>>>>> e2b1933a3ab3a6fb77fccdab65351167e33927f7
                         <div class="">
                             @yield('content')
                         </div>
-                         
+
                       </div>
                     </div>
                   </div>

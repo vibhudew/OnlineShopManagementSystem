@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
+use App\Models\Contact;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FullCalenderController;
 
@@ -18,10 +19,18 @@ use App\Http\Controllers\FullCalenderController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/Contacts',function (){
+   $data=Contact::All();
+   return view('/Contacts/view')->with('Contact',$data);
 });
+Route::get('/contact/add',function (){
+    return view('/Contacts/add');
+ });
 
+Route::post('/saveContact','ContactController@store');
+
+Route::get('/deletecontact/{id}','ContactController@deletecontact');
+Route::get('/updatecontact/{id}','ContactController@updatecontactview');
 
  Route::get('/Sales1', function () {
      return view('Sales/viewsales');
@@ -67,20 +76,21 @@ Route::get('/stock', function(){
 
 
 Route::get('/Manufacturing1', function () {
-    
+
     return view('Manufacturing/addRecipe');
 });
 
 Route:: get('/Manufacturing',function(){
     //We only return Recipe1 when saveing data but this view should appear other times aswell
     $data=App\Models\Recipe::all();
-    return view('Manufacturing/Recipe')->with('Recipe1',$data); 
+    return view('Manufacturing/Recipe')->with('Recipe1',$data);
 });
-//this calls the store function in REcipeController 
+//this calls the store function in REcipeController
 Route:: post('/saveRecipe','RecipeController@store');
 
 Route::get('/deleteRecipe/{id}','RecipeController@deleterecipe');
 
+ Auth::routes();
 Route::get('/search','RecipeController@search');
 Route::get('/search2','RecipeController@search2');
 
@@ -88,7 +98,7 @@ Route::get('/insertManufacts', function (){
     $data=App\Models\Recipe::all();
     return view('Manufacturing/insertManufact')->with('manuData',$data);
   });
-Route::post('/saveManufact','RecipeController@manufacturing'); 
+Route::post('/saveManufact','RecipeController@manufacturing');
 
 Route::get('/displayManufact', function (){
     $data2=App\Models\Manufact::all();
@@ -107,24 +117,25 @@ Route::get('/download-pdf','RecipeController@downloadReport');
 //manufacturing part end
 
 
-Auth::routes();
 
 
- //Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
  Route:: get('/Sales',function(){
     //We only return viewsales1 when saving data but this view should appear other times aswell
     $data=App\Models\addsales::all();
-    return view('Sales/viewsales')->with('viewsales1',$data); 
+    return view('Sales/viewsales')->with('viewsales1',$data);
 });
 
-//this calls the store function in AddsalesController 
+//this calls the store function in AddsalesController
  Route:: post('/savesales','AddsalesController@store');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
+ Route::get('/search' ,'AddsalesController@search');
 
 
 
@@ -133,16 +144,19 @@ Auth::routes();
     Route::resource('/Payroll', '\App\Http\Controllers\PayrollController');
     Route::resource('/Attendance', '\App\Http\Controllers\AttendanceController');
 
+
+
 //HRM Search Routes
  Route::get('/searchEmployee','\App\Http\Controllers\EmployeeController@searchEmployee');
  Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
  Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
+
  //HRM Reports
- 
+
 
 Route::get('/Accounts1', function () {
-    
+
     return view('Accounts/addAccount');
 });
 
@@ -171,7 +185,7 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     //Calender...
     Route::get('fullcalender', [FullCalenderController::class, 'index']);
     Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
-     //miyelandi 
+     //miyelandi
      Route::get('/Purchase1', function () {
         return view('Purchase/viewpurchase');
      });
@@ -182,20 +196,20 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
       Route:: get('/Purchase',function(){
         //We only return viewsales1 when saving data but this view should appear other times aswell
         $data=App\Models\addpurchase::all();
-        return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+        return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
     });
-    
-    //this calls the store function in AddsalesController 
+
+    //this calls the store function in AddsalesController
      Route:: post('/savepurchase','AddPurchaseController@store');
      Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
      Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
      Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
     //We only return viewsales1 when saving data but this view should appear other times aswell
     $data=App\Models\addpurchase::all();
-    return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
+    return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
 });
 
-//this calls the store function in AddsalesController 
+//this calls the store function in AddsalesController
  Route:: post('/savepurchase','AddPurchaseController@store');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');

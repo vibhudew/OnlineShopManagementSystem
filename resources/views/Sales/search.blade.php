@@ -40,18 +40,18 @@
        
       
        <!--view data in table -->
-       @foreach($viewsales1 as $Viewsales1)
+       @foreach($addsales as   $addsales)
         <tr>    
-            <td>{{$Viewsales1->invoiceid}}</td> <!--accessing columns in db from $recipe1 variable -->
-            <td>{{$Viewsales1->customer}}</td>
-            <td>{{$Viewsales1->totalamount}}</td>
-            <td>{{$Viewsales1->paymentmethod}}</td>
-            <td>{{$Viewsales1->payterm}}</td>
-            <td>{{$Viewsales1->paymentstatus}}</td>
-            <td>{{$Viewsales1->sellstatus}}</td>
+            <td>{{  $addsales->invoiceid}}</td> <!--accessing columns in db from $recipe1 variable -->
+            <td>{{  $addsales->customer}}</td>
+            <td>{{  $addsales->totalamount}}</td>
+            <td>{{  $addsales->paymentmethod}}</td>
+            <td>{{  $addsales->payterm}}</td>
+            <td>{{  $addsales->paymentstatus}}</td>
+            <td>{{  $addsales->sellstatus}}</td>
             <td>
-                <a href="/deletesales/{{$Viewsales1->id}}" class="btn btn-danger">Delete</a>
-                <a href="/updatesale/{{$Viewsales1->id}}" class="btn btn-success">Edit</a>
+                <a href="/deletesales/{{  $addsales->id}}" class="btn btn-danger">Delete</a>
+                <a href="/updatesale/{{  $addsales->id}}" class="btn btn-success">Edit</a>
             </td>
         </tr>
         @endforeach
