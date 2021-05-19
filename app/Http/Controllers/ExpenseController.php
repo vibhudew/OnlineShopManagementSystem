@@ -26,9 +26,21 @@ class ExpenseController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
         $categories = ExpenseCategory::all(['id','name']);
         return view('expense.create',compact('categories'));
         
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        //
+=======
+        return view('expense.create');
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+        return view('expense.create');
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+>>>>>>> 24ec6163582ce344bf21f738dbf4c38a0ec54f5b
     }
 
     /**

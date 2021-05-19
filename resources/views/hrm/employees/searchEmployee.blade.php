@@ -2,7 +2,7 @@
 
 @section('title', 'HRM')
 @section('page-title', 'HRM')
-@section('card-title', 'Attendance Management')
+@section('card-title', 'Employee Management')
 
 @section('content')
 
@@ -36,16 +36,16 @@
 <div class="row">
 <div class="col-sm-12">
     <br>
-    <h1>All Attendances</h1> 
+    <h1>All Employees</h1> 
 
-    <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchAttend')}}">
-      <input class="form-control mr-sm-2" size="100" name="queryAttend" type="search" placeholder="Type Employee First Name to Get Atttendance Records" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchEmployee')}}">
+      <input class="form-control mr-sm-2" size="50" name="queryEmp" type="search" placeholder="Type Employee First Name to Search " aria-label="Search">
       <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
-
+    
     <div>
-    <a style="margin: 19px;" href="{{ route('Attendance.create')}}" class="btn btn-primary btn-lg">Add Attendance</a>
-    </div>  
+    <a style="margin: 19px;" href="{{ route('HRM.create')}}" class="btn btn-primary btn-lg">Add Employee</a>
+    </div> 
 
     <div class="col-sm-12">
 
@@ -56,35 +56,42 @@
         @endif
     </div>  
 
+  
     <table class="table table-dark">
       <thead class="thead-light">
         <tr>
           <td >ID</td>
-          <td >Employee ID with Name </td>
-          <td >Start Time </td>
-          <td >End Time </td>
+          <td >Name</td>
+          <td >Address</td>
+          <td >NIC</td>
+          <td >Mobile</td>
+          <td >Email</td>
           <td colspan = 2>Action</td>
         </tr>
     </thead>
     <tbody>
-        @foreach($attendances as $attendance)
+        @foreach($employees as $employee)
         <tr>
-            <td>{{ $attendance->id}}</td>
-            <td>{{ $attendance->empNameAttend}}</td>
-            <td>{{ $attendance->startTime}}</td>
-            <td>{{ $attendance->endTime}}</td>
+            <td>{{ $employee->id}}</td>
+            <td>{{ $employee->name}}</td>
+            <td>{{ $employee->address}}</td>
+            <td>{{ $employee->nic}}</td>
+            <td>{{ $employee->mobile}}</td>
+            <td>{{ $employee->email}}</td>
             
             <td>
-                <a href="{{ route('Attendance.edit',$attendance->id)}}" class="btn btn-success">Edit</a>
+                <a href="{{ route('HRM.edit',$employee->id)}}" class="btn btn-success">Edit</a>
                
             </td>
             <td>
-                <form action="{{ route('Attendance.destroy', $attendance->id)}}" method="post">
+                <form action="{{ route('HRM.destroy', $employee->id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-warning" type="submit">Delete</button>
                 </form>
             </td>
+		
+			
         </tr>
         @endforeach
     </tbody>
