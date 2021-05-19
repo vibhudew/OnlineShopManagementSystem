@@ -44,5 +44,6 @@
     </tr>
     @endforeach
 </table>
+<a href="/download-pdf" class="btn btn-secondary">Get Report</a>
 
 @endsection
