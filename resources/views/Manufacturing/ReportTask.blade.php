@@ -41,13 +41,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($taskReport as $task1)
+                @foreach($taskReport as $recipe1)
                 <tr>
-                    <td>{{$task1->task}}</td>
-                    <td>{{$task1->production_cost}}</td>
-                    <td>{{$task1->manufacturing_cost}}</td>
-                    <td>{{$task1->total_cost}}</td>
-                    <td>{{$task1->created_at }}</td>
+                    <td>{{$recipe1->manufacturingProductName}}</td>
+                    <td>{{$recipe1->recipe}}</td>
+                    <td>{{$recipe1->steps}}</td>
+                    <td>{{$recipe1->production_cost}}</td>
+                    <td>{{$recipe1->manufacturing_cost}}</td>
+                    <td>{{$recipe1->total_cost}}</td>
                 </tr>  
                 @endforeach
             </tbody>
