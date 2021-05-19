@@ -14,14 +14,14 @@ class CreateAddsalesTable extends Migration
     public function up()
     {
         Schema::create('addsales', function (Blueprint $table) {
-            $table->id();
-            $table->integer('invoiceid');
-	        $table->string('customer');
-	        $table->double('totalamount');
-	        $table->string('paymentmethod');
-	        $table->string('payterm');
-            $table->string('paymentstatus');
-            $table->string('sellstatus');
+            $table->increments('id');
+            $table->string('invoiceid')->nullable;
+	        $table->string('customer')->nullable;
+	        $table->double('totalamount')->nullable;
+	        $table->string('paymentmethod')->nullable;
+	        $table->string('payterm')->nullable;
+            $table->string('paymentstatus')->nullable;
+            $table->string('sellstatus')->nullable;
             $table->timestamps();
         });
     }
