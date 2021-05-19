@@ -10,14 +10,9 @@ class AttendanceController extends Controller
 {
     public function index()
     {
-        //$attendances =Attendance::all();
+        $attendances =Attendance::all();
 
-        $attendances = Attendance::latest()->paginate(5);
-    
-        return view('hrm.attendance.read',compact('attendances'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
-
-        //return view('hrm.attendance.read', ['attendances' => $attendances]);
+        return view('hrm.attendance.read', ['attendances' => $attendances]);
     }
 
     public function store(Request $request)

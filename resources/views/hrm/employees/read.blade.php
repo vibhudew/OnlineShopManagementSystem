@@ -114,5 +114,26 @@
 </div>
 </div>
 
+<script type="text/javascript">
+  $(function () {
+    
+    var table = $('.data-table').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('HRM.index') }}",
+        columns: [
+            {data: 'id', name: 'id'},
+            {data: 'name', name: 'name'},
+            {data: 'address', name: 'address'},
+            {data: 'nic', name: 'nic'},
+            {data: 'mobile', name: 'mobile'},
+            {data: 'email', name: 'email'},
+            
+        ]
+    });
+    
+  });
+</script>
+
 
 @endsection

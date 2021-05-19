@@ -5,15 +5,17 @@ use App\Models\Employee;
 
 use Illuminate\Http\Request;
 
-use PdfReport;
+
 
 class EmployeeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $employees = Employee::all();
 
         return view('hrm.employees.read', ['employees' => $employees]);
+        
+       
     }
 
     public function store(Request $request)
@@ -104,33 +106,4 @@ class EmployeeController extends Controller
         return $pdf-> download('employees.pdf');
     } */
 
-    public function displayReport(Request $request)
-{
-    //$fromDate = $request->input('from_date');
-    //$toDate = $request->input('to_date');
-    //$sortBy = $request->input('sort_by');
-
-    $title = 'Employee Report'; // Report title
-
-    $meta = [ // For displaying filters description on header
-        //'Registered on' => $fromDate . ' To ' . $toDate,
-        //'Sort By' => $sortBy
-    ]; 
-
-    $queryBuilder = Employee::select(['name', 'address', 'nic','mobile','email']); // Do some querying..
-
-    $columns = [ // Set Column to be displayed
-        'Full Name' => 'name',
-        'Address' => 'address',
-        'NIC' => 'nic',
-        'Mobile' => 'mobile',
-        'Email' => 'email',
-        
-    ];
-
-    // Generate Report with flexibility to manipulate column class even manipulate column value (using Carbon, etc).
-    return PdfReport::of($title, $meta,$queryBuilder, $columns)
-                    
-                    ->stream(); // other available method: download('filename') to download pdf / make() that will producing DomPDF / SnappyPdf instance so you could do any other DomPDF / snappyPdf method such as stream() or download()
-}
 }

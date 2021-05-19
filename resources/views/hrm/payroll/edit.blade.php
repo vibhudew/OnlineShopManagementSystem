@@ -102,7 +102,7 @@
 
           <div class="form-group" class="mb-3">
                 <label for="gross">Gross Amount:</label>
-                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" />
+                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
           </div>
 
           <br/><br>
