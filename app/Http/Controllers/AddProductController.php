@@ -13,7 +13,7 @@ class AddProductController extends Controller
 
         $this->validate($request,[
             'pId'=>'required|max:4|min:1',
-            'productName'=>'required|max:10|min:1'
+            'productName'=>'required|max:50|min:1'
         ]);
         
         $ProductDetails->Productid=$request->pId;
@@ -29,8 +29,22 @@ class AddProductController extends Controller
 
         $data= ProductDetails::all();
            
-        return view('Product/viewproduct')->with('Product1', $data);
+        return view('Product/viewproduct')->with('Product1', $data);//return product view with data to display
         //dd($request->all());
     }
+    public function deleteProduct($id){
+        $ProductDetails = ProductDetails::find($id);
+        $ProductDetails->delete();
+        return redirect()->back();
+
+    }
+    
+    public function updateProduct($id){
+        $ProductDetails = ProductDetails::find($id);
+        
+        return view('resources.views.Product.updateproduct')->with('ProductDetails', $ProductDetails);
+
+    }
+    
 
 }

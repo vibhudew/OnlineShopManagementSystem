@@ -13,8 +13,7 @@
 @endforeach
 <form method= "post" action="/savesales">
   {{csrf_field()}}
-<div class="card">
-<div class="container ">
+
 <div class="form-row">
   <div class="form-group col-md-6">
  
@@ -55,9 +54,13 @@
     <input type="text" class="form-control" name="sellstatus" placeholder="Enter the sell status">
 </div>
 <br>
+<div class = "row">
+<div class = " col-md-10"></div>
+<div class = " col-md-2">
 <input type="submit"  class="btn btn-primary" value = "Save">
 </div>
-</div>
+
+
 </form>
 
 

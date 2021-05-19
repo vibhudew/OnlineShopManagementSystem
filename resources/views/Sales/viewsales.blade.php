@@ -6,9 +6,14 @@
 
 @section('content')
 
-<div class="container">
-           
-<table class="table table-bordered table-dark">
+<div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
 
         <th>Invoice Id</th>
         <th>Customers</th>
@@ -17,6 +22,8 @@
         <th>Pay Term</th>
         <th>Payment Status</th>
         <th>Sell Satus</th>
+       
+        
        
       
        <!--view data in table -->
@@ -29,6 +36,10 @@
             <td>{{$Viewsales1->payterm}}</td>
             <td>{{$Viewsales1->paymentstatus}}</td>
             <td>{{$Viewsales1->sellstatus}}</td>
+            <td>
+                <a href="/deletesales/{{$Viewsales1->id}}" class="btn btn-danger">Delete</a>
+                <a href="/updatesale/{{$Viewsales1->id}}" class="btn btn-success">Edit</a>
+            </td>
         </tr>
         @endforeach
     
