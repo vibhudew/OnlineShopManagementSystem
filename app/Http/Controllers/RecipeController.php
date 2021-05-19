@@ -38,13 +38,13 @@ class RecipeController extends Controller
          //return view('Manufacturing/updateManufact')->with('manufactData',$data); 
        
     }
-    public function search(){
+    public function searchRecipe(){
         $search_text = $_GET['query'];
         $searchRecipe = Recipe::where('manufacturingProductName','LIKE','%'.$search_text.'%')->get();
         
         return view('Manufacturing.search',compact('searchRecipe'));
     }
-    public function search2(){
+    public function searchManufact(){
         $search_text = $_GET['query2'];
         $searchManufact = Manufact::where('product_name','LIKE','%'.$search_text.'%')->get();
 

@@ -5,7 +5,7 @@
 
     <h1>Manufacturing Recipes</h1>
 
-    <form type="get" action="/search">
+    <form type="get" action="/searchRecipe">
     <div class="input-group">
         <div class="form-outline">
             <input id="search-input" type="search" placeholder="Search Recipes" id="form1" name="query" class="form-control" />

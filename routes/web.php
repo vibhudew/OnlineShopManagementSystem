@@ -91,8 +91,8 @@ Route:: post('/saveRecipe','RecipeController@store');
 Route::get('/deleteRecipe/{id}','RecipeController@deleterecipe');
 
  Auth::routes();
-Route::get('/search','RecipeController@search');
-Route::get('/search2','RecipeController@search2');
+Route::get('/searchRecipe','RecipeController@searchRecipe');
+Route::get('/searchManufact','RecipeController@searchManufact');
 
 Route::get('/insertManufacts', function (){
     $data=App\Models\Recipe::all();
