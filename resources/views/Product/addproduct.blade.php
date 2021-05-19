@@ -4,7 +4,9 @@
 @section('page-title', 'Product Manegement')
 @section('card-title', 'Add Products')
 
+
 @section('content')
+
 
 @foreach($errors->all() as $error)
 
@@ -84,5 +86,6 @@
   </div>
 
   <input type ="submit" class="btn btn-primary" value="SAVE">
+
 </form>
 @endsection

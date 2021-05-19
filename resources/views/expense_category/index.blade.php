@@ -1,8 +1,10 @@
 @extends('layouts.NewMaster')
 
-@section('title', 'Expense')
-@section('page-title', 'Expense')
-@section('card-title', 'All Expense')
+@section('title', 'Expense Category with Budget')
+@section('page-title', 'Expense Category with Budget')
+@section('card-title', 'Expense Category with Budget')
+@section('bigtitle','All Expense Category with Budget')
+@section('sidetitle','Add new expense category whith Budget')
 
 @section('content')
         <div class="table-responsive">
@@ -21,7 +23,7 @@
                 <td>{{$ex_category->id}}</td>
                 <td>{{$ex_category->name}}</td>
                 <td>{{$ex_category->amount}}</td>
-                <td>{{$ex_category->timeline}}{{$ex_category->period}}</td>
+                <td>{{$ex_category->timeline}}&nbsp;{{$ex_category->period}}</td>
                 <td>{{$ex_category->description}}</td>
                 <td>
                   <a class="btn btn-success" href="/editcategoryview/{{$ex_category->id}}" role="button" value="">Edit</a>
@@ -73,7 +75,7 @@
         <label>Period</label>
         <input class="form-control" list="Options" name="period" id="brand" placeholder="Select Your Budget Timeline">
         <datalist id="Options">
-            <option value="Day"">
+            <option value="Day">
             <option value="Month">
             <option value="Year">
         </datalist>
@@ -96,7 +98,7 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <a class="btn btn-danger btn-lg btn-block" href="/Expenses" role="button" value="">Back</a>
+        <a class="btn btn-danger btn-lg btn-block" href="/expense" role="button" value="">Back</a>
       </div>
     </div>
   </div>

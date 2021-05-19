@@ -1,8 +1,10 @@
 @extends('layouts.NewMaster')
 
-@section('title', 'Expense')
-@section('page-title', 'Expense')
-@section('card-title', 'All Expense')
+@section('title', 'Expense Category with Budget')
+@section('page-title', 'Expense Category with Budget')
+@section('card-title', 'Expense Category with Budget')
+@section('bigtitle','Update Expense Category with Budget')
+@section('sidetitle','')
 
 @section('content')
 
@@ -68,7 +70,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <input type="button" class="btn btn-danger btn-lg btn-block" href="expense-categories" role="button" value="Back">
+                <a class="btn btn-danger btn-lg btn-block" href="../expense-categories" role="button" value="Back">Back</a>
                 </div>
               </div>
             </div>

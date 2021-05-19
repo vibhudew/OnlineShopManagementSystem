@@ -71,7 +71,7 @@ class ExpenseCategoryController extends Controller
         $expensecategory->save();
         $expensecategory=ExpenseCategory::All();
         return view('expense_category.index')->with('expensecategory',$expensecategory);
-    
+        
     }
 
     public function destroy($id)
