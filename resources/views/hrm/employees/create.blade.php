@@ -8,22 +8,22 @@
 
 <div id="app">
         <div id="navbar">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"" style="background-color: #e3f2fd;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">HRM</a>
+    <h5><a class="navbar-brand" href="#">HRM</a></h5>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/HRM" >Employee</a>
+          <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Attendance" >Attendance</a>
+          <h4><a class="nav-link" href="/Attendance" >Attendance</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Payroll" >Payroll</a>
+          <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
         </li>
     
       </ul>
@@ -48,13 +48,8 @@
       <form method="post" action="{{ route('HRM.store') }}">
           @csrf
           <div class="form-group" class="mb-3">    
-              <label for="fname">First Name:</label>
-              <input type="text" class="form-control" name="fname"/>
-          </div>
-
-          <div class="form-group" class="mb-3">
-              <label for="lname">Last Name:</label>
-              <input type="text" class="form-control" name="lname"/>
+              <label for="name">Full Name:</label>
+              <input type="text" class="form-control" name="name"/>
           </div>
 
           <div class="form-group">

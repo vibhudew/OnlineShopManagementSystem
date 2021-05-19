@@ -38,29 +38,14 @@
     <br>
     <h1>All Employees</h1> 
 
-  <table>
-      <tr>
-        <td>
-            <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchEmployee')}}">
-            <input class="form-control mr-sm-2" size="50" name="queryEmp" type="search" placeholder="Type Employee First Name to Search " aria-label="Search">
-            <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </td>
-       <td size="200"></td>
-        <td>
-        <a class="btn btn-primary" href="{{ URL::to('/reportPDFEmp') }}">Export to PDF</a>
-
-        
-        </td>
-      </tr>
-
-  
-  
-  </table>
+    <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchEmployee')}}">
+      <input class="form-control mr-sm-2" size="50" name="queryEmp" type="search" placeholder="Type Employee First Name to Search " aria-label="Search">
+      <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
     
     <div>
     <a style="margin: 19px;" href="{{ route('HRM.create')}}" class="btn btn-primary btn-lg">Add Employee</a>
-    </div>  
+    </div> 
 
     <div class="col-sm-12">
 
@@ -71,6 +56,7 @@
         @endif
     </div>  
 
+  
     <table class="table table-dark">
       <thead class="thead-light">
         <tr>
@@ -113,6 +99,5 @@
 <div>
 </div>
 </div>
-
 
 @endsection

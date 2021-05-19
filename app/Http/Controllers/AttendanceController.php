@@ -4,20 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Attendance;
+use App\Models\Employee;
 
 class AttendanceController extends Controller
 {
     public function index()
     {
-        $attendances =Attendance::all();
+        //$attendances =Attendance::all();
 
-        return view('hrm.attendance.read', ['attendances' => $attendances]);
+        $attendances = Attendance::latest()->paginate(5);
+    
+        return view('hrm.attendance.read',compact('attendances'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+
+        //return view('hrm.attendance.read', ['attendances' => $attendances]);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'empNameAttend'=>'required|max:100|min:5',
+            
             'startTime'=>'required',
             'endTime'=>'required' 
             
@@ -36,19 +42,22 @@ class AttendanceController extends Controller
 
     public function create()
     {
-        return view('hrm.attendance.create');
+        $employees = Employee:: all(['id','name']);
+        return view('hrm.attendance.create', compact('employees'));
     }
 
     public function edit($id)
     {
+
         $attendance = Attendance::find($id);
-        return view('hrm.attendance.edit', ['attendance' => $attendance]);        
+        $employees = Employee:: all(['id','name']);
+        return view('hrm.attendance.edit', ['attendance' => $attendance],compact('employees'));        
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-            'empNameAttend'=>'required|max:100|min:5',
+           
             'startTime'=>'required',
             'endTime'=>'required'      
             
@@ -72,5 +81,15 @@ class AttendanceController extends Controller
 
         return redirect('/Attendance')->with('success', 'Attendance deleted successfully!');
     }
+
+    public function searchAttend(){
+
+        $search_text = $_GET['queryAttend'];
+        $attendances = Attendance::where('empNameAttend','LIKE','%'.$search_text.'%') -> get();
+
+        return view('hrm.attendance.searchAttend', compact('attendances'));
+
+    }
 }
+
 
