@@ -20,7 +20,7 @@
                 <h4><a class="nav-link active" aria-current="page" href="/Product" >All Products</a></h4>
             </li>
             <li class="nav-item">
-                <h4><a class="nav-link" href="/Products/addproduct" >Stock Report</a></h4>
+                <h4><a class="nav-link" href="/stock" >Stock Report</a></h4>
             </li>
           </ul>
       </div>

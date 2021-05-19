@@ -54,6 +54,12 @@ Route::post('/updateItems','AddProductController@updateProduct');
 
 Route::get('/search', 'AddProductController@search');
 
+Route::get('/stock', function(){
+    return view('Product_Stock/viewstock');
+});
+
+
+
 //kaveen product part end
 
 
