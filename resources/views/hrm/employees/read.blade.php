@@ -8,41 +8,15 @@
 
 <div id="app">
         <div id="navbar">
-<<<<<<< HEAD
-<<<<<<< HEAD
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary"" style="background-color: #e3f2fd;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">HRM</a>
-=======
 		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <h5><a class="navbar-brand" href="#">HRM</a></h5>
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
-  <div class="container-fluid">
-    <h5><a class="navbar-brand" href="#">HRM</a></h5>
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <a class="nav-link active" aria-current="page" href="/HRM" >Employee</a>
-=======
-          <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
-        </li>
-        <li class="nav-item">
-          <h4><a class="nav-link" href="/Attendance" >Attendance</a></h4>
-        </li>
-        <li class="nav-item">
-<<<<<<< HEAD
-          <a class="nav-link" href="/Payroll" >Payroll</a>
-=======
           <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
         </li>
         <li class="nav-item">
@@ -50,10 +24,6 @@
         </li>
         <li class="nav-item">
           <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-          <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
         </li>
     
       </ul>
@@ -66,13 +36,8 @@
 <div class="row">
 <div class="col-sm-12">
     <br>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <h1>All Employees</h1>    
-=======
-=======
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
-    <h1>All Employees</h1> 
 
   <table>
       <tr>
@@ -89,15 +54,9 @@
         
         </td>
       </tr>
-
-  
   
   </table>
-    
-<<<<<<< HEAD
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+
     <div>
     <a style="margin: 19px;" href="{{ route('HRM.create')}}" class="btn btn-primary btn-lg">Add Employee</a>
     </div>  
@@ -111,18 +70,15 @@
         @endif
     </div>  
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   <table class="table table-striped">
     <thead >
-=======
+
     <table class="table table-dark">
       <thead class="thead-light">
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
     <table class="table table-dark">
       <thead class="thead-light">
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+
         <tr>
           <td >ID</td>
           <td >Name</td>
@@ -137,15 +93,7 @@
         @foreach($employees as $employee)
         <tr>
             <td>{{ $employee->id}}</td>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <td>{{ $employee->fname}} &nbsp;&nbsp; {{$employee->lname}}</td>
-=======
             <td>{{ $employee->name}}</td>
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-            <td>{{ $employee->name}}</td>
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
             <td>{{ $employee->address}}</td>
             <td>{{ $employee->nic}}</td>
             <td>{{ $employee->mobile}}</td>
@@ -172,35 +120,4 @@
 </div>
 </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
-<script type="text/javascript">
-  $(function () {
-    
-    var table = $('.data-table').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: "{{ route('HRM.index') }}",
-        columns: [
-            {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
-            {data: 'address', name: 'address'},
-            {data: 'nic', name: 'nic'},
-            {data: 'mobile', name: 'mobile'},
-            {data: 'email', name: 'email'},
-            
-        ]
-    });
-    
-  });
-</script>
-
-
-<<<<<<< HEAD
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 @endsection
