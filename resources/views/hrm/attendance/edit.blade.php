@@ -49,6 +49,7 @@
     <form method="post" action="{{ route('Attendance.update', $attendance->id) }}">
     {{ method_field('PUT') }}
           @csrf
+          
           <div class="dropdown" class="mb-3">    
               <label for="empNameAttend">Employee Name:</label>
                   <select class="form-control" name="empNameAttend" value="{{$attendance->empNameAttend }}">
@@ -56,7 +57,6 @@
                           <option value="{{ $employee->id}} &nbsp&nbsp {{$employee ->name}}">{{$employee ->name}}</option>
                       @endforeach 
                   </select>
-             
           </div>
 
           <div class="form-group" class="mb-3">

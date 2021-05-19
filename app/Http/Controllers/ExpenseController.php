@@ -25,7 +25,15 @@ class ExpenseController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        //
+=======
         return view('expense.create');
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+        return view('expense.create');
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
     }
 
     /**

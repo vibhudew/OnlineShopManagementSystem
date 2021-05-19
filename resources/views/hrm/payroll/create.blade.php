@@ -47,8 +47,7 @@
     @endif
       <form method="post" action="{{ route('Payroll.store') }}">
           @csrf
-         
-     
+           
           <div  class="mb-3" class="dropdown">    
               <label for="empName">Employee Name:</label>
                   <select class="form-control" name="empName">
@@ -58,7 +57,6 @@
                   
                   </select>
           </div>
-        
 
           <div class="form-group" class="mb-3">
               <label for="monthYear">Month/Year:</label>

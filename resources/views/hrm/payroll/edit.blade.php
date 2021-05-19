@@ -10,20 +10,20 @@
         <div id="navbar">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">HRM</a>
+    <h5><a class="navbar-brand" href="#">HRM</a></h5>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/HRM" >Employee</a>
+          <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Attendance" >Attendance</a>
+          <h4><a class="nav-link" href="/Attendance" >Attendance</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Payroll" >Payroll</a>
+          <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
         </li>
     
       </ul>
@@ -58,6 +58,7 @@
                   </select>
              
           </div>
+
         
 
           <div class="form-group" class="mb-3">
@@ -102,7 +103,15 @@
 
           <div class="form-group" class="mb-3">
                 <label for="gross">Gross Amount:</label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" />
+=======
                 <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
           </div>
 
           <br/><br>

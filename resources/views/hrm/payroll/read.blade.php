@@ -43,6 +43,7 @@
       <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
 
+
     <div>
     <a style="margin: 19px;" href="{{ route('Payroll.create')}}" class="btn btn-primary btn-lg">Add Payroll</a>
     </div>  

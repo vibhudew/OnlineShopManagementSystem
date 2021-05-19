@@ -36,7 +36,8 @@
 <div class="row">
 <div class="col-sm-12">
     <br>
-    <h1>All Employees</h1> 
+
+    <h1>All Employees</h1>    
 
   <table>
       <tr>
@@ -53,11 +54,9 @@
         
         </td>
       </tr>
-
-  
   
   </table>
-    
+
     <div>
     <a style="margin: 19px;" href="{{ route('HRM.create')}}" class="btn btn-primary btn-lg">Add Employee</a>
     </div>  
@@ -71,8 +70,15 @@
         @endif
     </div>  
 
+
+  <table class="table table-striped">
+    <thead >
+
     <table class="table table-dark">
       <thead class="thead-light">
+    <table class="table table-dark">
+      <thead class="thead-light">
+
         <tr>
           <td >ID</td>
           <td >Name</td>
@@ -113,27 +119,5 @@
 <div>
 </div>
 </div>
-
-<script type="text/javascript">
-  $(function () {
-    
-    var table = $('.data-table').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: "{{ route('HRM.index') }}",
-        columns: [
-            {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
-            {data: 'address', name: 'address'},
-            {data: 'nic', name: 'nic'},
-            {data: 'mobile', name: 'mobile'},
-            {data: 'email', name: 'email'},
-            
-        ]
-    });
-    
-  });
-</script>
-
 
 @endsection

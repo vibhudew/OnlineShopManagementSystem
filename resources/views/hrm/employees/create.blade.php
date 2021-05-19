@@ -50,6 +50,7 @@
           <div class="form-group" class="mb-3">    
               <label for="name">Full Name:</label>
               <input type="text" class="form-control" name="name"/>
+
           </div>
 
           <div class="form-group">

@@ -5,22 +5,18 @@ use App\Models\Employee;
 
 use Illuminate\Http\Request;
 
-
-
 class EmployeeController extends Controller
 {
     public function index(Request $request)
+
     {
         $employees = Employee::all();
 
         return view('hrm.employees.read', ['employees' => $employees]);
-        
-       
     }
 
     public function store(Request $request)
     {
-      
         $request->validate([
             'name'=>'required|max:100|min:3',
             'address'=>'required|max:100|min:5',
@@ -32,16 +28,18 @@ class EmployeeController extends Controller
 
 
         $employee = new Employee([
+        
 
             'name' => $request->get('name'),
             'address' => $request->get('address'),
             'nic' => $request->get('nic'),
             'mobile' => $request->get('mobile'),
             'email' => $request->get('email'),
+
         ]);
+        
 
-
-        $employee->save();
+             $employee->save();
 
         return redirect('/HRM')->with('success', 'Employee created successfully!!!');
     }
@@ -65,18 +63,16 @@ class EmployeeController extends Controller
             'address'=>'required|max:100|min:5',
             'nic'=>'required|max:12|min:10',
             'mobile'=>'required|min:10',
-            'email'=>'required|min:5|max:50|email'     
+            'email'=>'required|min:5|max:50|email'
             
         ]);
 
         $employee = Employee::find($id);
-       
         $employee->name = $request->get('name');
         $employee->address = $request->get('address');
         $employee->nic = $request->get('nic');
         $employee->mobile =$request->get('mobile');
         $employee->email = $request->get('email');
-          
         $employee->save();
 
         return redirect('/HRM')->with('success', 'Employee updated successfully!');
@@ -98,6 +94,7 @@ class EmployeeController extends Controller
         return view('hrm.employees.searchEmployee', compact('employees'));
 
     }
+
 /*
     public function reportEmp(){
 
@@ -105,5 +102,4 @@ class EmployeeController extends Controller
         $pdf = PDF::loadView('hrm.employees.read',compact('employees'));
         return $pdf-> download('employees.pdf');
     } */
-
 }

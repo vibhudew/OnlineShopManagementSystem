@@ -52,7 +52,7 @@
               <label for="name">Full Name:</label>
               <input type="text" class="form-control" name="name" value="{{$employee->name }}" required/>
           </div>
-              
+          
           <div class="form-group">
                 <label for="address">Address:</label>
                 <input type="text" class="form-control" name="address" value="{{ $employee->address }}" required  />

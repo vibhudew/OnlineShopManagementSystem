@@ -52,6 +52,7 @@
       
           <div  class="mb-3" class="dropdown">    
               <label for="empNameAttend">Employee Name:</label>
+
                   <select class="form-control" name="empNameAttend">
                       @foreach ($employees as $employee)
                           <option value="{{ $employee->id}} &nbsp&nbsp {{$employee ->name}}">{{$employee ->name}}</option>
