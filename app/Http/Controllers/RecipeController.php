@@ -6,6 +6,7 @@ use App\Models\Manufact;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use PDF;
 
 class RecipeController extends Controller
 {
@@ -132,6 +133,12 @@ class RecipeController extends Controller
 
         $data3 = Recipe::all();
         return redirect('Manufacturing')->with('Recipe1',$data3);
-
+        
     }
+    public function getReport(){
+        $taskReport = Recipe::all();
+        return view('ReportTask',compact('taskReport'));
+    }
+    
+   
 }
