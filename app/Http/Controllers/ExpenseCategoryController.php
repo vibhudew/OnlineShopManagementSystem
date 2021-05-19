@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ExpenseCategory;
 use Illuminate\Http\Request;
-
+use Toastr;
 
 class ExpenseCategoryController extends Controller
 {
@@ -31,7 +31,7 @@ class ExpenseCategoryController extends Controller
         $this->validate($request,[
 
             'name'=>'required|max:100|min:3',
-            'amount'=>'required',
+            'amount'=>'required|',
             'timeline'=>'required',
             'period'=>'required',
         ]);
@@ -43,7 +43,7 @@ class ExpenseCategoryController extends Controller
         $expensecategory->description=$request->description;
         $expensecategory->save();
 
-        
+        Toastr::success('added successfully :)','Success');
         return redirect()->back();
         //return view('/Expense/add')->with('Ex_Category',$data);
 
@@ -70,7 +70,8 @@ class ExpenseCategoryController extends Controller
         $expensecategory->description=$request->description;
         $expensecategory->save();
         $expensecategory=ExpenseCategory::All();
-        return view('expense_category.index')->with('expensecategory',$expensecategory);
+        Toastr::success('Updated successfully :)','Success');
+        return redirect('/expense-categories');
         
     }
 
@@ -78,6 +79,7 @@ class ExpenseCategoryController extends Controller
     {
         $expensecategory=ExpenseCategory::find($id);
         $expensecategory->delete();
+        Toastr::error('Deleted successfully :)','Delete');
         return redirect()->back();
     }
 }

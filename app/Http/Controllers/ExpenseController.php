@@ -6,6 +6,8 @@ use App\Models\Expense;
 use Illuminate\Http\Request;
 use App\DataTables\ExpenseDataTable;
 use App\Models\ExpenseCategory;
+use App\Models\Contact;
+use Toastr;
 
 class ExpenseController extends Controller
 {
@@ -26,8 +28,9 @@ class ExpenseController extends Controller
      */
     public function create()
     {
+        $contcats= Contact::all(['id','First_name']);
         $categories = ExpenseCategory::all(['id','name']);
-        return view('expense.create',compact('categories'));
+        return view('expense.create',compact('categories','contcats'));
     }
 
     /**
@@ -55,7 +58,7 @@ class ExpenseController extends Controller
         $expense->description=$request->description;
         $expense->save();
 
-        
+        Toastr::success('added successfully :)','Success');
         return redirect('/expense');
     }
 
@@ -102,7 +105,7 @@ class ExpenseController extends Controller
     public function destroy($id)
     {
         Expense::find($id)->delete($id);
-  
+        Toastr::error('Deleted successfully :)','Delete');
         return redirect()->back();
     }
 }

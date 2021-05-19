@@ -28,21 +28,19 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="form-group">
                   <label for="name">Category</label>
-                  <select class="form-control">
+                  <select class="form-control" name="category">
                     @foreach($categories as $category)
-                      <option value="{{$category->id}}">{{$category->name}}</option>
+                      <option value="{{$category->name}}">{{$category->name}}</option>
                     @endforeach
                   </select>
-                  <label>Category</label>
-                  <input type="text" class="form-control" name="amount" placeholder="Enter your budget category" >
                 </div>
-              </div>
+              
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Date</label>
                   <input type="date" class="form-control" name="date" >
+                </div>
               </div>
             </div>
             <div class="row">
@@ -53,10 +51,12 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group">
                   <label>Expense for contact</label>
-                  <input type="text" class="form-control" name="timeline" placeholder="Select contact" >
-                </div>
+                  <select class="form-control" name="contact">
+                    @foreach($contcats as $contcat)
+                      <option value="{{$contcat->First_name}}">{{$contcat->First_name}}</option>
+                    @endforeach
+                  </select>
               </div>
             </div>
             <div class="row">

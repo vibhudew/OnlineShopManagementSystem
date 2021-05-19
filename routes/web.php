@@ -177,7 +177,7 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     Route::get('/editexpenseview/{id}','ExpenseController@edit');
     Route::post('/editexpense','ExpenseController@update');
     Route::get('/deleteexpense/{id}','ExpenseController@destroy');
-    Route::get('/createexpense','ExpenseController@create');
+    Route::get('/createxpense' ,'ExpenseController@create');
     //Calender...
     Route::get('fullcalender', [FullCalenderController::class, 'index']);
     Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
