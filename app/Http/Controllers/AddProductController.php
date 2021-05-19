@@ -12,13 +12,8 @@ class AddProductController extends Controller
         $ProductDetails = new ProductDetails;
 
         $this->validate($request,[
-<<<<<<< HEAD
-            'pId'=>'required|max:4|min:1',
-            'productName'=>'required|max:50|min:1'
-=======
             'productName'=>'required|max:50|min:2'
             
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
         ]);
         
         $ProductDetails->Productid=$request->pId;
@@ -44,12 +39,6 @@ class AddProductController extends Controller
 
     }
     
-<<<<<<< HEAD
-    public function updateProduct($id){
-        $ProductDetails = ProductDetails::find($id);
-        
-        return view('resources.views.Product.updateproduct')->with('ProductDetails', $ProductDetails);
-=======
     public function updateProductView($id){
         $ProductDetails = ProductDetails::find($id);
         
@@ -84,7 +73,6 @@ class AddProductController extends Controller
         return view('Product/viewproduct')->with('Product1',$ProductDetails);
 
 
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
     }
     

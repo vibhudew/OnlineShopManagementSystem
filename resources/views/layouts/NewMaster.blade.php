@@ -26,11 +26,7 @@
           <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
           <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
           <script src="/vendor/datatables/buttons.server-side.js"></script>
-<<<<<<< HEAD
-
-=======
           <script src="http://127.0.0.1:8000/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
         </head>
         
         <body class="">
@@ -252,10 +248,6 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-=======
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
               <footer class="footer">
                 <div class=" container-fluid ">
@@ -287,11 +279,5 @@
               </footer>
             </div>
           </div>
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
       </body>
 </html>

@@ -18,11 +18,7 @@ class PayrollController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-<<<<<<< HEAD
-            'empName' =>'required|max:100|min:3',
-=======
            
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
             'monthYear'=>'required',
             'totalWorkDur'=>'required',
             'amtPerDur'=>'required',
@@ -47,33 +43,21 @@ class PayrollController extends Controller
 
     public function create()
     {
-<<<<<<< HEAD
-        return view('hrm.payroll.create');
-=======
         $employees = Employee:: all(['id','name']);
         return view('hrm.payroll.create',compact('employees'));
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     public function edit($id)
     {
         $payroll = Payroll::find($id);
-<<<<<<< HEAD
-        return view('hrm.payroll.edit', ['payroll' => $payroll]);        
-=======
         $employees = Employee:: all(['id','name']);
         return view('hrm.payroll.edit', ['payroll' => $payroll],compact('employees'));        
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-<<<<<<< HEAD
-            'empName' =>'required|max:100|min:3',
-=======
             
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
             'monthYear'=>'required',
             'totalWorkDur'=>'required',
             'amtPerDur'=>'required',
@@ -104,8 +88,6 @@ class PayrollController extends Controller
 
         return redirect('/Payroll')->with('success', 'Payroll deleted successfully!');
     }
-<<<<<<< HEAD
-=======
 
     public function searchPayroll(){
 
@@ -115,5 +97,4 @@ class PayrollController extends Controller
         return view('hrm.payroll.searchPayroll', compact('payrolls'));
 
     }
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 }

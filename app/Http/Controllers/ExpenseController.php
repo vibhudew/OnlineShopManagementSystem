@@ -40,9 +40,6 @@ class ExpenseController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        //
-=======
        
         $expense= new Expense;
 
@@ -62,7 +59,6 @@ class ExpenseController extends Controller
 
         
         return redirect()->back();
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     /**
@@ -105,16 +101,10 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
-    public function destroy(Expense $expense)
-    {
-        //
-=======
     public function destroy($id)
     {
         Expense::find($id)->delete($id);
   
         return redirect()->back();
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 }

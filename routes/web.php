@@ -5,10 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AccountController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\FullCalenderController;
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 /*
 |--------------------------------------------------------------------------
@@ -35,12 +32,9 @@ Route::get('/', function () {
 
 
 //kaveen work product part
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 Route::get('/Product', function () {
     $data=App\Models\ProductDetails::all();
     return view('Product/viewproduct')->with('Product1', $data);
@@ -54,9 +48,7 @@ Route:: post('/saveProduct','AddProductController@store');
 
 Route::get('/deleteProduct/{Productid}','AddProductController@deleteProduct');
 
-<<<<<<< HEAD
 Route::get('/updateProduct/{Productid}','AddProductController@updateProduct');
-=======
 Route::get('/updateProduct/{Productid}','AddProductController@updateProductView');
 
 Route::post('/updateItems','AddProductController@updateProduct');
@@ -68,17 +60,13 @@ Route::get('/stock', function(){
 });
 
 
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 //kaveen product part end
 
 
-<<<<<<< HEAD
 //manufacturing part starts
-=======
 
 
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 Route::get('/Manufacturing1', function () {
     
     return view('Manufacturing/addRecipe');
@@ -136,7 +124,6 @@ Auth::routes();
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
 
-<<<<<<< HEAD
 
 
 
@@ -148,8 +135,6 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
 
 
  
-=======
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 
 //HRM Routes
@@ -162,17 +147,13 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
  Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
  Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
-<<<<<<< HEAD
-=======
  //HRM Reports
  
 
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 Route::get('/Accounts1', function () {
     
     return view('Accounts/addAccount');
 });
-<<<<<<< HEAD
 
 Route::post('/saveAccount','AccountController@store');
 
@@ -190,18 +171,14 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
   //  Route::resource('expenses', 'ExpenseController');
 
     Route::get('/expense', [ExpenseController::class ,'index']);
-=======
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
     Route::get('/addexpense', function () {
         return view('expense/create');
     });
 
-<<<<<<< HEAD
     Route::get('/editexpense', function () {
         return view('expense/edit');
     });
-=======
 Route::post('/saveAccount','AccountController@store');
 
 Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
@@ -255,4 +232,3 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
  Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03

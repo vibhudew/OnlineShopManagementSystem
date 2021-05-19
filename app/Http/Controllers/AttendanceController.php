@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Attendance;
-<<<<<<< HEAD
-=======
 use App\Models\Employee;
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
 
 class AttendanceController extends Controller
 {
@@ -21,11 +18,7 @@ class AttendanceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-<<<<<<< HEAD
-            'empNameAttend'=>'required|max:100|min:5',
-=======
             
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
             'startTime'=>'required',
             'endTime'=>'required' 
             
@@ -44,35 +37,22 @@ class AttendanceController extends Controller
 
     public function create()
     {
-<<<<<<< HEAD
-        return view('hrm.attendance.create');
-=======
         $employees = Employee:: all(['id','name']);
         return view('hrm.attendance.create', compact('employees'));
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     public function edit($id)
     {
-<<<<<<< HEAD
-        $attendance = Attendance::find($id);
-        return view('hrm.attendance.edit', ['attendance' => $attendance]);        
-=======
 
         $attendance = Attendance::find($id);
         $employees = Employee:: all(['id','name']);
         return view('hrm.attendance.edit', ['attendance' => $attendance],compact('employees'));        
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-<<<<<<< HEAD
-            'empNameAttend'=>'required|max:100|min:5',
-=======
            
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
             'startTime'=>'required',
             'endTime'=>'required'      
             
@@ -96,10 +76,6 @@ class AttendanceController extends Controller
 
         return redirect('/Attendance')->with('success', 'Attendance deleted successfully!');
     }
-<<<<<<< HEAD
-}
-
-=======
 
     public function searchAttend(){
 
@@ -112,4 +88,3 @@ class AttendanceController extends Controller
 }
 
 
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
