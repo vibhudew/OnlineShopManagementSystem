@@ -112,8 +112,8 @@ Route::post('/updateManufact2','RecipeController@updateManufact2');
 Route::get('/updateRecipe/{id}','RecipeController@updateRecipe');
 Route::post('/updateRecipe2','RecipeController@updateRecipe2');
 
-Route::get('/get-all-taskReport','RecipeController@getReport');
-Route::get('/download-pdf','RecipeController@downloadReport');
+Route::get('/download-Recipe-pdf','RecipeController@downloadReport');
+Route::get('/download-Manufact-pdf','RecipeController@getManufactReport');
 //manufacturing part end
 
 

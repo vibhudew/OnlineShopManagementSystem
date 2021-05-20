@@ -135,14 +135,16 @@ class RecipeController extends Controller
         return redirect('Manufacturing')->with('Recipe1',$data3);
         
     }
-    public function getReport(){
-        $taskReport = Recipe::all();
-        return view('Manufacturing/ReportTask',compact('taskReport'));
-    }
+   
     public function downloadReport(){
-        $taskReport = Recipe::all();
-        $pdf = PDF::loadView('Manufacturing/ReportTask',compact('taskReport'));
-        return $pdf->setPaper('A4','potrate')->download('abc.pdf');
+        $RecipeReport = Recipe::all();
+        $pdf = PDF::loadView('Manufacturing/RecipeReport',compact('RecipeReport'));
+        return $pdf->setPaper('A4','potrate')->download('ManufacturingRecipesReport.pdf');
+    }
+    public function getManufactReport(){
+        $RecipeReport = Manufact::all();
+        $pdf = PDF::loadView('Manufacturing/ManufactReport',compact('RecipeReport'));
+        return $pdf->setPaper('A4','potrate')->download('ManufacturingDetailsReport.pdf');
     }
    
 }
