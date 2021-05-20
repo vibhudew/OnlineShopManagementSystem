@@ -31,7 +31,7 @@ class ExpenseCategoryController extends Controller
         $this->validate($request,[
 
             'name'=>'required|max:100|min:3',
-            'amount'=>'required|',
+            'amount'=>'required',
             'timeline'=>'required',
             'period'=>'required',
         ]);

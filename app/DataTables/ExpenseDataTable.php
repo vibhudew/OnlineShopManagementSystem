@@ -24,7 +24,8 @@ class ExpenseDataTable extends DataTable
             ->addColumn('action', function( $data ){ 
 
 
-                return '<a class="btn btn-danger" href="/deleteexpense/'.$data->id.'">Delete</a>'; // or simply return html here
+                return '<a class="btn btn-success" href="/editexpenseview/'.$data->id.'">Edit</a>
+                <a class="btn btn-danger" href="/deleteexpense/'.$data->id.'">Delete</a>'; // or simply return html here
             } );
 
     }
@@ -53,7 +54,6 @@ class ExpenseDataTable extends DataTable
                     ->minifiedAjax()
                     ->dom('Bfrtip')
                     ->orderBy(1)
-        
                     ;
 
     }

@@ -18,7 +18,10 @@ class ExpenseController extends Controller
      */
     public function index(ExpenseDataTable $dataTable)
     {
-        return $dataTable->render('expense.index');
+
+        $extotale = Expense::sum('amount');
+        
+        return $dataTable->render('expense.index',compact('extotale'));
     }
 
     /**
@@ -79,9 +82,12 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function edit(Expense $expense)
+    public function edit($id)
     {
-        //
+        $contcats= Contact::all(['id','First_name']);
+        $categories = ExpenseCategory::all(['id','name']);
+        $expenses= Expense::find($id);
+        return view('expense.edit',compact('expenses','categories','contcats'));
     }
 
     /**
@@ -91,9 +97,20 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Expense $expense)
+    public function update(Request $request)
     {
-        //
+        $id=$request->id;
+        $expense=Expense::find($id);
+        $expense->name=$request->name;
+        $expense->category=$request->category;
+        $expense->date=$request->date;
+        $expense->amount=$request->amount;
+        $expense->contact=$request->contact;
+        $expense->description=$request->description;
+        $expense->save();
+        $expense=Expense::All();
+        Toastr::success('Updated successfully :)','Success');
+        return redirect('/expense');
     }
 
     /**

@@ -43,16 +43,14 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group">
                   <label>Period</label>
-                  <input class="form-control" list="Options" name="period" value="{{$editcategory->period}}">
-                  <datalist id="Options">
-                      <option value="Day">
-                      <option value="Month">
-                      <option value="Year">
-                  </datalist>
+                  <select class="form-control" name="period" >
+                    <option value="{{$editcategory->period}}">{{$editcategory->period}}</option>
+                      <option value="Day">Day</option>
+                      <option value="Month">Month</option>
+                      <option value="Year">Year</option>
+                  </select>
                 </div>
-              </div>
             </div>
             <div class="row">
               <div class="col-md-12">
@@ -63,14 +61,14 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-1">
                 <div class="form-group">
-                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Edit">
+                  <input type="submit" class="btn btn-primary" value="Edit">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-1">
                 <div class="form-group">
-                <a class="btn btn-danger btn-lg btn-block" href="../expense-categories" role="button" value="Back">Back</a>
+                <a class="btn btn-danger" href="../expense-categories" role="button" value="Back">Back</a>
                 </div>
               </div>
             </div>
