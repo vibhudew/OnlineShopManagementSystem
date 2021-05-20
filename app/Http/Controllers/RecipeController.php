@@ -80,7 +80,10 @@ class RecipeController extends Controller
     }
     public function updateManufact($id){
         $manufact=Manufact::find($id);
-        return view('Manufacturing/updateManufact')->with('manufactData',$manufact);
+        $productName = Recipe::all(['id','manufacturingProductName']);
+        return view('Manufacturing/updateManufact')->with('manufactData',$manufact)->with('productName',$productName);
+        //return view('Manufacturing.updateManufact',compact('productName'));
+        
     }
     public function updateManufact2(Request $request){
         $this->validate($request,[
@@ -91,8 +94,10 @@ class RecipeController extends Controller
         $id=$request->id;
         $price=$request->price;
         $numOfUnits=$request->numOfUnits;
+        $Productname=$request->	dropdown;
         $updateData = Manufact::find($id);
-
+        
+        $updateData->product_name=$Productname;
         $updateData->cost=$price;
         $updateData->num_of_units=$numOfUnits;
         $updateData->cost_for_all_units=$price * $numOfUnits;

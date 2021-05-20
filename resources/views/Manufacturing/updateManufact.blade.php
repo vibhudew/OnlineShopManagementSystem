@@ -12,17 +12,17 @@
 <form method="POST" action="/updateManufact2" >
     {{csrf_field()}}
 
-    {{-- <div class="dropdown">
+     <div class="dropdown">
         <label for="dropdown" class="col-sm-4 col-form-label text-md-right"></label>
-        <div class="col-md-12">
+        <div>
             <h2> Choose Product</h2>  
             <select class="form-control" name="dropdown">
-              @foreach($manufactData as $Mdata)
+              @foreach($productName as $Mdata)
               <option value="{{ $Mdata->	manufacturingProductName }}">{{ $Mdata-> 	manufacturingProductName }}</option>
               @endforeach 
             </select>
         </div>
-    </div>   --}}
+    </div>   
 
     <br>
     <h2>Price</h2>     
