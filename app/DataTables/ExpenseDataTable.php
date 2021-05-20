@@ -21,7 +21,13 @@ class ExpenseDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', 'expense.action');
+            ->addColumn('action', function( $data ){ 
+
+
+                return '<a class="btn btn-success" href="/editexpenseview/'.$data->id.'">Edit</a>
+                <a class="btn btn-danger" href="/deleteexpense/'.$data->id.'">Delete</a>'; // or simply return html here
+            } );
+
     }
 
     /**
@@ -48,7 +54,6 @@ class ExpenseDataTable extends DataTable
                     ->minifiedAjax()
                     ->dom('Bfrtip')
                     ->orderBy(1)
-        
                     ;
 
     }
@@ -61,13 +66,16 @@ class ExpenseDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'id',
-            'name',
-            'category',
-            'date',
-            'amount',
-            'contact',
-            'description'
+
+            Column::make('id')->title('ID'),
+            Column::make('name')->title('Name'),
+            Column::make('category')->title('Category'),
+            Column::make('date')->title('Date'),
+            Column::make('amount')->title('Amount'),
+            Column::make('contact')->title('Contact'),
+            Column::make('description')->title('Description'),
+            Column::make('action')->title('Action'),
+
         ];
     }
 

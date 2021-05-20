@@ -163,6 +163,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         \Yajra\DataTables\DataTablesServiceProvider::class,
         \Yajra\DataTables\ButtonsServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -230,6 +232,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'DataTables' => \Yajra\DataTables\Facades\DataTables::class,
+        'PDF'=>\Barryvdh\DomPDF\Facade::class,
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
 
     ],
 

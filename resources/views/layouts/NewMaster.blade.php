@@ -27,6 +27,8 @@
           <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
           <script src="/vendor/datatables/buttons.server-side.js"></script>
           <script src="http://127.0.0.1:8000/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+          <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
+
         </head>
         
         <body class="">
@@ -248,7 +250,6 @@
                 </div>
               </div>
             </div>
-          </div>
 
               <footer class="footer">
                 <div class=" container-fluid ">
@@ -280,8 +281,7 @@
               </footer>
             </div>
           </div>
-
-
-
+          <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+          {!! Toastr::message() !!}
       </body>
 </html>
