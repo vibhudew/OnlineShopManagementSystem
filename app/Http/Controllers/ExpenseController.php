@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Expense;
 use Illuminate\Http\Request;
 use App\DataTables\ExpenseDataTable;
+use App\Models\ExpenseCategory;
+use App\Models\Contact;
+use Toastr;
 
 class ExpenseController extends Controller
 {
@@ -15,7 +18,10 @@ class ExpenseController extends Controller
      */
     public function index(ExpenseDataTable $dataTable)
     {
-        return $dataTable->render('expense.index');
+
+        $extotale = Expense::sum('amount');
+        
+        return $dataTable->render('expense.index',compact('extotale'));
     }
 
     /**
@@ -25,15 +31,9 @@ class ExpenseController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        //
-=======
-        return view('expense.create');
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-        return view('expense.create');
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+        $contcats= Contact::all(['id','First_name']);
+        $categories = ExpenseCategory::all(['id','name']);
+        return view('expense.create',compact('categories','contcats'));
     }
 
     /**
@@ -61,8 +61,8 @@ class ExpenseController extends Controller
         $expense->description=$request->description;
         $expense->save();
 
-        
-        return redirect()->back();
+        Toastr::success('added successfully :)','Success');
+        return redirect('/expense');
     }
 
     /**
@@ -82,9 +82,12 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function edit(Expense $expense)
+    public function edit($id)
     {
-        //
+        $contcats= Contact::all(['id','First_name']);
+        $categories = ExpenseCategory::all(['id','name']);
+        $expenses= Expense::find($id);
+        return view('expense.edit',compact('expenses','categories','contcats'));
     }
 
     /**
@@ -94,9 +97,20 @@ class ExpenseController extends Controller
      * @param  \App\Models\Expense  $expense
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Expense $expense)
+    public function update(Request $request)
     {
-        //
+        $id=$request->id;
+        $expense=Expense::find($id);
+        $expense->name=$request->name;
+        $expense->category=$request->category;
+        $expense->date=$request->date;
+        $expense->amount=$request->amount;
+        $expense->contact=$request->contact;
+        $expense->description=$request->description;
+        $expense->save();
+        $expense=Expense::All();
+        Toastr::success('Updated successfully :)','Success');
+        return redirect('/expense');
     }
 
     /**
@@ -108,7 +122,7 @@ class ExpenseController extends Controller
     public function destroy($id)
     {
         Expense::find($id)->delete($id);
-  
+        Toastr::error('Deleted successfully :)','Delete');
         return redirect()->back();
     }
 }

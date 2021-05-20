@@ -24,35 +24,22 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="Enter your name" >
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" >
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="form-group">
-                  <label>Category</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <input type="text" class="form-control" name="amount" placeholder="Enter your budget category" >
-=======
-                  <input type="text" class="form-control" name="category" placeholder="Enter your budget category" >
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-                  <input type="text" class="form-control" name="category" placeholder="Enter your budget category" >
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+                  <label for="name">Category</label>
+                  <select class="form-control" name="category" id="category">
+                    @foreach($categories as $category)
+                      <option value="{{$category->name}}">{{$category->name}}</option>
+                    @endforeach
+                  </select>
                 </div>
-              </div>
+              
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Date</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <input type="datetime-local" class="form-control" name="amount" >
-=======
-                  <input type="datetime-local" class="form-control" name="date" >
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-                  <input type="datetime-local" class="form-control" name="date" >
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+                  <input type="date" class="form-control" name="date" id="date">
                 </div>
               </div>
             </div>
@@ -60,51 +47,42 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Amount</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <input type="text" class="form-control" name="timeline" placeholder="Enter expense amount" >
-=======
-                  <input type="text" class="form-control" name="amount" placeholder="Enter expense amount" >
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-                  <input type="text" class="form-control" name="amount" placeholder="Enter expense amount" >
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+                  <input type="text" class="form-control" name="amount" id="amount" placeholder="Enter expense amount" >
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group">
                   <label>Expense for contact</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <input type="text" class="form-control" name="timeline" placeholder="Select contact" >
-=======
-                  <input type="text" class="form-control" name="contact" placeholder="Select contact" >
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-                  <input type="text" class="form-control" name="contact" placeholder="Select contact" >
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
-                </div>
+                  <select class="form-control" name="contact" id="contact">
+                    @foreach($contcats as $contcat)
+                      <option value="{{$contcat->First_name}}">{{$contcat->First_name}}</option>
+                    @endforeach
+                  </select>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Description</label>
-                  <textarea rows="4" cols="80" class="form-control" name="description" placeholder="Here can be your description"></textarea>
+                  <textarea rows="4" cols="80" class="form-control" name="description" id="description" placeholder="Here can be your description"></textarea>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-1">
+              <div class="col-md-2">
                 <div class="form-group">
-                  <input type="submit" class="btn btn-primary" value="Add">
+                  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Add">
                 </div>
               </div>
-              <div class="col-md-1">
+              <div class="col-md-2">
                 <div class="form-group">
-                  <a class="btn btn-danger" href="/expense" role="button" value="">Back</a>
+                  <a class="btn btn-danger btn-lg btn-block" href="/expense" role="button" value="">Back</a>
                 </div>
               </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <a class="btn btn-warning btn-lg btn-block" href="" onchange="autoFill()">Demo</a>
+                </div>
+            </div>
             </div>
           </form>
         </div>
@@ -114,3 +92,14 @@
 @section('sidecontent')
 
 @endsection
+
+<script type="text/javascript">
+  function autoFill() {
+    document.getElementById('name').value = "festival Shopping";
+    document.getElementById('category').value = "Shopping";
+    document.getElementById('date').value = "2021-01-01";
+    document.getElementById('amount').value = "3500.00";
+    document.getElementById('contact').value = "Riyaj";
+    document.getElementById('description').value = "";
+  }
+</script>
