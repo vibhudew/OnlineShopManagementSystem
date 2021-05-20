@@ -81,9 +81,7 @@ class RecipeController extends Controller
     public function updateManufact($id){
         $manufact=Manufact::find($id);
         $productName = Recipe::all(['id','manufacturingProductName']);
-        return view('Manufacturing/updateManufact')->with('manufactData',$manufact)->with('productName',$productName);
-        //return view('Manufacturing.updateManufact',compact('productName'));
-        
+        return view('Manufacturing/updateManufact')->with('manufactData',$manufact)->with('productName',$productName);    
     }
     public function updateManufact2(Request $request){
         $this->validate($request,[
@@ -144,12 +142,12 @@ class RecipeController extends Controller
     public function downloadReport(){
         $RecipeReport = Recipe::all();
         $pdf = PDF::loadView('Manufacturing/RecipeReport',compact('RecipeReport'));
-        return $pdf->setPaper('A4','potrate')->download('ManufacturingRecipesReport.pdf');
+        return $pdf->download('ManufacturingRecipesReport.pdf');
     }
     public function getManufactReport(){
         $RecipeReport = Manufact::all();
         $pdf = PDF::loadView('Manufacturing/ManufactReport',compact('RecipeReport'));
-        return $pdf->setPaper('A4','potrate')->download('ManufacturingDetailsReport.pdf');
+        return $pdf->download('ManufacturingDetailsReport.pdf');
     }
    
 }
