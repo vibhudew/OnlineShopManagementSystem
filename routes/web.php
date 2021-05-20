@@ -52,11 +52,25 @@ Route::get('/updateProduct/{Productid}','AddProductController@updateProductView'
 
 Route::post('/updateItems','AddProductController@updateProduct');
 
-Route::get('/search', 'AddProductController@search');
+Route::get('/productsearch', 'AddProductController@search');
 
-Route::get('/stock', function(){
-    return view('Product_Stock/viewstock');
+
+//stock start
+
+Route::get('/Product_Stock', function(){
+    $data=App\Models\ProductStock::all();
+    return view('Product_Stock/viewstock')->with('ProductStock', $data);
 });
+
+Route::get('/Product_Stock/addstock', 'ProductStocksController@create');
+
+Route:: post('/saveStock','ProductStocksController@stockstore');
+
+Route::get('/deleteStock/{Productid}','ProductStocksController@deleteStock');
+
+Route::get('/updateStockBtn/{Productid}','ProductStocksController@updateStockView');
+
+Route::post('/updateStocks','ProductStocksController@updateStock');
 
 
 
