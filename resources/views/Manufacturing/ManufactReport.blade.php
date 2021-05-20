@@ -15,15 +15,15 @@
         }
         #tb1 td,#tb1 th{
             border: 1px solid #dddddd;
-            padding: :8px;
+            padding: 8px;
+            text-align: center;
         }
         #tb1 tr:nth-child(even){
             background-color: #91ebd4; 
         }
         #tb1 th{
             padding-top:12px;
-            padding-bottom: 12px;
-            text-align: left;
+            padding-bottom: 12px;   
             background-color: rgb(28, 224, 156);
             color:#fff;
 
