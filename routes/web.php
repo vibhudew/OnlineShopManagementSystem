@@ -31,6 +31,8 @@ Route::post('/saveContact','ContactController@store');
 
 Route::get('/deletecontact/{id}','ContactController@deletecontact');
 Route::get('/updatecontact/{id}','ContactController@updatecontactview');
+Route::post('/contactUpdate2','ContactController@contactUpdate2');
+
 
  Route::get('/Sales1', function () {
      return view('Sales/viewsales');

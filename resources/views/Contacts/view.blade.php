@@ -36,7 +36,7 @@
         <td>
             <a href="/updatecontact/{{$contact->id}}" class="btn btn-success">Update</>
 
-            <a href="/deletecontact/{{$contact->id}}" class="btn btn-default">Delete</>
+            <a href="/deletecontact/{{$contact->id}}" class="btn btn-warning">Delete</>
 
 
         </td>

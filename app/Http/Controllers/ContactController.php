@@ -34,21 +34,48 @@ public function deletecontact($id){
 
     $contact->delete();
 
-     return redirect()->back();
+     return redirect()->back()->with('success','Account deleted successfully!');
 
 
 }
 public function updatecontactview($id){
-    $contact=new Contact;
+
     $contact=Contact::find($id);
 
         return view('Contacts\updatecontact')->with('contactdata',$contact);
 
 }
+public function contactUpdate2(Request $request){
+    $this->validate($request,[
 
+        'businessName'=>'required|min:3|max:50',
+        'type'=>'required',
+        'firstName'=>'required|min:3|max:50',
+        'lastName'=>'required|min:3|max:50',
+        'email'=>'required|min:8|max:10',
+        'mobile'=>'required|min:8|max:10',
+        'address'=>'required|min:3|max:'
+    ]);
+
+    $id=$request->id;
+    $Contact= Contact::find($id);
+
+    $Contact->Business_id=$request->Business_id;
+    $Contact->Business_name=$request->Business_name;
+    $Contact->Type=$request->Type;
+    $Contact->First_name=$request->First_name;
+    $Contact->Last_name=$request->Last_name;
+    $Contact->Email=$request->Email;
+    $Contact->Mobile=$request->Mobile;
+    $Contact->Address=$request->Address;
+    $Contact->save();
+
+    $data3 = Contact::all();
+    return redirect('Contacts')->with('Contact1',$contactUpdate2);
 
 
 }
 
 
 
+}
