@@ -13,11 +13,20 @@
   </div>
   @endforeach
 
+  <td size="200"></td>
+        <td>
+        <a class="btn btn-primary" href="/downloadsalespdf">Export to PDF</a>
+
+        
+        </td>
+
 
   <form class = form-inline my-2 my-lg-0 type="get" action="{{url('/search')}}">
                       <input class="form-control mr-sm-2" type="search"  name ="query" placeholder="search Sales">
                       <button type="submit"  class="btn btn-outline-success my-2-sm-0" >Search</button>
   </form>
+
+
 
 <div class="content">
         <div class="row">
@@ -67,18 +76,18 @@
           <thead>
             <tr>
              
-            <th>Sales product Id</th>
+            <th>Invoice Id</th>
             <th>Product Name</th>
               <th>Quantity</th>
               <th>Unit Price</th>
-              <th>Total</th>
+              <th>Total Amount</th>
              
             </tr>
           </thead>
           <tbody class="row_container">
             
           <td>
-                  <input type="text" name="Product_id" class="form-control" placeholder="Sales product id">
+                  <input type="text" name="Invoice_id" class="form-control" placeholder="invoice id">
                 </td>  
                  <td>
                   <input type="text" name="Product_name" class="form-control" placeholder="product Name">

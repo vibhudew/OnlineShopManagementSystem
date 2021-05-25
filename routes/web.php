@@ -126,12 +126,14 @@ Route::post('/updateRecipe2','RecipeController@updateRecipe2');
     return view('Sales/viewsales')->with('viewsales1',$data);
 });
 
-//this calls the store function in AddsalesController
+//Sales Routes
  Route:: post('/savesales','AddsalesController@store');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
  Route::get('/search' ,'AddsalesController@search');
+ Route::get('/downloadsalespdf','AddsalesController@salesPDF');
+
 
 
 
@@ -218,3 +220,4 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
  Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
+ 

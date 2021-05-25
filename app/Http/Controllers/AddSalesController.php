@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\addsales;
+use PDF;
 
 class AddsalesController extends Controller
 {
@@ -65,6 +66,14 @@ class AddsalesController extends Controller
         $search_text  =$_GET['query'];
         $addsales =addsales::where('customer','LIKE','%'.$search_text.'%')->get();
         return view('Sales/search', compact('addsales'));
+
+}
+
+public function salesPDF(){
+
+    $addsales=addsales::all();
+    $pdf = PDF::loadView('Sales/viewPdf' ,compact('addsales'));
+    return $pdf->download('sales.pdf');
 
 }
 
