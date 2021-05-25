@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EmployeeController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -107,3 +109,28 @@ Route::post('/addcategory','Budgetcontroller@addexcategory');
 Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
 Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
 Route::post('/editexcategory','Budgetcontroller@editexcategory');
+
+Route::get('/Purchases', function () {
+    return view('Purchases/viewpurchases');
+ });
+ Route::get('/Purchases1', function () {
+    return view('Purchases/addpurchases');
+ });
+ Route:: get('/Purchases',function(){
+    //We only return viewsales1 when saving data but this view should appear other times aswell
+    $data=App\Models\PurchaseDetails::all();
+    return view('Purchases/viewpurchases')->with('viewpurchases1',$data);
+
+});
+
+ Route:: post('/savepurchases','purchasecontroller@store');
+ Route::get('/deletepurchases/{id}','purchasecontroller@deleteviewpurchases');
+ Route::get('/updatepurchases/{id}','purchasecontroller@updateviewpurchases'); 
+ Route::post('/editpurchases','purchasecontroller@editviewpurchases');
+
+ //Route::get('/get-all-employee/{id}'.[purchasecontroller::class,'getAllEmployees']);
+ //Route::get('/downlaod-pdf'.[purchasecontroller::class,'downloadPDF']);
+ Route::get('/get-All-Employees/{id}','purchasecontroller@getAllEmployees');
+ Route::get('/downlaod-pdf'.'purchasecontroller@downloadPDF');
+ 
+ 
