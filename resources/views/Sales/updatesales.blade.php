@@ -5,67 +5,69 @@
 @section('card-title', 'Edit Sales')
 
 @section('content')
-<div class="card">
-<div class="container ">
-<div class="form-row">
-  <div class="form-group col-md-6">
-  <form method= "post" action="/savesales">
+
+
+<form method= "post" action="/editsales">
   {{csrf_field()}}
-      <label for="Invoiceid">Invoice ID :</label>
-      <input type="text" class="form-control" name="Invoiceid" placeholder="Enter the Invoice Id">
-
-    </div>
-    <div class="form-group col-md-6">
-      <label for="Invoicedate">Invoice Date :</label>
-    <input type="Text" class="form-control" name="Invoicedate" placeholder="Enter the Invoice Date">
-  </div>
-  </div>
-  
-  <div class="form-row">
-  <div class="form-group col-md-6">
-      <label for="Salespay">Sales Payment ID :</label>
-     
-      <input type="text" class="form-control" name="salespayid" placeholder="Enter the Sales Payment Id">
-
-    </div>
-
-  <div class="form-group col-md-6">
-      <label for="Totalamount">Total Amount(Rs.):</label>
-      <input type="text" class="form-control" name="totamount" placeholder="Enter The Total Amount">
-    </div>
-    </div>
-    <div class="form-row">
-    <div class="form-group col-md-6">
-    <label for="customer">Customer:</label>
-     <input type="text" class="form-control" name="customer" placeholder="Enter Customer name">
-
+<div class="form-row">
+<div class="form-group col-md-6">
+@foreach($errors->all() as $error)
+<div class="alert alert-danger" role="alert">
+<input type="hidden" name="id" value ="{{$upsale->id}}"/>
+    {{$error}}
 </div>
-    <div class="form-group col-md-6">
-    <label for="paymethod">Payment Method:</label>
-    <input type="text" class="form-control" name="paymentmethod" placeholder="Enter the payment method">
 
-</div>
-    <div class="form-row">
-    <div class="form-group col-md-6">
-    <label for="payterm">Payment Term:</label>
-    <input type="text" class="form-control" name="payterm" placeholder="Enter the pay-term">
+@endforeach
 
+<input type="hidden" class="form-control" name="id" value ="{{$upsale->id}}"/>
+ 
+  <label>Invoice ID</label>
+      <input type="text" class="form-control" name="Invoiceid1" value ="{{$upsale->invoiceid}}"/>
 </div>
 <div class="form-group col-md-6">
+    <label for="customer">Customer</label>
+     <input type="text" class="form-control" name="customer1" value ="{{$upsale->customer}}"/>
+
+</div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="Totalamount">Total Amount(Rs.)</label>
+      <input type="text" class="form-control" name="totamount1" value ="{{$upsale->totalamount}}"/>
+    </div>
+    <div class="form-group col-md-6">
+    <label for="paymethod">Payment Method:</label>
+    <input type="text" class="form-control" name="paymentmethod1" value ="{{$upsale->paymentmethod}}"/>
+
+</div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="payterm">Payment Term:</label>
+    <input type="text" class="form-control" name="payterm1" value ="{{$upsale->payterm}}"/>
+
+</div>
+
+<div class="form-group col-md-6">
     <label for="Paymentstatus">Payment Status:</label>
-    <input type="text" class="form-control" name="paymentstatus" placeholder="Enter the payment Status">
+    <input type="text" class="form-control" name="paymentstatus1" value ="{{$upsale->paymentstatus}}"/>
+</div>
 </div>
 <div class="form-group col-md-6">
     <label for="Sellstatus">Sell Status:</label>
-    <input type="text" class="form-control" name="sellstatus" placeholder="Enter the sell status">
+    <input type="text" class="form-control" name="sellstatus1" value ="{{$upsale->sellstatus}}"/>
 </div>
-<input type="submit" class="btn btn-primary" value = "Save">
-</form>
+<br>
+<div class = "row">
+<div class = " col-md-10"></div>
+<div class = " col-md-6">
+<input type="submit"  class="btn btn-primary" value = "Update">
 </div>
+<div class = "row">
+<div class = " col-md-6"></div>
+<div class = " col-md-6">
+<input type="button"  class="btn btn-danger" value = "Clear">
 </div>
-
-  
-
 
 
 @endsection
