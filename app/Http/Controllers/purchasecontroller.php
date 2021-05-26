@@ -71,5 +71,12 @@ class purchasecontroller extends Controller
         //,compact('Purchases1'));
         return $pdf ->download(employee.pdf);
     }
-    
+    public function searchPurchase(){
+
+        $search_text = $_GET['queryPurchase'];
+        $purchasedetails = purchaseDetails::where('transactionreferencenumber','LIKE','%'.$search_text.'%') -> get();
+
+        return view('Purchase.searchPurchase', compact('purchasedetails'));
+
+    }
 }

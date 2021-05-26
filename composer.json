@@ -7,10 +7,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "barryvdh/laravel-dompdf": "^0.9.0",
-<<<<<<< HEAD
-=======
         "brian2694/laravel-toastr": "^5.56",
->>>>>>> 17264a24e51f5d48d7e33cf0199480f97c5915ad
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
