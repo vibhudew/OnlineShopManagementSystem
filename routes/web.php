@@ -217,41 +217,9 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
 });
 
-<<<<<<< HEAD
-Route::post('/addcategory','Budgetcontroller@addexcategory');
-Route::get('/deleteexcategory/{id}','Budgetcontroller@deleteexcategory');
-Route::get('/editexcategoryview/{id}','Budgetcontroller@editexcategoryview');
-Route::post('/editexcategory','Budgetcontroller@editexcategory');
-
-Route::get('/Purchases', function () {
-    return view('Purchases/viewpurchases');
- });
- Route::get('/Purchases1', function () {
-    return view('Purchases/addpurchases');
- });
- Route:: get('/Purchases',function(){
-    //We only return viewsales1 when saving data but this view should appear other times aswell
-    $data=App\Models\PurchaseDetails::all();
-    return view('Purchases/viewpurchases')->with('viewpurchases1',$data);
-
-});
-
- Route:: post('/savepurchases','purchasecontroller@store');
- Route::get('/deletepurchases/{id}','purchasecontroller@deleteviewpurchases');
- Route::get('/updatepurchases/{id}','purchasecontroller@updateviewpurchases'); 
- Route::post('/editpurchases','purchasecontroller@editviewpurchases');
-
- //Route::get('/get-all-employee/{id}'.[purchasecontroller::class,'getAllEmployees']);
- //Route::get('/downlaod-pdf'.[purchasecontroller::class,'downloadPDF']);
- Route::get('/get-All-Employees/{id}','purchasecontroller@getAllEmployees');
- Route::get('/downlaod-pdf'.'purchasecontroller@downloadPDF');
- 
- 
-=======
 //this calls the store function in AddsalesController
  Route:: post('/savepurchase','AddPurchaseController@store');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
  Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
  
->>>>>>> 17264a24e51f5d48d7e33cf0199480f97c5915ad
