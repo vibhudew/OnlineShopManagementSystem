@@ -6,8 +6,19 @@
 
 @section('content')
 
+<<<<<<< HEAD
 
 <a href="Products/addproduct" class = "btn btn-primary"> ADD </a>
+=======
+<div class="col-sm-12">
+  @if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+     
+    </div>
+  @endif
+</div>
+>>>>>>> c82a0ce501ebac564d2cad85b96c1208da7f1229
 
 <div id="app">
     <div id="navbar">
@@ -23,7 +34,7 @@
                 <h4><a class="nav-link active" aria-current="page" href="/Product" >All Products</a></h4>
             </li>
             <li class="nav-item">
-                <h4><a class="nav-link" href="/stock" >Stock Report</a></h4>
+                <h4><a class="nav-link" href="Product_Stock" >Stock Report</a></h4>
             </li>
           </ul>
       </div>
@@ -35,18 +46,22 @@
 <a href="Products/addproduct" class = "btn btn-primary"> ADD PRODUCT </a>
 
 
-<form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/search') }}">
+<form class="form-inline my-2 my-lg-0" type="get" action="{{ url('/productsearch') }}">
   
   <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search Product" aria-label="Search">
   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
 
 </form>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c82a0ce501ebac564d2cad85b96c1208da7f1229
 <div class="card-body">
   <div class="table-responsive">
     <table class="table">
       <thead class=" text-primary">
+        <tr style="text-align: center">
           <th>Id</th>
           <!-- <th>Product Id</th> -->
           <th>Product Name</th>
@@ -58,6 +73,7 @@
           <th>SellingPrice(Rs.)</th>
           <th>ProductDescription</th>
           <th>Action</th>
+        </tr>
       </thead>
       <tbody>
       @foreach($Product1 as $product1)
@@ -89,5 +105,8 @@
 @endsection
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c82a0ce501ebac564d2cad85b96c1208da7f1229
