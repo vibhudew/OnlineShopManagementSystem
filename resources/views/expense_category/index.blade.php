@@ -91,16 +91,21 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <input type="submit" class="btn btn-primary btn-lg btn-block" value="Add">
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <a class="btn btn-danger btn-lg btn-block" href="/expense" role="button" value="">Back</a>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <a class="btn btn-warning btn-lg btn-block" href="" role="button" value="">Demo</a>
+      </div>
+  </div>
   </div>
 
 </form>

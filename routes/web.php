@@ -8,6 +8,8 @@ use App\Models\Contact;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FullCalenderController;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,12 +63,29 @@ Route::get('/updateProduct/{Productid}','AddProductController@updateProductView'
 
 Route::post('/updateItems','AddProductController@updateProduct');
 
-Route::get('/search', 'AddProductController@search');
+Route::get('/productsearch', 'AddProductController@pSearch');
 
-Route::get('/stock', function(){
-    return view('Product_Stock/viewstock');
+
+//stock start
+
+Route::get('/Product_Stock', function(){
+    $data=App\Models\ProductStock::all();
+    return view('Product_Stock/viewstock')->with('ProductStock', $data);
 });
 
+Route::get('/Product_Stock/addstock', 'ProductStocksController@create');
+
+Route:: post('/saveStock','ProductStocksController@stockstore');
+
+Route::get('/deleteStock/{Productid}','ProductStocksController@deleteStock');
+
+Route::get('/updateStockBtn/{Productid}','ProductStocksController@updateStockView');
+
+Route::post('/updateStocks','ProductStocksController@updateStock');
+
+//pdf route
+
+Route::get('/stockreportview' , 'ProductStocksController@stockReport');
 
 
 //kaveen product part end
@@ -130,12 +149,14 @@ Route::get('/download-Manufact-pdf','RecipeController@getManufactReport');
     return view('Sales/viewsales')->with('viewsales1',$data);
 });
 
-//this calls the store function in AddsalesController
+//Sales Routes
  Route:: post('/savesales','AddsalesController@store');
  Route::get('/deletesales/{id}','AddsalesController@deleteviewsales');
  Route::get('/updatesale/{id}','AddsalesController@updateviewsales');
  Route::post('/editsales','AddsalesController@editviewsales');
  Route::get('/search' ,'AddsalesController@search');
+ Route::get('/downloadsalespdf','AddsalesController@salesPDF');
+
 
 
 
@@ -181,7 +202,7 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     Route::get('/editexpenseview/{id}','ExpenseController@edit');
     Route::post('/editexpense','ExpenseController@update');
     Route::get('/deleteexpense/{id}','ExpenseController@destroy');
-    Route::get('/createexpense','ExpenseController@create');
+    Route::get('/createxpense' ,'ExpenseController@create');
     //Calender...
     Route::get('fullcalender', [FullCalenderController::class, 'index']);
     Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
@@ -222,3 +243,4 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
  Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
+ 

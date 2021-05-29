@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
+=======
+class ComposerStaticInitb53670dd9c99430acc9f76da89943bad
+>>>>>>> 5661bd427a02e06d2e2f7d455781505e99e56777
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -25,8 +29,6 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
-        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         'abede361264e2ae69ec1eee813a101af' => __DIR__ . '/..' . '/markbaker/complex/classes/src/functions/abs.php',
         '21a5860fbef5be28db5ddfbc3cca67c4' => __DIR__ . '/..' . '/markbaker/complex/classes/src/functions/acos.php',
         '1546e3f9d127f2a9bb2d1b6c31c26ef1' => __DIR__ . '/..' . '/markbaker/complex/classes/src/functions/acosh.php',
@@ -86,6 +88,8 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         '4888a6f58c08148ebe17682f9ce9b2a8' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/Operations/divideby.php',
         'eef6fa3879d3efa347cd24d5eb348f85' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/Operations/divideinto.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
@@ -96,6 +100,7 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'caf23243e9cb3afd48d0414815ebf07e' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/helper.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
 
@@ -248,6 +253,7 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Brian2694\\Toastr\\' => 17,
             'Barryvdh\\DomPDF\\' => 16,
         ),
         'A' => 
@@ -622,6 +628,10 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Brian2694\\Toastr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brian2694/laravel-toastr/src',
+        ),
         'Barryvdh\\DomPDF\\' => 
         array (
             0 => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src',
@@ -666,7 +676,6 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AccountController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccountController.php',
         'App\\Http\\Controllers\\AddProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddProductController.php',
-        'App\\Http\\Controllers\\AddPurchaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddPurchaseController.php',
         'App\\Http\\Controllers\\AttendanceController' => __DIR__ . '/../..' . '/app/Http/Controllers/AttendanceController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -682,7 +691,9 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'App\\Http\\Controllers\\FullCalenderController' => __DIR__ . '/../..' . '/app/Http/Controllers/FullCalenderController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\PayrollController' => __DIR__ . '/../..' . '/app/Http/Controllers/PayrollController.php',
+        'App\\Http\\Controllers\\ProductStocksController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductStocksController.php',
         'App\\Http\\Controllers\\RecipeController' => __DIR__ . '/../..' . '/app/Http/Controllers/RecipeController.php',
+        'App\\Http\\Controllers\\purchasecontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/purchasecontroller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -702,6 +713,8 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'App\\Models\\Manufact' => __DIR__ . '/../..' . '/app/Models/Manufact.php',
         'App\\Models\\Payroll' => __DIR__ . '/../..' . '/app/Models/Payroll.php',
         'App\\Models\\ProductDetails' => __DIR__ . '/../..' . '/app/Models/ProductDetails.php',
+        'App\\Models\\ProductStock' => __DIR__ . '/../..' . '/app/Models/ProductStock.php',
+        'App\\Models\\PurchaseDetails' => __DIR__ . '/../..' . '/app/Models/PurchaseDetails.php',
         'App\\Models\\Recipe' => __DIR__ . '/../..' . '/app/Models/Recipe.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\addpurchase' => __DIR__ . '/../..' . '/app/Models/addpurchase.php',
@@ -719,6 +732,9 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
         'Barryvdh\\DomPDF\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',
+        'Brian2694\\Toastr\\Facades\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Facades/Toastr.php',
+        'Brian2694\\Toastr\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Toastr.php',
+        'Brian2694\\Toastr\\ToastrServiceProvider' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/ToastrServiceProvider.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -2377,6 +2393,7 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'Illuminate\\Contracts\\Validation\\Rule' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/Rule.php',
         'Illuminate\\Contracts\\Validation\\ValidatesWhenResolved' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/ValidatesWhenResolved.php',
         'Illuminate\\Contracts\\Validation\\Validator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/Validator.php',
+        'Illuminate\\Contracts\\Validation\\ValidatorAwareRule' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/ValidatorAwareRule.php',
         'Illuminate\\Contracts\\View\\Engine' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/View/Engine.php',
         'Illuminate\\Contracts\\View\\Factory' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/View/Factory.php',
         'Illuminate\\Contracts\\View\\View' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/View/View.php',
@@ -2492,6 +2509,7 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
         'Illuminate\\Database\\Events\\TransactionCommitted' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionCommitted.php',
         'Illuminate\\Database\\Events\\TransactionRolledBack' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionRolledBack.php',
         'Illuminate\\Database\\Grammar' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Grammar.php',
+        'Illuminate\\Database\\LazyLoadingViolationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/LazyLoadingViolationException.php',
         'Illuminate\\Database\\MigrationServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/MigrationServiceProvider.php',
         'Illuminate\\Database\\Migrations\\DatabaseMigrationRepository' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php',
         'Illuminate\\Database\\Migrations\\Migration' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Migrations/Migration.php',
@@ -6337,10 +6355,17 @@ class ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit4bc2f57c841b4f5093bd9fddb2245289::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$classMap;
+>>>>>>> 5661bd427a02e06d2e2f7d455781505e99e56777
 
         }, null, ClassLoader::class);
     }
