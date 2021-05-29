@@ -3,6 +3,14 @@
 @section('page-title', 'Manufacturing')
 @section('content')
 
+<div class="col-sm-12">
+    @if(session()->get('success'))
+      <div class="alert alert-success">
+        {{ session()->get('success') }}  
+      </div>
+    @endif
+</div>
+
 <h1>Manufacturing</h1>
 <br>
 <form type="get" action="/searchManufact">
