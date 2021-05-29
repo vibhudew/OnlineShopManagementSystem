@@ -150,6 +150,10 @@ Route::post('/updateRecipe2','RecipeController@updateRecipe2');
 
  //HRM Reports
 
+ Route::get('/reportEmp',[\App\Http\Controllers\EmployeeController::class,'reportEmp']);
+ Route::get('/reportAttend',[\App\Http\Controllers\AttendanceController::class,'reportAttend']);
+ Route::get('/reportPayroll',[\App\Http\Controllers\PayrollController::class,'reportPayroll']);
+
 
 Route::get('/Accounts1', function () {
 
