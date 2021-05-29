@@ -176,7 +176,6 @@ Route::get('/deleteAccount/{id}','AccountController@deleteAccount');
 
 Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
-Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 Route::post('/accountUpdate2','AccountController@accountUpdate2');
 
 =======
