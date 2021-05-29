@@ -61,7 +61,7 @@ Route::get('/updateProduct/{Productid}','AddProductController@updateProductView'
 
 Route::post('/updateItems','AddProductController@updateProduct');
 
-Route::get('/productsearch', 'AddProductController@search');
+Route::get('/productsearch', 'AddProductController@pSearch');
 
 
 //stock start
@@ -81,6 +81,9 @@ Route::get('/updateStockBtn/{Productid}','ProductStocksController@updateStockVie
 
 Route::post('/updateStocks','ProductStocksController@updateStock');
 
+//pdf route
+
+Route::get('/stockreportview' , 'ProductStocksController@stockReport');
 
 
 //kaveen product part end

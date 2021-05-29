@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-@section('title', 'AddProductPage')
+@section('title', 'AddStockPage')
 @section('page-title', 'Product Manegement')
-@section('card-title', 'Add Products')
+@section('card-title', 'Add Stock Details')
 
 
 @section('content')

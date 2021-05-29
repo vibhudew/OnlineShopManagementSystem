@@ -6,6 +6,15 @@
 
 @section('content')
 
+<div class="col-sm-12">
+  @if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+     
+    </div>
+  @endif
+</div>
+
 <div id="app">
     <div id="navbar">
       <nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
@@ -30,6 +39,7 @@
 
 <a href="/Product_Stock/addstock" class = "btn btn-primary"> ADD STOCK DETAILS </a>
 
+<a href="/stockreportview" class = "btn btn-primary"> STOCK REPORT </a>
 
 <div class="card-body">
   <div class="table-responsive">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ProductStock;
 use App\Models\ProductDetails;
+use PDF;
 
 class ProductStocksController extends Controller
 {
@@ -20,8 +21,9 @@ class ProductStocksController extends Controller
         $ProductStock->save();
 
         $data= ProductStock::all();
-           
-        return view('Product_Stock/viewstock')->with('ProductStock', $data);
+        
+        
+        return redirect('/Product_Stock')->with('ProductStock', $data)->with('success', 'product updated successfully!');
         // dd($request->all());
     }
 
@@ -35,7 +37,7 @@ class ProductStocksController extends Controller
     public function deleteStock($id){
         $ProductStock = ProductStock::find($id);
         $ProductStock->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'product updated successfully!');
 
     }
     
@@ -60,13 +62,19 @@ class ProductStocksController extends Controller
  
         $ProductStock->save();
         $ProductStock=ProductStock::All();
-        return view('Product_Stock/viewstock')->with('ProductStock',$ProductStock);
+        return redirect('/Product_Stock')->with('ProductStock',$ProductStock)->with('success', 'product updated successfully!');
 
 
 
     }
 
-    
+    public function stockReport(){
 
+        $ProductStock = ProductStock::all();
+        $pdf = PDF::loadView('Product_Stock/stockreportview', compact('ProductStock'));
+        return $pdf->download('report.pdf');
+    }
+
+    
 
 }
