@@ -37,11 +37,20 @@
 <div class="col-sm-12">
     <br>
     <h1>All Payrolls</h1> 
+<table>
+    <tr>
+      <td>
+            <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchPayroll')}}">
+            <input class="form-control mr-sm-2" size="50" name="queryPayroll" type="search" placeholder="Type Employee First Name to Get Payroll Records" aria-label="Search">
+            <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </td>
+      <td>
+      <a class="btn btn-primary" href="{{ URL::to('/reportPayroll') }}">Get Payrolls PDF</a>
+      </td>
+   </tr>
 
-    <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchPayroll')}}">
-      <input class="form-control mr-sm-2" size="100" name="queryPayroll" type="search" placeholder="Type Employee First Name to Get Payroll Records" aria-label="Search">
-      <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+   </table>
 
 
     <div>
@@ -103,13 +112,6 @@
 </div>
 </div>
 
-<script>
-function myFunction() {
-  var num = 5.56789;
-  var n = num.toFixed(2);
-  document.getElementById("demo").innerHTML = n;
-}
-</script>
 
 
 @endsection

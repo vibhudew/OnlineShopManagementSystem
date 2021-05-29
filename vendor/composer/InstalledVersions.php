@@ -30,7 +30,15 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
+<<<<<<< HEAD
     'reference' => 'f00a2eafa03f2027a7ba8a5cee89817026f79cfb',
+=======
+<<<<<<< HEAD
+    'reference' => '3caaff1014dd2b90334476b590b58428e57d9cde',
+=======
+    'reference' => 'c82a0ce501ebac564d2cad85b96c1208da7f1229',
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+>>>>>>> 21c152e46021e6197d01daf43b9bdc94cfb33d09
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -53,6 +61,8 @@ private static $installed = array (
       ),
       'reference' => '5b99e1f94157d74e450f4c97e8444fcaffa2144b',
     ),
+<<<<<<< HEAD
+=======
     'brian2694/laravel-toastr' => 
     array (
       'pretty_version' => '5.56',
@@ -62,6 +72,7 @@ private static $installed = array (
       ),
       'reference' => '98137445f55d981f3587800349f1aa7b045d7974',
     ),
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
     'brick/math' => 
     array (
       'pretty_version' => '0.9.2',
@@ -496,7 +507,15 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
+<<<<<<< HEAD
       'reference' => 'f00a2eafa03f2027a7ba8a5cee89817026f79cfb',
+=======
+<<<<<<< HEAD
+      'reference' => '3caaff1014dd2b90334476b590b58428e57d9cde',
+=======
+      'reference' => 'c82a0ce501ebac564d2cad85b96c1208da7f1229',
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+>>>>>>> 21c152e46021e6197d01daf43b9bdc94cfb33d09
     ),
     'laravel/sail' => 
     array (
@@ -1716,7 +1735,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

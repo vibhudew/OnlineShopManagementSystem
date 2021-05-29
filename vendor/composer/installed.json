@@ -129,6 +129,8 @@
             "install-path": "../barryvdh/laravel-dompdf"
         },
         {
+<<<<<<< HEAD
+=======
             "name": "brian2694/laravel-toastr",
             "version": "5.56",
             "version_normalized": "5.56.0.0",
@@ -194,6 +196,7 @@
             "install-path": "../brian2694/laravel-toastr"
         },
         {
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
             "name": "brick/math",
             "version": "0.9.2",
             "version_normalized": "0.9.2.0",

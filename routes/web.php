@@ -173,8 +173,14 @@ Route::get('/download-Manufact-pdf','RecipeController@getManufactReport');
  Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
  Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
+<<<<<<< HEAD
+=======
 
  //HRM Reports
+
+ Route::get('/reportEmp',[\App\Http\Controllers\EmployeeController::class,'reportEmp']);
+ Route::get('/reportAttend',[\App\Http\Controllers\AttendanceController::class,'reportAttend']);
+ Route::get('/reportPayroll',[\App\Http\Controllers\PayrollController::class,'reportPayroll']);
 
 
 Route::get('/Accounts1', function () {
@@ -189,6 +195,7 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
 Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
+<<<<<<< HEAD
  //Expense Categories...
 
  Route::resource('expense-categories', 'ExpenseCategoryController');
@@ -220,6 +227,9 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
  //Calender...
 
  Route::get('fullcalender', [FullCalenderController::class, 'index']);
+=======
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+>>>>>>> 21c152e46021e6197d01daf43b9bdc94cfb33d09
 
  Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
 
@@ -254,9 +264,40 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
     return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
 });
 
+<<<<<<< HEAD
+    Route::get('/editexpense', function () {
+        return view('expense/edit');
+    });
+
+
+
+    //Madushi
+
+Route::get('/Accounts', function () {
+    $data=App\Models\Accounts::all();
+    return view('Accounts/accountView')->with('Account1', $data);
+});
+
+Route::get('/Accounts1', function () {
+    return view('Accounts/addAccount');
+});
+
+Route:: post('/saveAccount','AccountController@store');
+
+Route::get('/deleteAccount/{id}','AccountController@deleteAccount');
+
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
+
+Route::post('/accountUpdate2','AccountController@accountUpdate2');
+
+Route::get('/searchAccount', 'AccountController@searchAccount');
+
+Route::get('/reportAccount','AccountController@ReportAccount');
+=======
 //this calls the store function in AddsalesController
  Route:: post('/savepurchase','AddPurchaseController@store');
  Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
  Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
  Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
  
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44

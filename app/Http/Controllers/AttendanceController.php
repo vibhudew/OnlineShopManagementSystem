@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Attendance;
 use App\Models\Employee;
+use PDF;
 
 class AttendanceController extends Controller
 {
@@ -85,6 +86,13 @@ class AttendanceController extends Controller
         return view('hrm.attendance.searchAttend', compact('attendances'));
 
     }
+
+    public function reportAttend(){
+       
+        $attendances =Attendance::all();
+        $pdf = PDF::loadView('hrm.attendance.attendancesPDF',compact('attendances'));
+        return $pdf-> download('attendancesList.pdf');
+    } 
 }
 
 

@@ -49,7 +49,7 @@
         </td>
        <td size="200"></td>
         <td>
-        <a class="btn btn-primary" href="{{ URL::to('/reportPDFEmp') }}">Export to PDF</a>
+        <a class="btn btn-primary" href="{{ URL::to('/reportEmp') }}">Get Employees PDF</a>
 
         
         </td>
@@ -80,7 +80,7 @@
       <thead class="thead-light">
 
         <tr>
-          <td >ID</td>
+          <td >Employee ID</td>
           <td >Name</td>
           <td >Address</td>
           <td >NIC</td>

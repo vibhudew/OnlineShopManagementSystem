@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
+    "content-hash": "1270bd082d6dd4f5ec4fab561a882cbe",
+=======
     "content-hash": "cf6201d58e9829793d34656b79c60d76",
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -129,6 +133,8 @@
             "time": "2020-12-27T12:05:53+00:00"
         },
         {
+<<<<<<< HEAD
+=======
             "name": "brian2694/laravel-toastr",
             "version": "5.56",
             "source": {
@@ -191,6 +197,7 @@
             "time": "2021-05-12T19:27:46+00:00"
         },
         {
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
             "name": "brick/math",
             "version": "0.9.2",
             "source": {

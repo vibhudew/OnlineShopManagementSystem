@@ -249,7 +249,10 @@ class ComposerStaticInitb2b32653664747fa5796245cc5d168f1
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+<<<<<<< HEAD
+=======
             'Brian2694\\Toastr\\' => 17,
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
             'Barryvdh\\DomPDF\\' => 16,
         ),
         'A' => 
@@ -624,10 +627,13 @@ class ComposerStaticInitb2b32653664747fa5796245cc5d168f1
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+<<<<<<< HEAD
+=======
         'Brian2694\\Toastr\\' => 
         array (
             0 => __DIR__ . '/..' . '/brian2694/laravel-toastr/src',
         ),
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
         'Barryvdh\\DomPDF\\' => 
         array (
             0 => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src',
@@ -728,9 +734,12 @@ class ComposerStaticInitb2b32653664747fa5796245cc5d168f1
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
         'Barryvdh\\DomPDF\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',
+<<<<<<< HEAD
+=======
         'Brian2694\\Toastr\\Facades\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Facades/Toastr.php',
         'Brian2694\\Toastr\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Toastr.php',
         'Brian2694\\Toastr\\ToastrServiceProvider' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/ToastrServiceProvider.php',
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
