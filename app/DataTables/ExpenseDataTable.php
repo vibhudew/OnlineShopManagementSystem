@@ -21,8 +21,13 @@ class ExpenseDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', '<button type="button" class="btn btn-success btn-sm" >Edit</button>
-            <button type="button" class="btn btn-danger btn-sm" id="getDeleteId">Delete</button>');
+            ->addColumn('action', function( $data ){ 
+
+
+                return '<a class="btn btn-success" href="/editexpenseview/'.$data->id.'">Edit</a>
+                <a class="btn btn-danger" href="/deleteexpense/'.$data->id.'">Delete</a>'; // or simply return html here
+            } );
+
     }
 
     /**
@@ -48,7 +53,9 @@ class ExpenseDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
-                    ->orderBy(1);
+                    ->orderBy(1)
+                    ;
+
     }
 
     /**
@@ -80,6 +87,5 @@ class ExpenseDataTable extends DataTable
     protected function filename()
     {
         return 'Expense_' . date('YmdHis');
-    
     }
 }

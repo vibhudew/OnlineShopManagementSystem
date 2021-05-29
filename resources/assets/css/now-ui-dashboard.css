@@ -1830,6 +1830,171 @@ textarea.form-control:active {
   margin-top: 6px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+a {
+  color: #f96332;
+}
+
+a:hover,
+a:focus {
+  color: #f96332;
+}
+
+h1,
+.h1 {
+  font-size: 3.5em;
+  line-height: 1.15;
+  margin-bottom: 30px;
+}
+
+h1 small,
+.h1 small {
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: .8;
+}
+
+h2,
+.h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+h3,
+.h3 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  line-height: 1.4em;
+}
+
+h4,
+.h4 {
+  font-size: 1.714em;
+  line-height: 1.45em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h4+.category,
+h4.title+.category,
+.h4+.category,
+.h4.title+.category {
+  margin-top: -10px;
+}
+
+h5,
+.h5 {
+  font-size: 1.57em;
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+
+h6,
+.h6 {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p.description {
+  font-size: 1.14em;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.title.title-up {
+  text-transform: uppercase;
+}
+
+.title.title-up a {
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+.title+.category {
+  margin-top: -10px;
+}
+
+.description,
+.card-description,
+.footer-big p,
+.card .footer .stats {
+  color: #9A9A9A;
+  font-weight: 300;
+}
+
+.category,
+.card-category {
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #9A9A9A;
+  font-size: 0.7142em;
+}
+
+.card-category {
+  font-size: 1em;
+}
+
+.text-primary,
+a.text-primary:focus,
+a.text-primary:hover {
+  color: #f96332 !important;
+}
+
+.text-info,
+a.text-info:focus,
+a.text-info:hover {
+  color: #2CA8FF !important;
+}
+
+.text-success,
+a.text-success:focus,
+a.text-success:hover {
+  color: #18ce0f !important;
+}
+
+.text-warning,
+a.text-warning:focus,
+a.text-warning:hover {
+  color: #FFB236 !important;
+}
+
+.text-danger,
+a.text-danger:focus,
+a.text-danger:hover {
+  color: #FF3636 !important;
+}
+
+.text-gray,
+a.text-gray:focus,
+a.text-gray:hover {
+  color: #E3E3E3 !important;
+}
+
+=======
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 .blockquote {
   border-left: none;
   border: 1px solid #888;
@@ -3951,7 +4116,19 @@ Created using IcoMoon - icomoon.io
   line-height: 1.8;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+.footer:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+=======
 
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 
 .fixed-plugin {
   position: fixed;
@@ -4277,7 +4454,18 @@ Created using IcoMoon - icomoon.io
   padding: 15px 15px 10px 15px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+.card .card-body.table-full-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+=======
 
+>>>>>>> e1872a383f65a428f506c0704f65e55287986f03
+=======
+
+>>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
 
 .card .card-header {
   padding: 15px 15px 0;

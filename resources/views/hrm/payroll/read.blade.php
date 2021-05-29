@@ -8,22 +8,22 @@
 
 <div id="app">
         <div id="navbar">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: #e3f2fd;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">HRM</a>
+    <h5><a class="navbar-brand" href="#">HRM</a></h5>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/HRM" >Employee</a>
+          <h4><a class="nav-link active" aria-current="page" href="/HRM" >Employee</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Attendance" >Attendance</a>
+          <h4><a class="nav-link" href="/Attendance" >Attendance</a></h4>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Payroll" >Payroll</a>
+          <h4><a class="nav-link" href="/Payroll" >Payroll</a></h4>
         </li>
     
       </ul>
@@ -37,6 +37,21 @@
 <div class="col-sm-12">
     <br>
     <h1>All Payrolls</h1> 
+<table>
+    <tr>
+      <td>
+            <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchPayroll')}}">
+            <input class="form-control mr-sm-2" size="50" name="queryPayroll" type="search" placeholder="Type Employee First Name to Get Payroll Records" aria-label="Search">
+            <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </td>
+      <td>
+      <a class="btn btn-primary" href="{{ URL::to('/reportPayroll') }}">Get Payrolls PDF</a>
+      </td>
+   </tr>
+
+   </table>
+
 
     <div>
     <a style="margin: 19px;" href="{{ route('Payroll.create')}}" class="btn btn-primary btn-lg">Add Payroll</a>
@@ -51,11 +66,12 @@
         @endif
     </div>  
 
-  <table class="table table-striped">
-    <thead >
+
+    <table class="table table-dark">
+      <thead class="thead-light">
         <tr>
           <td >ID</td>
-          <td >Employee Name </td>
+          <td >Employee ID with Name </td>
           <td >Month/Year </td>
           <td >Total Work Duration </td>
           <td >Amount per Duration Unit </td>
@@ -96,13 +112,6 @@
 </div>
 </div>
 
-<script>
-function myFunction() {
-  var num = 5.56789;
-  var n = num.toFixed(2);
-  document.getElementById("demo").innerHTML = n;
-}
-</script>
 
 
 @endsection

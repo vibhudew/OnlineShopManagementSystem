@@ -16,6 +16,7 @@ class CreatePurchaseitemsTable extends Migration
         Schema::create('purchaseitems', function (Blueprint $table) {
             $table->id();
             $table->integer('salesitemid');
+            
             $table->double('price');
 	        $table->double('discountamount');
 	        $table->integer('quantity');
