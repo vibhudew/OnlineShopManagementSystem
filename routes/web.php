@@ -10,6 +10,7 @@ use App\Http\Controllers\FullCalenderController;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -188,24 +189,39 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
 Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
+ //Expense Categories...
 
-    //Expense Categories...
-    Route::resource('expense-categories', 'ExpenseCategoryController');
-    Route::post('/addcategory','ExpenseCategoryController@store');
-    Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
-    Route::post('/editexcategory','ExpenseCategoryController@update');
-    Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
-    Route::post('/expense-categories','ExpenseCategoryController@index');
-    //Expenses...
-    Route::get('/expense', [ExpenseController::class ,'index']);
-    Route::post('/addexpense','ExpenseController@store');
-    Route::get('/editexpenseview/{id}','ExpenseController@edit');
-    Route::post('/editexpense','ExpenseController@update');
-    Route::get('/deleteexpense/{id}','ExpenseController@destroy');
-    Route::get('/createxpense' ,'ExpenseController@create');
-    //Calender...
-    Route::get('fullcalender', [FullCalenderController::class, 'index']);
-    Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+ Route::resource('expense-categories', 'ExpenseCategoryController');
+
+ Route::post('/addcategory','ExpenseCategoryController@store');
+
+ Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
+
+ Route::post('/editexcategory','ExpenseCategoryController@update');
+
+ Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+
+ Route::post('/expense-categories','ExpenseCategoryController@index');
+
+ //Expenses...
+
+ Route::get('/expense', [ExpenseController::class ,'index']);
+
+ Route::post('/addexpense','ExpenseController@store');
+
+ Route::get('/editexpenseview/{id}','ExpenseController@edit');
+
+ Route::post('/editexpense','ExpenseController@update');
+
+ Route::get('/deleteexpense/{id}','ExpenseController@destroy');
+
+ Route::get('/createxpense' ,'ExpenseController@create');
+
+ //Calender...
+
+ Route::get('fullcalender', [FullCalenderController::class, 'index']);
+
+ Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
 
 
 

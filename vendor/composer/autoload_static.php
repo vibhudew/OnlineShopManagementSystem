@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb53670dd9c99430acc9f76da89943bad
+class ComposerStaticInitb2b32653664747fa5796245cc5d168f1
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -2396,7 +2396,6 @@ class ComposerStaticInitb53670dd9c99430acc9f76da89943bad
         'Illuminate\\Contracts\\Validation\\UncompromisedVerifier' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/UncompromisedVerifier.php',
         'Illuminate\\Contracts\\Validation\\ValidatesWhenResolved' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/ValidatesWhenResolved.php',
         'Illuminate\\Contracts\\Validation\\Validator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/Validator.php',
-        'Illuminate\\Contracts\\Validation\\ValidatorAwareRule' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/Validation/ValidatorAwareRule.php',
         'Illuminate\\Contracts\\View\\Engine' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/View/Engine.php',
         'Illuminate\\Contracts\\View\\Factory' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/View/Factory.php',
         'Illuminate\\Contracts\\View\\View' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Contracts/View/View.php',
@@ -2513,7 +2512,6 @@ class ComposerStaticInitb53670dd9c99430acc9f76da89943bad
         'Illuminate\\Database\\Events\\TransactionCommitted' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionCommitted.php',
         'Illuminate\\Database\\Events\\TransactionRolledBack' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Events/TransactionRolledBack.php',
         'Illuminate\\Database\\Grammar' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Grammar.php',
-        'Illuminate\\Database\\LazyLoadingViolationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/LazyLoadingViolationException.php',
         'Illuminate\\Database\\MigrationServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/MigrationServiceProvider.php',
         'Illuminate\\Database\\Migrations\\DatabaseMigrationRepository' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php',
         'Illuminate\\Database\\Migrations\\Migration' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Migrations/Migration.php',
@@ -6369,10 +6367,10 @@ class ComposerStaticInitb53670dd9c99430acc9f76da89943bad
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb53670dd9c99430acc9f76da89943bad::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb2b32653664747fa5796245cc5d168f1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb2b32653664747fa5796245cc5d168f1::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb2b32653664747fa5796245cc5d168f1::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb2b32653664747fa5796245cc5d168f1::$classMap;
 
         }, null, ClassLoader::class);
     }

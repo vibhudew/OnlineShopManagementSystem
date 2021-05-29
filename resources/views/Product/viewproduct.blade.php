@@ -6,10 +6,6 @@
 
 @section('content')
 
-<<<<<<< HEAD
-
-<a href="Products/addproduct" class = "btn btn-primary"> ADD </a>
-=======
 <div class="col-sm-12">
   @if(session()->get('success'))
     <div class="alert alert-success">
@@ -18,7 +14,6 @@
     </div>
   @endif
 </div>
->>>>>>> c82a0ce501ebac564d2cad85b96c1208da7f1229
 
 <div id="app">
     <div id="navbar">
@@ -53,10 +48,6 @@
 
 </form>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c82a0ce501ebac564d2cad85b96c1208da7f1229
 <div class="card-body">
   <div class="table-responsive">
     <table class="table">
@@ -105,8 +96,3 @@
 @endsection
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> c82a0ce501ebac564d2cad85b96c1208da7f1229
