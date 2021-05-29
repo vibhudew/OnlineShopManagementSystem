@@ -152,7 +152,6 @@ Route::resource('/HRM', '\App\Http\Controllers\EmployeeController');
     return view('Purchase/viewpurchase')->with('viewpurchase1',$data); 
 });
 
-<<<<<<< HEAD
     Route::get('/editexpense', function () {
         return view('expense/edit');
     });
@@ -178,10 +177,6 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
 Route::post('/accountUpdate2','AccountController@accountUpdate2');
 
-=======
-//this calls the store function in AddsalesController 
- Route:: post('/savepurchase','AddPurchaseController@store');
- Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
- Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
- Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
->>>>>>> 4f667dd107c692b908ad8b3a47c2c166a83fe75a
+Route::get('/searchAccount', 'AccountController@searchAccount');
+
+Route::get('/reportAccount','AccountController@ReportAccount');
