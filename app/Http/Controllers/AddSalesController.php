@@ -27,13 +27,13 @@ class AddsalesController extends Controller
         $addsales->save();
         $addsales=addsales::all();//getting all data from addsales table to data variable to display
         //dd($request->all()); 
-        return view('Sales/viewsales')->with('viewsales1', $addsales );  //return addsales view with data to display
+        return redirect('/Sales')->with('viewsales1', $addsales )->with('success', 'Sales added successfully!');  //return addsales view with data to display
     }
     public function deleteviewsales($id){
 
         $addsales=addsales::find($id);
         $addsales->delete();
-        return redirect()->back();
+        return redirect('/Sales')->with('success', 'Sales deleted successfully!');
     }
 
     public function updateviewsales($id){
@@ -58,14 +58,14 @@ class AddsalesController extends Controller
          $addsales->sellstatus=$request->sellstatus1;
          $addsales->save();
          $addsales=addsales::all();
-         return view('Sales/viewsales')-> with('viewsales1', $addsales );
+         return redirect('/Sales')-> with('viewsales1', $addsales )->with('success', 'Sales updated successfully!');
 
     }
 
-    public function search(){
+    public function searchsales(){
         $search_text  =$_GET['query'];
         $addsales =addsales::where('customer','LIKE','%'.$search_text.'%')->get();
-        return view('Sales/search', compact('addsales'));
+        return view('Sales/searchsales', compact('addsales'));
 
 }
 

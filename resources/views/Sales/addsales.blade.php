@@ -5,12 +5,13 @@
 @section('card-title', 'Add Sales')
 
 @section('content')
+ 
 @foreach($errors->all() as $error)
   <div class="alert alert-danger" role="alert">
     {{$error}}
   </div>
 
-@endforeach
+@endforeach 
 <form method= "post" action="/savesales">
   {{csrf_field()}}
 
