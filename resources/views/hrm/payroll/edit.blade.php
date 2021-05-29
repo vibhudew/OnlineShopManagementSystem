@@ -103,15 +103,8 @@
 
           <div class="form-group" class="mb-3">
                 <label for="gross">Gross Amount:</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" />
-=======
                 <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
->>>>>>> e1872a383f65a428f506c0704f65e55287986f03
-=======
-                <input type="text" class="form-control" name="gross" id="gross" value="{{$payroll->gross }}" readonly/>
->>>>>>> 2064e6ee1c0bce3e7a69234813ff91137aac8ca1
+
           </div>
 
           <br/><br>
