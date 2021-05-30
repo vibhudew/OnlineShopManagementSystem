@@ -177,8 +177,7 @@ Route::get('/download-Manufact-pdf','RecipeController@getManufactReport');
  Route::get('/searchAttend','\App\Http\Controllers\AttendanceController@searchAttend');
  Route::get('/searchPayroll','\App\Http\Controllers\PayrollController@searchPayroll');
 
-<<<<<<< HEAD
-=======
+
 
  //HRM Reports
 
@@ -199,41 +198,7 @@ Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
 
 Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
-<<<<<<< HEAD
- //Expense Categories...
 
- Route::resource('expense-categories', 'ExpenseCategoryController');
-
- Route::post('/addcategory','ExpenseCategoryController@store');
-
- Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
-
- Route::post('/editexcategory','ExpenseCategoryController@update');
-
- Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
-
- Route::post('/expense-categories','ExpenseCategoryController@index');
-
- //Expenses...
-
- Route::get('/expense', [ExpenseController::class ,'index']);
-
- Route::post('/addexpense','ExpenseController@store');
-
- Route::get('/editexpenseview/{id}','ExpenseController@edit');
-
- Route::post('/editexpense','ExpenseController@update');
-
- Route::get('/deleteexpense/{id}','ExpenseController@destroy');
-
- Route::get('/createxpense' ,'ExpenseController@create');
-
- //Calender...
-
- Route::get('fullcalender', [FullCalenderController::class, 'index']);
-=======
->>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
->>>>>>> 21c152e46021e6197d01daf43b9bdc94cfb33d09
 
  Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
 
@@ -244,64 +209,28 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 
 
 
-     //miyelandi
-     Route::get('/Purchase1', function () {
-        return view('Purchase/viewpurchase');
-     });
-    Route::get('/Purchase1', function () {
-         return view('Purchase/addpurchase');
-      });
-
-      Route:: get('/Purchase',function(){
-        //We only return viewsales1 when saving data but this view should appear other times aswell
-        $data=App\Models\addpurchase::all();
-        return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
-    });
-
-    //this calls the store function in AddsalesController
-     Route:: post('/savepurchase','AddPurchaseController@store');
-     Route::get('/deletepurchase/{id}','AddPurchaseController@deleteviewpurchase');
-     Route::get('/updatepurchase/{id}','AddPurchaseController@updateviewpurchase');
-     Route::post('/editpurchase','AddPurchaseController@editviewpurchase'); Route:: get('/Purchase',function(){
+ Route::get('/Purchases', function () {
+    return view('Purchases/viewpurchases');
+ });
+ Route::get('/Purchases1', function () {
+    return view('Purchases/addpurchases');
+ });
+ Route:: get('/Purchases',function(){
     //We only return viewsales1 when saving data but this view should appear other times aswell
-    $data=App\Models\addpurchase::all();
-    return view('Purchase/viewpurchase')->with('viewpurchase1',$data);
+    $data=App\Models\PurchaseDetails::all();
+    return view('Purchases/viewpurchases')->with('viewpurchases1',$data);
+
 });
 
-<<<<<<< HEAD
-    Route::get('/editexpense', function () {
-        return view('expense/edit');
-    });
-
-
-
-    //Madushi
-
-Route::get('/Accounts', function () {
-    $data=App\Models\Accounts::all();
-    return view('Accounts/accountView')->with('Account1', $data);
-});
-
-Route::get('/Accounts1', function () {
-    return view('Accounts/addAccount');
-});
-
-Route:: post('/saveAccount','AccountController@store');
-
-Route::get('/deleteAccount/{id}','AccountController@deleteAccount');
-
-Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
-
-Route::post('/accountUpdate2','AccountController@accountUpdate2');
-
-Route::get('/searchAccount', 'AccountController@searchAccount');
-
-Route::get('/reportAccount','AccountController@ReportAccount');
-=======
-//this calls the store function in AddsalesController
- Route:: post('/savepurchase','AddPurchaseController@store');
- Route::get('/deletepurchase/{id}','AddsalesController@deleteviewpurchase');
- Route::get('/updatepurchase/{id}','AddsalesController@updateviewpurchase');
- Route::post('/editpurchase','AddPurchaseController@editviewpurchase');
+ Route:: post('/savepurchases','purchasecontroller@store');
+ Route::get('/deletepurchases/{id}','purchasecontroller@deleteviewpurchases');
+ Route::get('/updatepurchases/{id}','purchasecontroller@updateviewpurchases'); 
+ Route::post('/editpurchases','purchasecontroller@editviewpurchases');
  
->>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+ Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
+
+Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
+
+
+   
+ 

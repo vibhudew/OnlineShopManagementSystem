@@ -6,19 +6,7 @@
     'aliases' => 
     array (
     ),
-<<<<<<< HEAD
-    'reference' => '747160dea35af4c6dc71faeea3f1663c54baddcb',
-=======
-<<<<<<< HEAD
-    'reference' => 'f00a2eafa03f2027a7ba8a5cee89817026f79cfb',
-=======
-<<<<<<< HEAD
-    'reference' => '3caaff1014dd2b90334476b590b58428e57d9cde',
-=======
-    'reference' => 'c82a0ce501ebac564d2cad85b96c1208da7f1229',
->>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
->>>>>>> 21c152e46021e6197d01daf43b9bdc94cfb33d09
->>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
+    'reference' => '23daabc9c9ed3a0a8fd7fc30a6ab02be000e675a',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -32,8 +20,6 @@
       ),
       'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
     ),
-<<<<<<< HEAD
-=======
     'barryvdh/laravel-dompdf' => 
     array (
       'pretty_version' => 'v0.9.0',
@@ -43,8 +29,6 @@
       ),
       'reference' => '5b99e1f94157d74e450f4c97e8444fcaffa2144b',
     ),
-<<<<<<< HEAD
-=======
     'brian2694/laravel-toastr' => 
     array (
       'pretty_version' => '5.56',
@@ -54,8 +38,6 @@
       ),
       'reference' => '98137445f55d981f3587800349f1aa7b045d7974',
     ),
->>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
->>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
     'brick/math' => 
     array (
       'pretty_version' => '0.9.2',
@@ -106,6 +88,15 @@
       ),
       'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
     ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
+    ),
     'dragonmantank/cron-expression' => 
     array (
       'pretty_version' => 'v3.1.0',
@@ -123,15 +114,6 @@
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
-    ),
-    'ezyang/htmlpurifier' => 
-    array (
-      'pretty_version' => 'v4.13.0',
-      'version' => '4.13.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '08e27c97e4c6ed02f37c5b2b20488046c8d90d75',
     ),
     'facade/flare-client-php' => 
     array (
@@ -481,19 +463,7 @@
       'aliases' => 
       array (
       ),
-<<<<<<< HEAD
-      'reference' => '747160dea35af4c6dc71faeea3f1663c54baddcb',
-=======
-<<<<<<< HEAD
-      'reference' => 'f00a2eafa03f2027a7ba8a5cee89817026f79cfb',
-=======
-<<<<<<< HEAD
-      'reference' => '3caaff1014dd2b90334476b590b58428e57d9cde',
-=======
-      'reference' => 'c82a0ce501ebac564d2cad85b96c1208da7f1229',
->>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
->>>>>>> 21c152e46021e6197d01daf43b9bdc94cfb33d09
->>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
+      'reference' => '23daabc9c9ed3a0a8fd7fc30a6ab02be000e675a',
     ),
     'laravel/sail' => 
     array (
@@ -521,15 +491,6 @@
       array (
       ),
       'reference' => '07d725813350c695c779382cbd6dac0ab8665537',
-    ),
-    'laravelcollective/html' => 
-    array (
-      'pretty_version' => 'v6.2.1',
-      'version' => '6.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ae15b9c4bf918ec3a78f092b8555551dd693fde3',
     ),
     'league/commonmark' => 
     array (
@@ -650,6 +611,24 @@
       ),
       'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
     ),
+    'phenx/php-font-lib' => 
+    array (
+      'pretty_version' => '0.5.2',
+      'version' => '0.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
+    ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
+    ),
     'phpdocumentor/reflection-common' => 
     array (
       'pretty_version' => '2.2.0',
@@ -676,15 +655,6 @@
       array (
       ),
       'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
-    ),
-    'phpoffice/phpspreadsheet' => 
-    array (
-      'pretty_version' => '1.16.0',
-      'version' => '1.16.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '76d4323b85129d0c368149c831a07a3e258b2b50',
     ),
     'phpoption/phpoption' => 
     array (
@@ -890,6 +860,15 @@
       array (
         0 => '4.1.1',
       ),
+    ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.3.1',
+      'version' => '8.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
     ),
     'sebastian/cli-parser' => 
     array (
