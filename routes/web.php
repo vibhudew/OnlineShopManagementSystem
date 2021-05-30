@@ -227,9 +227,9 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
  Route::get('/updatepurchases/{id}','purchasecontroller@updateviewpurchases'); 
  Route::post('/editpurchases','purchasecontroller@editviewpurchases');
  
- Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
+ //Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
 
-Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
+//Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
 
 
    
