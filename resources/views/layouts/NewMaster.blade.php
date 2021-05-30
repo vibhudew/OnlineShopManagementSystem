@@ -53,13 +53,7 @@
                       <p>Dashboard</p>
                     </a>
                   </li>
-                  <li>
-                    <a href="/users">
-                      <i class="now-ui-icons users_circle-08"></i>
-                      <p>Users</p>
-                    </a>
-                  </li>
-                  <li>
+                 <li>
                     <a href="/Contacts">
                       <i class="now-ui-icons education_agenda-bookmark"></i>
                       <p>Contacts</p>

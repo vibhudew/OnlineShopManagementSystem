@@ -7,17 +7,13 @@
 @section('content')
 
 
+
+
 <form method= "post" action="/editsales">
   {{csrf_field()}}
 <div class="form-row">
 <div class="form-group col-md-6">
-@foreach($errors->all() as $error)
-<div class="alert alert-danger" role="alert">
-<input type="hidden" name="id" value ="{{$upsale->id}}"/>
-    {{$error}}
-</div>
-
-@endforeach
+ 
 
 <input type="hidden" class="form-control" name="id" value ="{{$upsale->id}}"/>
  

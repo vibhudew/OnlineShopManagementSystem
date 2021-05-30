@@ -6,6 +6,7 @@ use App\Models\Manufact;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use PDF;
 
 class RecipeController extends Controller
 {
@@ -32,18 +33,18 @@ class RecipeController extends Controller
          $data=Recipe::all();//getting all data from recipes table to data variable to display
          
 
-         return redirect('/Manufacturing')->with('Recipe1',$data); //return Recipe view with data to display 
+         return redirect('/Manufacturing')->with('Recipe1',$data)->with('success', 'Manufactures recipe added successfully!'); //return Recipe view with data to display 
          return view('Manufacturing/insertManufact')->with('manuData',$data); 
          //return view('Manufacturing/updateManufact')->with('manufactData',$data); 
        
     }
-    public function search(){
+    public function searchRecipe(){
         $search_text = $_GET['query'];
         $searchRecipe = Recipe::where('manufacturingProductName','LIKE','%'.$search_text.'%')->get();
         
         return view('Manufacturing.search',compact('searchRecipe'));
     }
-    public function search2(){
+    public function searchManufact(){
         $search_text = $_GET['query2'];
         $searchManufact = Manufact::where('product_name','LIKE','%'.$search_text.'%')->get();
 
@@ -54,7 +55,7 @@ class RecipeController extends Controller
 
         $recipe=Recipe::find($id);
         $recipe->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Manufacturing recipe deleted successfully!');
     }
     public function manufacturing(Request $request){
         $this->validate($request,[
@@ -69,17 +70,18 @@ class RecipeController extends Controller
         $manufact -> save();
 
         $data2 = Manufact::all();
-        return redirect('displayManufact')-> with('displayManufact',$data2);
+        return redirect('displayManufact')-> with('displayManufact',$data2)->with('success', 'Manufacturing details added successfully!');
          
     }
     public function DeleteManufact($id){
         $manufact=Manufact::find($id);
         $manufact->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Manufacturing details deleted successfully!');
     }
     public function updateManufact($id){
         $manufact=Manufact::find($id);
-        return view('Manufacturing/updateManufact')->with('manufactData',$manufact);
+        $productName = Recipe::all(['id','manufacturingProductName']);
+        return view('Manufacturing/updateManufact')->with('manufactData',$manufact)->with('productName',$productName);    
     }
     public function updateManufact2(Request $request){
         $this->validate($request,[
@@ -90,15 +92,17 @@ class RecipeController extends Controller
         $id=$request->id;
         $price=$request->price;
         $numOfUnits=$request->numOfUnits;
+        $Productname=$request->	dropdown;
         $updateData = Manufact::find($id);
-
+        
+        $updateData->product_name=$Productname;
         $updateData->cost=$price;
         $updateData->num_of_units=$numOfUnits;
         $updateData->cost_for_all_units=$price * $numOfUnits;
         $updateData->save();
 
         $data2 = Manufact::all();
-        return Redirect('displayManufact')->with('displayManufact',$data2);
+        return Redirect('displayManufact')->with('displayManufact',$data2)->with('success', 'Manufacturing details updated successfully!');
     }
     public function updateRecipe($id){
         $manufactRecipe=Recipe::find($id); //contain all data of manufact in manufactRecipe object
@@ -131,7 +135,19 @@ class RecipeController extends Controller
         $updateData2->save();
 
         $data3 = Recipe::all();
-        return redirect('Manufacturing')->with('Recipe1',$data3);
-
+        return redirect('Manufacturing')->with('Recipe1',$data3)->with('success', 'Manufacturing recipe updated successfully!');;
+        
     }
+   
+    public function downloadReport(){
+        $RecipeReport = Recipe::all();
+        $pdf = PDF::loadView('Manufacturing/RecipeReport',compact('RecipeReport'));
+        return $pdf->download('ManufacturingRecipesReport.pdf');
+    }
+    public function getManufactReport(){
+        $RecipeReport = Manufact::all();
+        $pdf = PDF::loadView('Manufacturing/ManufactReport',compact('RecipeReport'));
+        return $pdf->download('ManufacturingDetailsReport.pdf');
+    }
+   
 }

@@ -56,6 +56,9 @@
         @endif
     </div>  
 
+    <h2>Search Results</h2>
+    <br>
+
   
     <table class="table table-dark">
       <thead class="thead-light">

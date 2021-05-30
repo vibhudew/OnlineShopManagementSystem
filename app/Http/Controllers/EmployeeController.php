@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Employee;
+use PDF;
 
 use Illuminate\Http\Request;
 
@@ -26,20 +27,15 @@ class EmployeeController extends Controller
             
         ]);
 
-
         $employee = new Employee([
-        
-
             'name' => $request->get('name'),
             'address' => $request->get('address'),
             'nic' => $request->get('nic'),
             'mobile' => $request->get('mobile'),
             'email' => $request->get('email'),
-
         ]);
         
-
-             $employee->save();
+        $employee->save();
 
         return redirect('/HRM')->with('success', 'Employee created successfully!!!');
     }
@@ -58,13 +54,11 @@ class EmployeeController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-           
             'name'=>'required|max:100|min:3',
             'address'=>'required|max:100|min:5',
             'nic'=>'required|max:12|min:10',
             'mobile'=>'required|min:10',
-            'email'=>'required|min:5|max:50|email'
-            
+            'email'=>'required|min:5|max:50|email'     
         ]);
 
         $employee = Employee::find($id);
@@ -87,7 +81,6 @@ class EmployeeController extends Controller
     }
 
     public function searchEmployee(){
-
         $search_text = $_GET['queryEmp'];
         $employees = Employee::where('name','LIKE','%'.$search_text.'%') -> get();
 
@@ -95,11 +88,9 @@ class EmployeeController extends Controller
 
     }
 
-/*
     public function reportEmp(){
-
         $employees = Employee::all();
-        $pdf = PDF::loadView('hrm.employees.read',compact('employees'));
-        return $pdf-> download('employees.pdf');
-    } */
+        $pdf = PDF::loadView('hrm.employees.employees',compact('employees'));
+        return $pdf-> download('employeesList.pdf');
+    } 
 }

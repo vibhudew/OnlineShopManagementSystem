@@ -1,48 +1,54 @@
 @extends('layouts.master')
-
-@section('title', 'EditAccountDetailsPage')
-@section('page-title', 'Account Manegement')
-@section('card-title', 'Edit Accounts')
-
+@section('title', 'Add account')
+@section('page-title', 'Add account')
 @section('content')
 
-<form>
+<h1 class="display-5">Update Account</h1>
 
-<div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="name">Name :</label>
-      <input type="name" class="form-control" id="accName" placeholder="Exc tax">
-    </div>
+<!--<div class="jumbotron" >-->
+<div class="container">
+@foreach($errors->all() as $error)
+  <div class="alert alert-danger" role="alert">
+    {{$error}}
   </div>
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="AccountNumber">Account Number :</label>
-      <input type="AccountNumber" class="form-control" id="accNum" placeholder="Exc tax">
-    </div>
-  </div>
+@endforeach
+<form method="post" action="/accountUpdate2">
 
-  <div class="form-row">
+{{csrf_field()}}
+
+<input type="hidden" class="form-control" name="id"  value="{{$accounts->id}}"></input>
+
+<div class="form-group col-md-6">
+      <label for="Name">Name :</label>
+      <input type="Name" class="form-control" name="name"  value="{{$accounts->Name}}"></input>
+    </div>
+  
     <div class="form-group col-md-6">
-      <label for="AccountType">Account Type :</label>
-      <input type="AccountType" class="form-control" id="acctype" placeholder="Type to search...">
-      <datalist id="datalistOptions">
-        <option value="San Francisco">
-        <option value="New York">
-        <option value="Seattle">
-        <option value="Los Angeles">
-        <option value="Chicago">
+      <label for="AccountNumber">Account Number:</label>
+      <input type="AccountNumber" class="form-control" name="accountNumber" value="{{$accounts->AccountNumber}}"></input>
+    </div>
+  <div class="form-group col-md-6">
+    <label for="AccountType">Account Type :</label>
+    <input class="form-control" list="AccountType" name="accountType">
+    <datalist id="AccountType">
+        <option value="Current Account">
+        <option value="Saving Account">
     </datalist>
     </div>
+    <div class="form-group col-md-6">
+      <label for="OpeningBalance ">Opening Balance :</label>
+      <input type="OpeningBalance" class="form-control" name="balance" value="{{$accounts->Balance}}"></input>
     </div>
-    
-  <div class="form-row">
+
     <div class="form-group col-md-6">
       <label for="Note">Note :</label>
-      <input type="Note" class="form-control" id="notice" placeholder="Exc tax">
+      <input type="Note" class="form-control" name="note" value="{{$accounts->Note}}"></input>
     </div>
-  </div>
-
-  <input type ="submit" class="btn btn-primary" value="UPDATE">
+        <input type="submit" class="btn btn-info" value="Update">     
+</div>
 </form>
+</div>
+<!--</div>-->  
+    
 @endsection
