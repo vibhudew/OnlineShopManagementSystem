@@ -11,6 +11,14 @@
   </div>
 
 @endforeach
+
+<div class="col-sm-12">
+        @if(session()->get('success'))
+          <div class="alert alert-success">
+            {{ session()->get('success') }}  
+          </div>
+        @endif
+  </div> 
 <form method= "post" action="/savepurchases">
   {{csrf_field()}}
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PurchaseDetails;
+use PDF;
 
 class purchasecontroller extends Controller
 {
@@ -25,18 +26,19 @@ class purchasecontroller extends Controller
         $purchasedetails->save();
         $purchasedetails=PurchaseDetails::all();//getting all data from addsales table to data variable to display
         //dd($request->all()); 
-        return view('Purchases/viewpurchases')->with('viewpurchases1', $purchasedetails );  //return addsales view with data to display
+        return redirect('/Purchases')->with('viewpurchases1', $purchasedetails )->with('success', 'Purchase added successfully!');;  //return addsales view with data to display
     
     }
     public function deleteviewpurchases($id){
 
         $purchasedetails=PurchaseDetails::find($id);
         $purchasedetails->delete();
-        return redirect()->back();
+        
+        return redirect('/Purchases')->with('success', 'Purchase deleted successfully!');
     }
     public function updateviewpurchases($id){
 
-        $purchasedetails=purchaseDetails::find($id);
+        $purchasedetails=PurchaseDetails::find($id);
         return view('Purchases/updatepurchases')-> with('uppurchase' , $purchasedetails);
     }
     public function editviewpurchases(Request $request){
@@ -52,31 +54,22 @@ class purchasecontroller extends Controller
         $purchasedetails->purchasestatus=$request->purchasestatus1;
         $purchasedetails->paymentstatus=$request->paymentstatus1;
         $purchasedetails->save();
-        $purchasedetails=purchaseDetails::all();
-        return view('Purchases/viewpurchases')->with('viewpurchases1',  $purchasedetails );
+        $purchasedetails=PurchaseDetails::all();
+        return redirect('/Purchases')->with('viewpurchases1',  $purchasedetails )->with('success', 'Purchase updated successfully!');;
 
     }
 
-    public function getAllEmployees(){
-        $purchasedetails =purchaseDetails::all();
-        return view('Purchases/viewpurchases');
-        //->with('viewpurchases1', $purchasedetails ); 
-        //compact('Purchases1'));
-
-
-    }
-    public function downloadPDF(){
-        $purchasedetails  =purchaseDetails::all();
-        $pdf = PDF::loadView('Purchases/viewpurchases');
-        //,compact('Purchases1'));
-        return $pdf ->download(employee.pdf);
-    }
     public function searchPurchase(){
-
         $search_text = $_GET['queryPurchase'];
-        $purchasedetails = purchaseDetails::where('transactionreferencenumber','LIKE','%'.$search_text.'%') -> get();
+        $viewpurchases1 = PurchaseDetails::where('transactionreferencenumber','LIKE','%'.$search_text.'%') -> get();
 
-        return view('Purchase.searchPurchase', compact('purchasedetails'));
+        return view('Purchases.searchPurchase', compact('viewpurchases1'));
 
     }
+
+    public function reportPurchase(){
+        $viewpurchases1 = PurchaseDetails::all();
+        $pdf = PDF::loadView('Purchases.reportPurchase',compact('viewpurchases1'));
+        return $pdf-> download('purchasesList.pdf');
+    } 
 }

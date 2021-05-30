@@ -20,22 +20,19 @@
       <tr>
         <td>
             <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchPurchase')}}">
-            <input class="form-control mr-sm-2" size="50" name="queryPurchase" type="search" placeholder="Type Transaction Reference Number to Search " aria-label="Search">
+            <input class="form-control mr-sm-2" size="50" name="queryPurchase" type="search" placeholder="Type Transaction Reference Number to Search" aria-label="Search">
             <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
           </form>
         </td>
-       <td size="200"></td>
-        <td>
-        <a class="btn btn-primary" href="{{ URL::to('/reportPurchase') }}">Get Purchases PDF</a>
-        </td>
       </tr>
-      
+  
   </table>
 
   <br><br>
 
+  <h2>Search Results</h2>
+           
 <table class="table table-bordered table-dark">
-
 
         <th>transaction reference number</th>
         <th>supllier id</th>

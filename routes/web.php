@@ -186,29 +186,8 @@ Route::get('/download-Manufact-pdf','RecipeController@getManufactReport');
  Route::get('/reportPayroll',[\App\Http\Controllers\PayrollController::class,'reportPayroll']);
 
 
-Route::get('/Accounts1', function () {
 
-    return view('Accounts/addAccount');
-});
-
-
-Route::post('/saveAccount','AccountController@store');
-
-Route ::get ('/deleteAccount/{id}','AccountController@deleteAccount');
-
-Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
-
-
-
- Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
-
-
-
-
-
-
-
-
+//Purchases
  Route::get('/Purchases', function () {
     return view('Purchases/viewpurchases');
  });
@@ -226,10 +205,75 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
  Route::get('/deletepurchases/{id}','purchasecontroller@deleteviewpurchases');
  Route::get('/updatepurchases/{id}','purchasecontroller@updateviewpurchases'); 
  Route::post('/editpurchases','purchasecontroller@editviewpurchases');
- 
- Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
 
-Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
+ Route::get('/searchPurchase','\App\Http\Controllers\purchasecontroller@searchPurchase');
+ Route::get('/reportPurchase','purchasecontroller@reportPurchase');
+
+ //End of Purchases
+
+ //Purchases Returns 
+
+
+Route::get('/PurchaseReturn', function(){
+    $data=App\Models\ProductStock::all();
+    return view('Product_Stock/viewstock')->with('ProductStock', $data);
+});
+
+Route::get('/Product_Stock/addstock', 'ProductStocksController@create');
+
+Route:: post('/saveStock','ProductStocksController@stockstore');
+
+Route::get('/deleteStock/{Productid}','ProductStocksController@deleteStock');
+
+Route::get('/updateStockBtn/{Productid}','ProductStocksController@updateStockView');
+
+Route::post('/updateStocks','ProductStocksController@updateStock');
+
+//pdf route
+
+Route::get('/stockreportview' , 'ProductStocksController@stockReport');
+ 
+ //Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
+
+//Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
+
+//Expense Categories...
+Route::resource('expense-categories', 'ExpenseCategoryController');
+Route::post('/addcategory','ExpenseCategoryController@store');
+Route::get('/editcategoryview/{id}','ExpenseCategoryController@edit');
+Route::post('/editexcategory','ExpenseCategoryController@update');
+Route::get('/deletecategory/{id}','ExpenseCategoryController@destroy');
+Route::post('/expense-categories','ExpenseCategoryController@index');
+//Expenses...
+Route::get('/expense', [ExpenseController::class ,'index']);
+Route::post('/addexpense','ExpenseController@store');
+Route::get('/editexpenseview/{id}','ExpenseController@edit');
+Route::post('/editexpense','ExpenseController@update');
+Route::get('/deleteexpense/{id}','ExpenseController@destroy');
+Route::get('/createxpense' ,'ExpenseController@create');
+//Calender...
+Route::get('fullcalender', [FullCalenderController::class, 'index']);
+Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+
+//Madushi
+Route::get('/Accounts', function () {
+
+    $data=App\Models\Accounts::all();
+
+    return view('Accounts/accountView')->with('Account1', $data);
+
+});
+Route::get('/Accounts1', function () {
+
+    return view('Accounts/addAccount');
+
+});
+Route:: post('/saveAccount','AccountController@store');
+Route::get('/deleteAccount/{id}','AccountController@deleteAccount');
+Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
+Route::post('/accountUpdate2','AccountController@accountUpdate2');
+Route::get('/searchAccount', 'AccountController@searchAccount');
+Route::get('/reportAccount','AccountController@ReportAccount');
 
 
    
