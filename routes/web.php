@@ -290,15 +290,9 @@ Route::get('/reportAccount','AccountController@ReportAccount');
  Route::get('/updatepurchases/{id}','purchasecontroller@updateviewpurchases'); 
  Route::post('/editpurchases','purchasecontroller@editviewpurchases');
  
-<<<<<<< HEAD
-//  Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
-
-// Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
-=======
  //Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
 
 //Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
->>>>>>> 1bf94ca5c081a588c4af82fc737c84bc7e7e483e
 
 
    
