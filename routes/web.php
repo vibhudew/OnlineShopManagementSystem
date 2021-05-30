@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ExpenseController;
+
 use App\Http\Controllers\EmployeeController;
 use App\Models\Contact;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FullCalenderController;
+use App\Http\Controllers\ExpenseController;
 
 
 
@@ -234,6 +235,7 @@ Route::post('/updateStocks','ProductStocksController@updateStock');
 Route::get('/stockreportview' , 'ProductStocksController@stockReport');
  
  //Route::get('/', [PageController::class, 'index'])->name('Purchases/index');
+<<<<<<< HEAD
 
 //Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
 
@@ -274,6 +276,10 @@ Route::get('/accountUpdate/{id}','AccountController@accountUpdate');
 Route::post('/accountUpdate2','AccountController@accountUpdate2');
 Route::get('/searchAccount', 'AccountController@searchAccount');
 Route::get('/reportAccount','AccountController@ReportAccount');
+=======
+
+//Route::post('/uploadFile', [PageController::class, 'uploadFile'])->name('uploadFile');
+>>>>>>> 1bf94ca5c081a588c4af82fc737c84bc7e7e483e
 
 
    
