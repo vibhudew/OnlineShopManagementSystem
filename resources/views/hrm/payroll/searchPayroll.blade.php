@@ -47,9 +47,8 @@
           </form>
       </td>
 
-      <td>
-      <a class="btn btn-primary" href="#">Get Payrolls PDF for a Employee</a>
-      </td>
+      
+
    </tr>
     
     </table>
@@ -59,6 +58,9 @@
     <div>
     <a style="margin: 19px;" href="{{ route('Payroll.create')}}" class="btn btn-primary btn-lg">Add Payroll</a>
     </div>  
+
+    <h2>Search Results</h2>
+    <br>
 
     <div class="col-sm-12">
 
@@ -73,7 +75,7 @@
     <table class="table table-dark">
       <thead class="thead-light">
         <tr>
-          <td >ID</td>
+         
           <td >Employee ID with Name </td>
           <td >Month/Year </td>
           <td >Total Work Duration </td>
@@ -87,7 +89,7 @@
     <tbody>
         @foreach($payrolls as $payroll)
         <tr>
-            <td>{{ $payroll->id}}</td>
+            
             <td>{{ $payroll->empName}}</td>
             <td>{{ $payroll->monthYear}}</td>
             <td>{{ $payroll->totalWorkDur}}</td>
@@ -114,14 +116,6 @@
 <div>
 </div>
 </div>
-
-<script>
-function myFunction() {
-  var num = 5.56789;
-  var n = num.toFixed(2);
-  document.getElementById("demo").innerHTML = n;
-}
-</script>
 
 
 @endsection

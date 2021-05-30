@@ -6,12 +6,26 @@
 @section('card-title', 'All Sales')
 
 @section('content')
+<div class="col-sm-12">
 
-@foreach($errors->all() as $error)
+
+
+        @if(session()->get('success'))
+
+          <div class="alert alert-success">
+
+            {{ session()->get('success') }}  
+
+          </div>
+
+        @endif
+
+    </div>  
+ @foreach($errors->all() as $error)
   <div class="alert alert-danger" role="alert">
     {{$error}}
   </div>
-  @endforeach
+  @endforeach 
 
   <td size="200"></td>
         <td>
@@ -21,7 +35,7 @@
         </td>
 
 
-  <form class = form-inline my-2 my-lg-0 type="get" action="{{url('/search')}}">
+  <form class = form-inline my-2 my-lg-0 type="get" action="{{url('/searchsales')}}">
                       <input class="form-control mr-sm-2" type="search"  name ="query" placeholder="search Sales">
                       <button type="submit"  class="btn btn-outline-success my-2-sm-0" >Search</button>
   </form>

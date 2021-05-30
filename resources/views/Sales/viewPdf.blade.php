@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
     #t1{
 
 font-family: Arial, Helvetica, sans-serif;
@@ -52,6 +53,8 @@ color:#fff;
     </style>
 </head>
 <body>
+<br><br>
+<h2>Sales Report</h2>
 
 <table id="t1" >
      <thead >

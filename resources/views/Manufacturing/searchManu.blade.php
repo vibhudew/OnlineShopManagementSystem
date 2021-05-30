@@ -5,7 +5,7 @@
 
 <h1>Manufacturing</h1>
 <br>
-<form type="get" action="/search2">
+<form type="get" action="/searchManufact">
     <div class="input-group">
         <div class="form-outline">
             <input id="search-input" type="search" placeholder="Search Recipes" id="form1" name="query2" class="form-control" />

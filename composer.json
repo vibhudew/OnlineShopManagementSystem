@@ -6,6 +6,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+<<<<<<< HEAD
+=======
+        "barryvdh/laravel-dompdf": "^0.9.0",
+<<<<<<< HEAD
+=======
+        "brian2694/laravel-toastr": "^5.56",
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",

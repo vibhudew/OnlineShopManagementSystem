@@ -3,9 +3,17 @@
 @section('page-title', 'Manufacturing')
 @section('content')
 
+<div class="col-sm-12">
+    @if(session()->get('success'))
+      <div class="alert alert-success">
+        {{ session()->get('success') }}  
+      </div>
+    @endif
+</div>
+
 <h1>Manufacturing</h1>
 <br>
-<form type="get" action="/search2">
+<form type="get" action="/searchManufact">
     <div class="input-group">
         <div class="form-outline">
             <input id="search-input" type="search" placeholder="Search Recipes" id="form1" name="query2" class="form-control" />
@@ -44,5 +52,6 @@
     </tr>
     @endforeach
 </table>
+<a href="/download-Manufact-pdf" class="btn btn-secondary">Get Report</a>
 
 @endsection

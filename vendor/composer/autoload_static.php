@@ -35,6 +35,10 @@ class ComposerStaticInitd1ae8c8a73848ea4a9bef57137f845c5
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+<<<<<<< HEAD
+=======
+        'caf23243e9cb3afd48d0414815ebf07e' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/helper.php',
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
 
@@ -169,6 +173,14 @@ class ComposerStaticInitd1ae8c8a73848ea4a9bef57137f845c5
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            'Brian2694\\Toastr\\' => 17,
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+            'Barryvdh\\DomPDF\\' => 16,
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
         ),
         'A' => 
         array (
@@ -489,6 +501,20 @@ class ComposerStaticInitd1ae8c8a73848ea4a9bef57137f845c5
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        'Brian2694\\Toastr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brian2694/laravel-toastr/src',
+        ),
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+        'Barryvdh\\DomPDF\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src',
+        ),
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
         'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
@@ -530,6 +556,7 @@ class ComposerStaticInitd1ae8c8a73848ea4a9bef57137f845c5
         'App\\Http\\Controllers\\FullCalenderController' => __DIR__ . '/../..' . '/app/Http/Controllers/FullCalenderController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\PayrollController' => __DIR__ . '/../..' . '/app/Http/Controllers/PayrollController.php',
+        'App\\Http\\Controllers\\ProductStocksController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductStocksController.php',
         'App\\Http\\Controllers\\RecipeController' => __DIR__ . '/../..' . '/app/Http/Controllers/RecipeController.php',
         'App\\Http\\Controllers\\purchasecontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/purchasecontroller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -551,6 +578,10 @@ class ComposerStaticInitd1ae8c8a73848ea4a9bef57137f845c5
         'App\\Models\\Manufact' => __DIR__ . '/../..' . '/app/Models/Manufact.php',
         'App\\Models\\Payroll' => __DIR__ . '/../..' . '/app/Models/Payroll.php',
         'App\\Models\\ProductDetails' => __DIR__ . '/../..' . '/app/Models/ProductDetails.php',
+<<<<<<< HEAD
+=======
+        'App\\Models\\ProductStock' => __DIR__ . '/../..' . '/app/Models/ProductStock.php',
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
         'App\\Models\\PurchaseDetails' => __DIR__ . '/../..' . '/app/Models/PurchaseDetails.php',
         'App\\Models\\Recipe' => __DIR__ . '/../..' . '/app/Models/Recipe.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -566,6 +597,18 @@ class ComposerStaticInitd1ae8c8a73848ea4a9bef57137f845c5
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+<<<<<<< HEAD
+=======
+        'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
+        'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
+        'Barryvdh\\DomPDF\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',
+<<<<<<< HEAD
+=======
+        'Brian2694\\Toastr\\Facades\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Facades/Toastr.php',
+        'Brian2694\\Toastr\\Toastr' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/Toastr.php',
+        'Brian2694\\Toastr\\ToastrServiceProvider' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/ToastrServiceProvider.php',
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',

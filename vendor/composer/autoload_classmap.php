@@ -26,6 +26,7 @@ return array(
     'App\\Http\\Controllers\\FullCalenderController' => $baseDir . '/app/Http/Controllers/FullCalenderController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\PayrollController' => $baseDir . '/app/Http/Controllers/PayrollController.php',
+    'App\\Http\\Controllers\\ProductStocksController' => $baseDir . '/app/Http/Controllers/ProductStocksController.php',
     'App\\Http\\Controllers\\RecipeController' => $baseDir . '/app/Http/Controllers/RecipeController.php',
     'App\\Http\\Controllers\\purchasecontroller' => $baseDir . '/app/Http/Controllers/purchasecontroller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -47,6 +48,10 @@ return array(
     'App\\Models\\Manufact' => $baseDir . '/app/Models/Manufact.php',
     'App\\Models\\Payroll' => $baseDir . '/app/Models/Payroll.php',
     'App\\Models\\ProductDetails' => $baseDir . '/app/Models/ProductDetails.php',
+<<<<<<< HEAD
+=======
+    'App\\Models\\ProductStock' => $baseDir . '/app/Models/ProductStock.php',
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
     'App\\Models\\PurchaseDetails' => $baseDir . '/app/Models/PurchaseDetails.php',
     'App\\Models\\Recipe' => $baseDir . '/app/Models/Recipe.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
@@ -62,6 +67,18 @@ return array(
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+<<<<<<< HEAD
+=======
+    'Barryvdh\\DomPDF\\Facade' => $vendorDir . '/barryvdh/laravel-dompdf/src/Facade.php',
+    'Barryvdh\\DomPDF\\PDF' => $vendorDir . '/barryvdh/laravel-dompdf/src/PDF.php',
+    'Barryvdh\\DomPDF\\ServiceProvider' => $vendorDir . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',
+<<<<<<< HEAD
+=======
+    'Brian2694\\Toastr\\Facades\\Toastr' => $vendorDir . '/brian2694/laravel-toastr/src/Facades/Toastr.php',
+    'Brian2694\\Toastr\\Toastr' => $vendorDir . '/brian2694/laravel-toastr/src/Toastr.php',
+    'Brian2694\\Toastr\\ToastrServiceProvider' => $vendorDir . '/brian2694/laravel-toastr/src/ToastrServiceProvider.php',
+>>>>>>> d3ec151172106d0ba61433d99285674a60e6de44
+>>>>>>> fe62b292ea89e7a71b7d6895cb8995b5e98edbd6
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
     'Brick\\Math\\BigInteger' => $vendorDir . '/brick/math/src/BigInteger.php',
     'Brick\\Math\\BigNumber' => $vendorDir . '/brick/math/src/BigNumber.php',
