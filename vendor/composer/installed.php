@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '23daabc9c9ed3a0a8fd7fc30a6ab02be000e675a',
+    'reference' => 'ff15d8aef186058aea5d0e102e54da76b87f46d8',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -463,7 +463,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '23daabc9c9ed3a0a8fd7fc30a6ab02be000e675a',
+      'reference' => 'ff15d8aef186058aea5d0e102e54da76b87f46d8',
     ),
     'laravel/sail' => 
     array (
@@ -1324,6 +1324,15 @@
       array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
+    ),
+    'yajra/laravel-datatables-oracle' => 
+    array (
+      'pretty_version' => 'v9.18.0',
+      'version' => '9.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b00f25b1941879b34e05f270835235a32b46567c',
     ),
   ),
 );

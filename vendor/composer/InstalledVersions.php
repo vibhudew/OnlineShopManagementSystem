@@ -20,8 +20,6 @@ use Composer\Semver\VersionParser;
 
 
 
-
-
 class InstalledVersions
 {
 private static $installed = array (
@@ -32,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '23daabc9c9ed3a0a8fd7fc30a6ab02be000e675a',
+    'reference' => 'ff15d8aef186058aea5d0e102e54da76b87f46d8',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -489,7 +487,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '23daabc9c9ed3a0a8fd7fc30a6ab02be000e675a',
+      'reference' => 'ff15d8aef186058aea5d0e102e54da76b87f46d8',
     ),
     'laravel/sail' => 
     array (
@@ -1351,6 +1349,15 @@ private static $installed = array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
     ),
+    'yajra/laravel-datatables-oracle' => 
+    array (
+      'pretty_version' => 'v9.18.0',
+      'version' => '9.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b00f25b1941879b34e05f270835235a32b46567c',
+    ),
   ),
 );
 private static $canGetVendors;
@@ -1368,6 +1375,7 @@ $packages = array();
 foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
+
 
 if (1 === \count($packages)) {
 return $packages[0];
@@ -1564,7 +1572,6 @@ self::$installedByVendor = array();
 
 
 
-
 private static function getInstalled()
 {
 if (null === self::$canGetVendors) {
@@ -1574,6 +1581,7 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
+
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
