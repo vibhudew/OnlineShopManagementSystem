@@ -80,7 +80,7 @@
               </div>
               <div class="col-md-2">
                 <div class="form-group">
-                  <a class="btn btn-warning btn-lg btn-block" href="" onchange="autoFill()">Demo</a>
+                  <a class="btn btn-warning btn-lg btn-block" href="" onclick="autoFill()">Demo</a>
                 </div>
             </div>
             </div>
