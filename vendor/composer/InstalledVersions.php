@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '8111883802d6309558f7c9e8ed1d5c7875d19223',
+    'reference' => '747160dea35af4c6dc71faeea3f1663c54baddcb',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -45,24 +45,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
-    ),
-    'barryvdh/laravel-dompdf' => 
-    array (
-      'pretty_version' => 'v0.9.0',
-      'version' => '0.9.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5b99e1f94157d74e450f4c97e8444fcaffa2144b',
-    ),
-    'brian2694/laravel-toastr' => 
-    array (
-      'pretty_version' => '5.56',
-      'version' => '5.56.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '98137445f55d981f3587800349f1aa7b045d7974',
     ),
     'brick/math' => 
     array (
@@ -113,15 +95,6 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e864bbf5904cb8f5bb334f99209b48018522f042',
-    ),
-    'dompdf/dompdf' => 
-    array (
-      'pretty_version' => 'v1.0.2',
-      'version' => '1.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
     ),
     'dragonmantank/cron-expression' => 
     array (
@@ -489,7 +462,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '8111883802d6309558f7c9e8ed1d5c7875d19223',
+      'reference' => '747160dea35af4c6dc71faeea3f1663c54baddcb',
     ),
     'laravel/sail' => 
     array (
@@ -536,15 +509,6 @@ private static $installed = array (
       ),
       'reference' => '9be3b16c877d477357c015cec057548cf9b2a14a',
     ),
-    'league/fractal' => 
-    array (
-      'pretty_version' => '0.19.2',
-      'version' => '0.19.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '06dc15f6ba38f2dde2f919d3095d13b571190a7c',
-    ),
     'league/mime-type-detection' => 
     array (
       'pretty_version' => '1.7.0',
@@ -553,42 +517,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
-    ),
-    'maatwebsite/excel' => 
-    array (
-      'pretty_version' => '3.1.30',
-      'version' => '3.1.30.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'aa5d2e4d25c5c8218ea0a15103da95f5f8728953',
-    ),
-    'maennchen/zipstream-php' => 
-    array (
-      'pretty_version' => '2.1.0',
-      'version' => '2.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c4c5803cc1f93df3d2448478ef79394a5981cc58',
-    ),
-    'markbaker/complex' => 
-    array (
-      'pretty_version' => '2.0.2',
-      'version' => '2.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd18272926d58065140314c01e18ec3dd7ae854ea',
-    ),
-    'markbaker/matrix' => 
-    array (
-      'pretty_version' => '2.1.3',
-      'version' => '2.1.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '174395a901b5ba0925f1d790fa91bab531074b61',
     ),
     'mockery/mockery' => 
     array (
@@ -627,15 +555,6 @@ private static $installed = array (
       array (
         0 => '1.10.2',
       ),
-    ),
-    'myclabs/php-enum' => 
-    array (
-      'pretty_version' => '1.8.0',
-      'version' => '1.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '46cf3d8498b095bd33727b13fd5707263af99421',
     ),
     'nesbot/carbon' => 
     array (
@@ -690,24 +609,6 @@ private static $installed = array (
       array (
       ),
       'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
-    ),
-    'phenx/php-font-lib' => 
-    array (
-      'pretty_version' => '0.5.2',
-      'version' => '0.5.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
-    ),
-    'phenx/php-svg-lib' => 
-    array (
-      'pretty_version' => 'v0.3.3',
-      'version' => '0.3.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -856,15 +757,6 @@ private static $installed = array (
         0 => '1.0',
       ),
     ),
-    'psr/http-factory' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
-    ),
     'psr/http-message' => 
     array (
       'pretty_version' => '1.0.1',
@@ -949,15 +841,6 @@ private static $installed = array (
       array (
         0 => '4.1.1',
       ),
-    ),
-    'sabberworm/php-css-parser' => 
-    array (
-      'pretty_version' => '8.3.1',
-      'version' => '8.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
     ),
     'sebastian/cli-parser' => 
     array (
@@ -1413,60 +1296,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
-    ),
-    'yajra/laravel-datatables' => 
-    array (
-      'pretty_version' => 'v1.5.0',
-      'version' => '1.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '50de5e20ef01da1a353e0a81c0ad5f9da6a985ec',
-    ),
-    'yajra/laravel-datatables-buttons' => 
-    array (
-      'pretty_version' => 'v4.13.0',
-      'version' => '4.13.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3ac8d2bbfbb930852e75bdd3eb601ab629719247',
-    ),
-    'yajra/laravel-datatables-editor' => 
-    array (
-      'pretty_version' => 'v1.24.0',
-      'version' => '1.24.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3b959f928510f10364fa366a3bb792be96edefc9',
-    ),
-    'yajra/laravel-datatables-fractal' => 
-    array (
-      'pretty_version' => 'v1.6.0',
-      'version' => '1.6.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0aa387a9b3738248fa61110f0378904ef42b4a73',
-    ),
-    'yajra/laravel-datatables-html' => 
-    array (
-      'pretty_version' => 'v4.37.0',
-      'version' => '4.37.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '4fe74af44ff9c2795714a2c0761bc4604328b072',
-    ),
-    'yajra/laravel-datatables-oracle' => 
-    array (
-      'pretty_version' => 'v9.18.0',
-      'version' => '9.18.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b00f25b1941879b34e05f270835235a32b46567c',
     ),
   ),
 );
