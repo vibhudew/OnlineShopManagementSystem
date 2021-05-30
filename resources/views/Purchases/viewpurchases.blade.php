@@ -7,8 +7,35 @@
 @section('content')
 
 <div class="container">
-           
+
+<div class="col-sm-12">
+        @if(session()->get('success'))
+          <div class="alert alert-success">
+            {{ session()->get('success') }}  
+          </div>
+        @endif
+  </div>  
+
+  <table>
+      <tr>
+        <td>
+            <form class="form-inline my-2 my-lg-0" type="get" action="{{url('/searchPurchase')}}">
+            <input class="form-control mr-sm-2" size="50" name="queryPurchase" type="search" placeholder="Type Transaction Reference Number to Search " aria-label="Search">
+            <button class="btn btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </td>
+       <td size="200"></td>
+        <td>
+        <a class="btn btn-primary" href="{{ URL::to('/reportPurchase') }}">Get Purchases PDF</a>
+        </td>
+      </tr>
+      
+  </table>
+
+  <br><br>
+
 <table class="table table-bordered table-dark">
+
 
         <th>transaction reference number</th>
         <th>supllier id</th>
@@ -31,7 +58,7 @@
             <td>
             <a href="/deletepurchases/{{$Viewpurchases1->id}}" class="btn btn-danger">Delete</a>
             <a href="/updatepurchases/{{$Viewpurchases1->id}}" class="btn btn-success">Edit</a>
-            <a tile="print the purchase report"  href="{{url('getAllEmployees/'.$Viewpurchases1 ['id'])}}" class="btn btn-success"><i class="fas fa-file-pdf"></i>Print</a>
+           
 
             </td>
         </tr>
