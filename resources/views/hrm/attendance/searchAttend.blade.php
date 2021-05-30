@@ -46,9 +46,7 @@
         </form> 
     </td>
 
-    <td>
-        <a class="btn btn-primary" href="#">Get Attendances PDF for a Employee</a>
-    </td>
+    
 
 
 </tr>
@@ -70,10 +68,14 @@
         @endif
     </div>  
 
+    <h2>Search Results</h2>
+    <br>
+
+
     <table class="table table-dark">
       <thead class="thead-light">
         <tr>
-          <td >ID</td>
+        <td >ID</td>
           <td >Employee ID with Name </td>
           <td >Start Time </td>
           <td >End Time </td>
@@ -83,7 +85,7 @@
     <tbody>
         @foreach($attendances as $attendance)
         <tr>
-            <td>{{ $attendance->id}}</td>
+           <td>{{ $attendance->id}}</td>
             <td>{{ $attendance->empNameAttend}}</td>
             <td>{{ $attendance->startTime}}</td>
             <td>{{ $attendance->endTime}}</td>

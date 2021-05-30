@@ -5,8 +5,20 @@
 @section('card-title', 'All Contact')
 
 @section('content')
+ <div class="col-sm-12">
 
-<a href="contact/add" class = "btn btn-primary"> ADD </a>
+
+    @if(session()->get('success'))
+
+      <div class="alert alert-success">
+
+        {{ session()->get('success') }}
+
+      </div>
+      @endif
+    </div>
+
+ <a href="contact/add" class = "btn btn-primary"> ADD </a>
 
 <table class = "table table-dark">
   <th> Id</th>
@@ -36,7 +48,7 @@
         <td>
             <a href="/updatecontact/{{$contact->id}}" class="btn btn-success">Update</>
 
-            <a href="/deletecontact/{{$contact->id}}" class="btn btn-default">Delete</>
+            <a href="/deletecontact/{{$contact->id}}" class="btn btn-warning">Delete</>
 
 
         </td>
@@ -44,7 +56,7 @@
 
   @endforeach
 
-
-
 </table>
+
+
 @endsection

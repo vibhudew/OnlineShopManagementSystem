@@ -20,6 +20,8 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
@@ -30,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '19f34a478baca388e1b343c2fc7c7d11600bbc8e',
+    'reference' => 'ff15d8aef186058aea5d0e102e54da76b87f46d8',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -138,15 +140,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
-    ),
-    'ezyang/htmlpurifier' => 
-    array (
-      'pretty_version' => 'v4.13.0',
-      'version' => '4.13.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '08e27c97e4c6ed02f37c5b2b20488046c8d90d75',
     ),
     'facade/flare-client-php' => 
     array (
@@ -260,217 +253,217 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/broadcasting' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/bus' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/cache' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/collections' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/config' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/console' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/container' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/contracts' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/cookie' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/database' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/encryption' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/events' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/filesystem' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/hashing' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/http' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/log' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/macroable' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/mail' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/notifications' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/pagination' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/pipeline' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/queue' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/redis' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/routing' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/session' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/support' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/testing' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/translation' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/validation' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'illuminate/view' => 
     array (
       'replaced' => 
       array (
-        0 => 'v8.42.1',
+        0 => 'v8.44.0',
       ),
     ),
     'kodova/hamcrest-php' => 
@@ -482,12 +475,12 @@ private static $installed = array (
     ),
     'laravel/framework' => 
     array (
-      'pretty_version' => 'v8.42.1',
-      'version' => '8.42.1.0',
+      'pretty_version' => 'v8.44.0',
+      'version' => '8.44.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '41ec4897a70eb8729cf0ff34a8354413c54e42a6',
+      'reference' => '7b3b27dc8911ab02a69731af2ba97b5130b2ddb8',
     ),
     'laravel/laravel' => 
     array (
@@ -496,16 +489,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '19f34a478baca388e1b343c2fc7c7d11600bbc8e',
+      'reference' => 'ff15d8aef186058aea5d0e102e54da76b87f46d8',
     ),
     'laravel/sail' => 
     array (
-      'pretty_version' => 'v1.6.0',
-      'version' => '1.6.0.0',
+      'pretty_version' => 'v1.7.0',
+      'version' => '1.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5d23474cd411b07f46980d05f9c38e7dc0d17460',
+      'reference' => 'd1f703d73f782af5427697cdc5023395cd341963',
     ),
     'laravel/tinker' => 
     array (
@@ -518,21 +511,12 @@ private static $installed = array (
     ),
     'laravel/ui' => 
     array (
-      'pretty_version' => 'v3.2.1',
-      'version' => '3.2.1.0',
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e2478cd0342a92ec1c8c77422553bda8ee004fd0',
-    ),
-    'laravelcollective/html' => 
-    array (
-      'pretty_version' => 'v6.2.1',
-      'version' => '6.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ae15b9c4bf918ec3a78f092b8555551dd693fde3',
+      'reference' => '07d725813350c695c779382cbd6dac0ab8665537',
     ),
     'league/commonmark' => 
     array (
@@ -552,15 +536,6 @@ private static $installed = array (
       ),
       'reference' => '9be3b16c877d477357c015cec057548cf9b2a14a',
     ),
-    'league/fractal' => 
-    array (
-      'pretty_version' => '0.19.2',
-      'version' => '0.19.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '06dc15f6ba38f2dde2f919d3095d13b571190a7c',
-    ),
     'league/mime-type-detection' => 
     array (
       'pretty_version' => '1.7.0',
@@ -569,42 +544,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
-    ),
-    'maatwebsite/excel' => 
-    array (
-      'pretty_version' => '3.1.30',
-      'version' => '3.1.30.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'aa5d2e4d25c5c8218ea0a15103da95f5f8728953',
-    ),
-    'maennchen/zipstream-php' => 
-    array (
-      'pretty_version' => '2.1.0',
-      'version' => '2.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c4c5803cc1f93df3d2448478ef79394a5981cc58',
-    ),
-    'markbaker/complex' => 
-    array (
-      'pretty_version' => '2.0.0',
-      'version' => '2.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '9999f1432fae467bc93c53f357105b4c31bb994c',
-    ),
-    'markbaker/matrix' => 
-    array (
-      'pretty_version' => '2.1.2',
-      'version' => '2.1.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '361c0f545c3172ee26c3d596a0aa03f0cef65e6a',
     ),
     'mockery/mockery' => 
     array (
@@ -644,23 +583,14 @@ private static $installed = array (
         0 => '1.10.2',
       ),
     ),
-    'myclabs/php-enum' => 
-    array (
-      'pretty_version' => '1.8.0',
-      'version' => '1.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '46cf3d8498b095bd33727b13fd5707263af99421',
-    ),
     'nesbot/carbon' => 
     array (
-      'pretty_version' => '2.48.0',
-      'version' => '2.48.0.0',
+      'pretty_version' => '2.48.1',
+      'version' => '2.48.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd3c447f21072766cddec3522f9468a5849a76147',
+      'reference' => '8d1f50f1436fb4b05e7127360483dd9c6e73da16',
     ),
     'nikic/php-parser' => 
     array (
@@ -751,15 +681,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
-    ),
-    'phpoffice/phpspreadsheet' => 
-    array (
-      'pretty_version' => '1.16.0',
-      'version' => '1.16.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '76d4323b85129d0c368149c831a07a3e258b2b50',
     ),
     'phpoption/phpoption' => 
     array (
@@ -880,15 +801,6 @@ private static $installed = array (
       array (
         0 => '1.0',
       ),
-    ),
-    'psr/http-factory' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
     ),
     'psr/http-message' => 
     array (
@@ -1245,84 +1157,84 @@ private static $installed = array (
     ),
     'symfony/polyfill-ctype' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c6c942b1ac76c82448322025e084cadc56048b4e',
+      'reference' => '46cd95797e9df938fdd2b03693b5fca5e64b01ce',
     ),
     'symfony/polyfill-iconv' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '06fb361659649bcfd6a208a0f1fcaf4e827ad342',
+      'reference' => '63b5bb7db83e5673936d6e3b8b3e022ff6474933',
     ),
     'symfony/polyfill-intl-grapheme' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5601e09b69f26c1828b13b6bb87cb07cddba3170',
+      'reference' => '24b72c6baa32c746a4d0840147c9715e42bb68ab',
     ),
     'symfony/polyfill-intl-idn' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2d63434d922daf7da8dd863e7907e67ee3031483',
+      'reference' => '65bd267525e82759e7d8c4e8ceea44f398838e65',
     ),
     'symfony/polyfill-intl-normalizer' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '43a0283138253ed1d48d352ab6d0bdb3f809f248',
+      'reference' => '8590a5f561694770bdcd3f9b5c69dde6945028e8',
     ),
     'symfony/polyfill-mbstring' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5232de97ee3b75b0360528dae24e73db49566ab1',
+      'reference' => '2df51500adbaebdc4c38dea4c89a2e131c45c8a1',
     ),
     'symfony/polyfill-php72' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cc6e6f9b39fe8075b3dabfbaf5b5f645ae1340c9',
+      'reference' => '9a142215a36a3888e30d0a9eeea9766764e96976',
     ),
     'symfony/polyfill-php73' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a678b42e92f86eca04b7fa4c0f6f19d097fb69e2',
+      'reference' => 'fba8933c384d6476ab14fb7b8526e5287ca7e010',
     ),
     'symfony/polyfill-php80' => 
     array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dc3063ba22c2a1fd2f45ed856374d79114998f91',
+      'reference' => 'eca0bf41ed421bed1b57c4958bab16aa86b757d0',
     ),
     'symfony/process' => 
     array (
@@ -1439,60 +1351,6 @@ private static $installed = array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
     ),
-    'yajra/laravel-datatables' => 
-    array (
-      'pretty_version' => 'v1.5.0',
-      'version' => '1.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '50de5e20ef01da1a353e0a81c0ad5f9da6a985ec',
-    ),
-    'yajra/laravel-datatables-buttons' => 
-    array (
-      'pretty_version' => 'v4.13.0',
-      'version' => '4.13.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3ac8d2bbfbb930852e75bdd3eb601ab629719247',
-    ),
-    'yajra/laravel-datatables-editor' => 
-    array (
-      'pretty_version' => 'v1.24.0',
-      'version' => '1.24.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3b959f928510f10364fa366a3bb792be96edefc9',
-    ),
-    'yajra/laravel-datatables-fractal' => 
-    array (
-      'pretty_version' => 'v1.6.0',
-      'version' => '1.6.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0aa387a9b3738248fa61110f0378904ef42b4a73',
-    ),
-    'yajra/laravel-datatables-html' => 
-    array (
-      'pretty_version' => 'v4.37.0',
-      'version' => '4.37.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '4fe74af44ff9c2795714a2c0761bc4604328b072',
-    ),
-    'yajra/laravel-datatables-oracle' => 
-    array (
-      'pretty_version' => 'v9.18.0',
-      'version' => '9.18.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b00f25b1941879b34e05f270835235a32b46567c',
-    ),
   ),
 );
 private static $canGetVendors;
@@ -1510,7 +1368,6 @@ $packages = array();
 foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
-
 
 if (1 === \count($packages)) {
 return $packages[0];
@@ -1707,6 +1564,7 @@ self::$installedByVendor = array();
 
 
 
+
 private static function getInstalled()
 {
 if (null === self::$canGetVendors) {
@@ -1716,7 +1574,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

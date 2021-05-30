@@ -5,6 +5,7 @@ use App\Models\Payroll;
 use App\Models\Employee;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
+use PDF;
 
 class PayrollController extends Controller
 {
@@ -97,4 +98,11 @@ class PayrollController extends Controller
         return view('hrm.payroll.searchPayroll', compact('payrolls'));
 
     }
+
+    public function reportPayroll(){
+
+        $payrolls = Payroll::all();
+        $pdf = PDF::loadView('hrm.payroll.payrolls',compact('payrolls'));
+        return $pdf-> download('payrollsList.pdf');
+    } 
 }

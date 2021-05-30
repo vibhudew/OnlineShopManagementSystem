@@ -15,9 +15,10 @@ class CreateSalesItemsTable extends Migration
     {
         Schema::create('sales_items', function (Blueprint $table) {
             $table->id();
-            $table->integer('salesitemid');
+            $table->integer('invoice id');
+            $table->string('productname')->nullable;
             $table->double('price');
-	        $table->double('discountamount');
+	        $table->double('discountamountpercentage');
 	        $table->integer('quantity');
             $table->timestamps();
         });

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Contact page')
 @section('page-title', 'Contact management')
-@section('card-title', 'Add Contact')
+@section('card-title', 'Update Contact')
 
 
 
@@ -18,8 +18,9 @@
 
 @endforeach
 
-<form method="post" action="/saveContact">
+<form method="post" action="/contactUpdate2">
 {{csrf_field()}}
+<input type="hidden" class="form-control"  name="id"value="{{$contactdata->id}}">
 
 <div class="row">
   <div class="form-group col-md-4">
@@ -67,7 +68,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Address</label>
-                  <textarea rows="4" cols="80" class="form-control" name="Address" placeholder="Here can be your description"value="{{$contactdata->Address}}"></textarea>
+                  <textarea rows="4" cols="80" class="form-control" name="Address" placeholder="Here can be your description"   value="{{$contactdata->Address}}"></textarea>
                 </div>
               </div>
             </div>

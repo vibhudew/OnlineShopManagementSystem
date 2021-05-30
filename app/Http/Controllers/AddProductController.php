@@ -12,7 +12,9 @@ class AddProductController extends Controller
         $ProductDetails = new ProductDetails;
 
         $this->validate($request,[
-            'productName'=>'required|max:50|min:2'
+            'productName'=>'required|max:50|min:2',
+            'purchasePrice'=>'required|numeric',
+            'sellingPrice'=>'required|numeric',
             
         ]);
         
@@ -29,13 +31,13 @@ class AddProductController extends Controller
 
         $data= ProductDetails::all();
            
-        return view('Product/viewproduct')->with('Product1', $data);//return product view with data to display
+        return redirect('/Product')->with('Product1', $data)->with('success', 'product added successfully!');//return product view with data to display
         //dd($request->all());
     }
     public function deleteProduct($id){
         $ProductDetails = ProductDetails::find($id);
         $ProductDetails->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'product deleted successfully!');
 
     }
     
@@ -46,12 +48,12 @@ class AddProductController extends Controller
 
     }
 
-    public function search()
+    public function pSearch()
     {
         $search_text = $_GET['query'];
         $ProductDetails = ProductDetails::where('ProductName', 'LIKE', '%' .$search_text. '%')->get();
 
-        return view('Product/search' , compact('ProductDetails'));
+        return view('Product/productsearch' , compact('ProductDetails'));
     }
 
     public function updateProduct(Request $request){
@@ -70,7 +72,7 @@ class AddProductController extends Controller
         $ProductDetails->ProductDescription=$request->description;
         $ProductDetails->save();
         $ProductDetails=ProductDetails::All();
-        return view('Product/viewproduct')->with('Product1',$ProductDetails);
+        return redirect('/Product')->with('Product1',$ProductDetails)->with('success', 'product updated successfully!');
 
 
 
