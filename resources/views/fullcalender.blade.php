@@ -1,5 +1,5 @@
 
-@extends('layouts.master')
+@extends('layouts.callout')
 @section('title', 'Calender page')
 @section('page-title', 'Calender')
 @section('card-title', 'Calender')
@@ -127,5 +127,4 @@ function displayMessage(message) {
   
 </script>
   
-</body>
-</html>@endsection
+@endsection

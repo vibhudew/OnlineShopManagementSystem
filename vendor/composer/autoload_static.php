@@ -37,7 +37,10 @@ class ComposerStaticInitd125337fdff0e617628cd8b46c3f0343
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'caf23243e9cb3afd48d0414815ebf07e' => __DIR__ . '/..' . '/brian2694/laravel-toastr/src/helper.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+<<<<<<< HEAD
         '0b47d6d4a00ca9112ba3953b49e7c9a4' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/helper.php',
+=======
+>>>>>>> 1bf94ca5c081a588c4af82fc737c84bc7e7e483e
     );
 
     public static $prefixLengthsPsr4 = array (
