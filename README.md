@@ -1,62 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 align="center"> Central Hardware Shop, Mihintale</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## About the project
+<p>We have chosen to create an online shopping management system for the ITP project. "Central Hardware Shop" which has located at Mihintale area in Anuradhapura has been chosen 
+by us to do our project. The main reason for that is we have found a lot of manual paper –
+based documentation issues with the shopping management in this hardware. The owner 
+asked us to create an online shopping management system for his hardware shop.
+Currently, they have fully manual system for manage their tasks. current technology to manage 
+tasks comparing with Online Shopping System, the traditional commodity sales are based on 
+physical stores, which requires a large amount of workforce and material resources, failing to 
+achieve the desired expectations. 
 
-## About Laravel
+But obviously, it is an excellent choice to develop an online shopping system to organize all aspects of commodity and generate considerable savings. In terms of operations, the system runs in Windows, using MySQL database, which has superior performance in operation and management. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Regarding the functional requirements analysis, the design of the system is finished after a considerable number of research.We use PHP using Laravel framework to develop the back – end of our web application. We use HTML, JS/jQuery and Bootstrap to develop front – end. We use SQL for create the databases.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+We focus on eight functions in the system according to the project guidelines. This is a Walk –
+In – Customer based online system. Default Walk-In-Customer automatically added to the business. Customers has different options for payments. After purchasing an item automatically generates a bill from the system. All the details of the payments are stocked in the system for each customer. We can see the analyzed details of stock changes by the online system in hardware shop. All the staff details are managed and stored by online system. All purchases for the hardware shop are managed and stored by the online system. All the accounting details in hardware managed by the online system. These are the main functions that system is designed to do</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tools and Technologies used
+- ## **Backend Framework** - Laravel Version 8 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+- ## **Frontend Framework** - Bootstrap <p align="center"> <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank"><img src="https://i.stack.imgur.com/dMXbE.png" width="300"></a></p>
+- ## **DBMS** - MySQL <p align="center"><a href="https://www.mysql.com/" target="_blank"><img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" width="200"></a></p>
 
-## Learning Laravel
+- ## **Handling the administration of MySQL** - phpMyadmin <p align="center"><a href="https://www.phpmyadmin.net/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhpMyAdmin_logo.svg/800px-PhpMyAdmin_logo.svg.png" width="200"></a></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## To run the application
 
-## Laravel Sponsors
+### Prerequisities
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+ ###### Following servers and packages should be installed prior to the the application installation
 
-### Premium Partners
+- xammp server with php version 8
+- latest version of composer
+- mySQL server
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+### Installation
+  
+######  Following commands can be followed to run the application successfully
+
+1. Create a new folder, go inside the folder and open git bash from it
+2. Clone the project
+    ```
+    git clone https://github.com/Shashika503/OnlineShopManagementSystem.git
+    ```
+3. Go inside the cloned project folder using CD command
+4. Install composer packages
+    ```
+    composer install
+    ```
+5. Open the cloned project from VS code IDE
+6. Change the database name in the .env.example with the relevant DB name and Rename the .env.example file as .env
+7. Create a new Database inside MySQL DBMS with the DB name given in the .env file
+8. Generate keys 
+    ```
+    php artisan key:generate
+    ```
+9. Do the table migrations 
+    ```
+    php artisan migrate
+    ```
+10. Run the server 
+    ```
+    php artisan serve
+    ```
+11. Run the application by using the suggested URL in a prefered web browser
 
 ## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* cmd to create a new feature branch in the repo                                   
+        ``git checkout -b newFeatureBranchName``                            
+        ``git push origin newFeatureBranchName`` (now check whether it's created in github)
+* cmd to checkout to a branch which is already created                              
+        ``git checkout featureBranchName``                              
+        
+    ###### When working in your branch,                                                                       
+* if multiple files created, add them all at once:                                      
+        ``git add . ``                                                  
+        
+    ###### After doing any modification to the code in your branch,                                                  
+* commit it:                                        
+        ``git commit -m "commitName"``                                  
+* push it to the featureBranch in github                                        
+        ``git push origin featureBranchName``                                   
+        
+    ###### When your featureBranch is ready to merged with the Master branch,                              
+* pull the latest updates in github master to local master                              
+        ``git checkout master``                                     
+        ``git pull``                                                                                
+* Now your featureBranch can be merged to local master                                                                                                                                     
+        ``git merge featureBranchName``                                             
+* If everything works(run) perfect, push the updates in local master to github master:                                      
+        ``git push``                        
+        
+## Acknowledgment
+<p align="center"> <a href="https://www.sliit.lk/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a6/SLIIT_Logo_Crest.png" width="100"></a></p>
+<p align="center"> This is a group project done for Information Technology Project module in second year, SLIIT by eight team members </p>
